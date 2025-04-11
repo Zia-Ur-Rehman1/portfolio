@@ -48,10 +48,10 @@ Please make sure to maintain `authorship`.
 
   
 ## Credits
-
 - [@adrianhajdin](https://github.com/adrianhajdin) (The original author)
 - [@lordarcadius](https://github.com/lordarcadius) (I just fixed and modified few things)
 - [@dhruvsaxena1998](https://github.com/dhruvsaxena1998) (For help and PR)
+- [@burhankhan] (https://github.com/burhank928) 
 
   
 ## License
