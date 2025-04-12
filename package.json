@@ -1,7 +1,7 @@
 {
   "name": "portfolio_nextjs",
   "version": "0.1.0",
-  "homepage": "https://burhank928.github.io/portfolio",
+  "homepage": "https://ziarehman.github.io/portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
