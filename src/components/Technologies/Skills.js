@@ -1,11 +1,29 @@
-import { DiJavascript1,  DiRuby, DiPostgresql } from "react-icons/di";
-import { SiTypescript, SiFlutter, SiGraphql, SiDocker, SiJenkins, SiHeroku, SiShopify,SiBootstrap, SiMui, SiRedis, SiDigitalocean, SiAmazonwebservices, SiFirebase, SiTailwindcss, SiNgrok } from "react-icons/si";
+import { DiJavascript1,  DiRuby, DiPostgresql, DiPython, DiDjango } from "react-icons/di";
+import { SiTypescript, SiFlutter, SiGraphql, SiDocker, SiJenkins, SiHeroku, SiShopify,SiBootstrap, SiMui, SiRedis, SiDigitalocean, SiAmazonwebservices, SiFirebase, SiTailwindcss, SiNgrok, SiDart } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 
 export const Skills = [
   {
     category: "Languages",
     skills: [
+      {
+        slug: "ruby",
+        Component: DiRuby,
+        title: "Ruby",
+        Description: () => <>Backend development with Ruby on Rails</>,
+      },
+      {
+        slug: "python",
+        Component: DiPython,
+        title: "Python",
+        Description: () => <>Scripting and automation tasks</>,
+      },
+      {
+        slug: 'dart',
+        Component: SiDart,
+        title: "Dart",
+        Description: () => <>Programming language for Flutter development</>,
+      },
       {
         slug: "javascript",
         Component: DiJavascript1,
@@ -18,17 +36,23 @@ export const Skills = [
         title: "TypeScript",
         Description: () => <>Strongly typed JavaScript for scalable applications</>,
       },
-      {
-        slug: "ruby",
-        Component: DiRuby,
-        title: "Ruby",
-        Description: () => <>Backend development with Ruby on Rails</>,
-      },
     ],
   },
   {
     category: "Frameworks & Libraries",
     skills: [
+      {
+        slug: "rails",
+        Component: DiRuby,
+        title: "Rails",
+        Description: () => <>Web application framework for Ruby</>,
+      },
+      {
+        slug: 'django',
+        Component: DiDjango,
+        title: "Django",
+        Description: () => <>Web framework for Python</>,
+      },
       {
         slug: "react",
         Component: RiReactjsLine,
@@ -40,12 +64,6 @@ export const Skills = [
         Component: SiFlutter,
         title: "Flutter",
         Description: () => <>Cross-platform app development</>,
-      },
-      {
-        slug: "rails",
-        Component: DiRuby,
-        title: "Rails",
-        Description: () => <>Web application framework for Ruby</>,
       },
       {
         slug: "material-ui",
