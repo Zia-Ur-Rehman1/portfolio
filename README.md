@@ -34,7 +34,7 @@ Run this project with Yarn
 To deploy this project run
 
 ```bash
-  yarn build
+  yarn build && yarn deploy
 ```
 
   
