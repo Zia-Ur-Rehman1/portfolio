@@ -1,11 +1,19 @@
 export const ProjectsData = [
   {
+    title: 'EcoLink',
+    category: 'Insurance Communications',
+    description: 'EcoLink is a cloud communications platform integrating RingCentral with agency management systems like AMS360, enabling seamless call routing, SMS, voicemails, and compliance for insurance agencies.',
+    tags: ['Ruby on Rails', 'JavaScript', 'Turbo', 'ActionCable', 'PostgreSQL', 'Redis', 'RingCentral API', 'WebSockets', 'Multi-Tenancy', 'AWS ( EC2, S3 )'],
+    visit: 'https://ecolink.inteveo.com',
+    id: 0,
+  },
+  {
     title: 'Intellirent',
     category: 'Real Estate & Rental Marketing',
     description: 'Intellirent is a B2B paperless transactions software for residential leasing. Automated rental marketing and tenant screening software providing secure paperless transactions for residential leasing.',
     tags: ['Ruby', 'Rails', 'AWS', 'JavaScript (ES6)', 'Jira', 'Heroku','HAML', 'Atlassian', 'Stripe', 'PostgreSQL', 'Redis'],
     visit: 'https://myintellirent.com',
-    id: 0,
+    id: 1,
   },
   {
     title: 'PC - Product Options',
@@ -17,7 +25,7 @@ export const ProjectsData = [
       'DigitalOcean', 'Hetzner', 'Coolify', 'Sidekiq', 'GraphQL', 'Azure'
     ],
     visit: 'https://apps.shopify.com/product-customizer',
-    id: 1,
+    id: 2,
   },
   {
     title: 'Biomark',
@@ -28,20 +36,12 @@ export const ProjectsData = [
     id: 3,
   },
   {
-    title: 'EcoLink',
-    category: 'Insurance Communications',
-    description: 'EcoLink is a cloud communications platform integrating RingCentral with agency management systems like AMS360, enabling seamless call routing, SMS, voicemails, and compliance for insurance agencies.',
-    tags: ['Ruby on Rails', 'JavaScript', 'Turbo', 'ActionCable', 'PostgreSQL', 'Redis', 'RingCentral API', 'WebSockets'],
-    visit: 'https://ecolink.inteveo.com',
-    id: 4,
-  },
-  {
     title: 'AI Task Creator',
     category: 'Personal Project',
     description: 'An AI-powered application that converts natural language prompts into structured, customizable workflows. It intelligently interprets user intent, generates detailed step-by-step task lists, supports real-time editing, and streamlining productivity for individuals and teams.',
     tags: ['JavaScript', 'OpenAI GPT', 'Docker', 'Natural Language Processing', 'Prompt Engineering', 'Ruby on Rails'],
     visit: 'https://github.com/Zia-Ur-Rehman1/Create-Task-by-AI',
-    id: 5,
+    id: 4,
   },
 
   {
@@ -50,7 +50,7 @@ export const ProjectsData = [
   description: 'An AI-driven evolutionary algorithm implementation that mimics natural selection to solve optimization problems. It evolves a population of solutions via fitness evaluation, selection, crossover, and mutation—demonstrating core concepts in action.',
   tags: ['Python', 'Genetic Algorithm', 'Optimization', 'Evolutionary Computation', 'Fitness Function'],
   visit: 'https://github.com/Zia-Ur-Rehman1/Evolutionary_Algorithm',
-  id: 6,
+  id: 5,
 },
 
 {
@@ -59,7 +59,7 @@ export const ProjectsData = [
   tags: ['Django', 'Python', 'PostgreSQL', 'Docker', 'REST API', 'Tesseract OCR', 'PDF Parsing', 'CI/CD'],
   category: 'Ticket & Umrah Reservation',
   visit: 'https://github.com/Zia-Ur-Rehman1/Tickting_Umrah_Reserve_Portal',
-  id: 7,
+  id: 6,
 },
 {
   title: 'Namhal',
@@ -67,7 +67,7 @@ export const ProjectsData = [
   description: 'An Android application tailored for managing residency complaint workflows. Namhal enables administrators, managers, and staff to log, track, and resolve resident service requests, featuring real-time dashboards with actionable statistics for effective decision-making.',
   tags: ['Flutter (Dart)', 'Firebase', 'Android', 'Figma', 'Balsamiq', 'UX/UI Design'],
   visit: 'https://github.com/Zia-Ur-Rehman1/namhal',
-  id: 8
+  id: 7
 }
 
 
