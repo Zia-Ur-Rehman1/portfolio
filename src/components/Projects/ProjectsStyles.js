@@ -49,7 +49,7 @@ export const TitleContent = styled.div`
   text-align: center;
   z-index: 20;
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 1rem;
   margin-bottom: 0.7em;
   color: #9cc9e3;
   font-size: 1.8rem;
@@ -63,6 +63,19 @@ export const HeaderThree = styled.h3`
   margin: 0; /* Remove default margin */
   flex: 1; /* Allow the title to take up available space */
 `;
+
+export const Category = styled.div`
+  display: flex;
+  background-color: #334155; /* Dark gray background */
+  color: #f1f5f9; /* Light text color */
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin: auto; /* Space between title and category */
+`;
+
+
 
 export const Hr = styled.hr`
   width: 50px;
@@ -85,9 +98,9 @@ export const Intro = styled.div`
 export const CardInfo = styled.p`
   color: #e4e6e7; /* Light text color */
   font-size: 1.4rem;
-  line-height: 1.8;
+  line-height: 1.3;
   margin: 15px 0;
-  text-align: justify; /* Align text for readability */
+  text-align: left; /* Align text for readability */
   flex-grow: 1; /* Ensure the text takes up available space */
 `;
 

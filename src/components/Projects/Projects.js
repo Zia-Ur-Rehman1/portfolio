@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiOutlineLink } from 'react-icons/ai'; // Import the link icon
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img, TitleContainer } from './ProjectsStyles';
+import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree,Category, Hr, Tag, TagList, TitleContent, UtilityList, Img, TitleContainer } from './ProjectsStyles';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { ProjectsData } from '../../constants/constants';
 
@@ -18,6 +18,7 @@ const Projects = () => (
                 <AiOutlineLink size="1.5rem" />
               </ExternalLinks>
             </TitleContainer>
+            <Category>{p.category}</Category>
             <Hr />
             <CardInfo className="card-info">{p.description}</CardInfo>
             <div>
