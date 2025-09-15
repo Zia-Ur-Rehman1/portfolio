@@ -7,21 +7,22 @@ const Header = () => (
   <Container>
     <Div2>
       <li>
-        <Link href="/#projects" legacyBehavior>
+        <Link href="#projects" scroll={false}>
           <NavLink>Projects</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="/#skills" legacyBehavior>
+        <Link href="#skills" scroll={false}>
           <NavLink>Skills</NavLink>
         </Link>
       </li>
       <li>
-        <Link href="/#about" legacyBehavior>
+        <Link href="#about" scroll={false}>
           <NavLink>About</NavLink>
         </Link>
       </li>
     </Div2>
+
     <Div3>
       <SocialContainer>
         <SocialIcons href="https://github.com/Zia-Ur-Rehman1" target="_blank" rel="noopener noreferrer">

@@ -16,9 +16,9 @@ export const ProjectsData = [
     id: 1,
   },
   {
-    title: 'PC - Product Options',
+    title: 'PC - Product Customization',
     category: 'SaaS & E-Commerce',
-    description: 'PC enabling merchants to offer unlimited product options, including custom fields like engravings, color swatches, image uploads, and more, with interactive visuals and premium upcharges, boosting revenue and personalization.',
+    description: 'PC enabling merchants to offer unlimited product customization, including custom fields like engravings, color swatches, image uploads, and more, with interactive visuals and premium upcharges, boosting revenue and personalization.',
     tags: [
       'Rails', 'PostgreSQL', 'Ruby', 'React.js',
       'React Query', 'Polaris', 'Redis', 'JavaScript (ES6)', 'TypeScript',
@@ -36,14 +36,13 @@ export const ProjectsData = [
     id: 3,
   },
   {
-    title: 'AI Task Creator',
-    category: 'Personal Project',
-    description: 'An AI-powered application that converts natural language prompts into structured, customizable workflows. It intelligently interprets user intent, generates detailed step-by-step task lists, supports real-time editing, and streamlining productivity for individuals and teams.',
-    tags: ['JavaScript', 'OpenAI GPT', 'Docker', 'Natural Language Processing', 'Prompt Engineering', 'Ruby on Rails'],
-    visit: 'https://github.com/Zia-Ur-Rehman1/Create-Task-by-AI',
-    id: 4,
+      title: 'Local Serv',
+      category: 'AI Automation',
+      description: 'Local Serv is an AI-powered service marketplace that enables customers to seamlessly book and purchase local services such as car washing and home renovation through natural AI-driven conversations. Built with Databutton, it showcases rapid prototyping with generative AI—transforming service discovery into an intuitive, conversational experience.',
+      tags: ['Prompt Engineering', 'Generative AI', 'Databutton', 'OpenAI GPT', 'API Integrations', 'Rapid Prototyping', 'JavaScript', 'Python'],
+      visit: 'https://barhoumholdings.databutton.app/local-serv',
+      id: 4,
   },
-
   {
   title: 'Evolutionary Algorithm',
   category: 'Academic / AI Project',
@@ -51,26 +50,23 @@ export const ProjectsData = [
   tags: ['Python', 'Genetic Algorithm', 'Optimization', 'Evolutionary Computation', 'Fitness Function'],
   visit: 'https://github.com/Zia-Ur-Rehman1/Evolutionary_Algorithm',
   id: 5,
-},
-
-{
-  title: 'Tickting Umrah Reserve Portal',
-  description: 'A comprehensive web-based system for managing Umrah travel bookings. It enables users to handle ticket reservations, process service requests & payments. Uses AI-powered document parsing and a secure, live & transparent payment tracking system.',
-  tags: ['Django', 'Python', 'PostgreSQL', 'Docker', 'REST API', 'Tesseract OCR', 'PDF Parsing', 'CI/CD'],
-  category: 'Ticket & Umrah Reservation',
-  visit: 'https://github.com/Zia-Ur-Rehman1/Tickting_Umrah_Reserve_Portal',
-  id: 6,
-},
-{
-  title: 'Namhal',
-  category: 'CRM | Residency Complaint Management',
-  description: 'An Android application tailored for managing residency complaint workflows. Namhal enables administrators, managers, and staff to log, track, and resolve resident service requests, featuring real-time dashboards with actionable statistics for effective decision-making.',
-  tags: ['Flutter (Dart)', 'Firebase', 'Android', 'Figma', 'Balsamiq', 'UX/UI Design'],
-  visit: 'https://github.com/Zia-Ur-Rehman1/namhal',
-  id: 7
-}
-
-
+  },
+  {
+    title: 'Tickting Umrah Reserve Portal',
+    description: 'A comprehensive web-based system for managing Umrah travel bookings. It enables users to handle ticket reservations, process service requests & payments. Uses AI-powered document parsing and a secure, live & transparent payment tracking system.',
+    tags: ['Django', 'Python', 'PostgreSQL', 'Docker', 'REST API', 'Tesseract OCR', 'PDF Parsing', 'CI/CD'],
+    category: 'Ticket & Umrah Reservation',
+    visit: 'https://github.com/Zia-Ur-Rehman1/Tickting_Umrah_Reserve_Portal',
+    id: 6,
+  },
+  {
+    title: 'Namhal',
+    category: 'CRM | Residency Complaint Management',
+    description: 'An Android application tailored for managing residency complaint workflows. Namhal enables administrators, managers, and staff to log, track, and resolve resident service requests, featuring real-time dashboards with actionable statistics for effective decision-making.',
+    tags: ['Flutter (Dart)', 'Firebase', 'Android', 'Figma', 'Balsamiq', 'UX/UI Design'],
+    visit: 'https://github.com/Zia-Ur-Rehman1/namhal',
+    id: 7
+  }
 ];
 
 export const AccomplishmentsData = [
