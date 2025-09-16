@@ -4,7 +4,7 @@
   "homepage": "https://Zia-Ur-Rehman1.github.io/portfolio",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "NODE_ENV=production next build",
     "start": "next start",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d out"
