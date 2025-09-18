@@ -9,8 +9,10 @@ export const Section = styled.section`
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  align-items: ${(props) => (props.align ? props.align : "")};
 
   @media ${(props) => props.theme.breakpoints.md} {
+    display: flex;
     padding: 24px 48px 0;
     flex-direction: column;
   }

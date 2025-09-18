@@ -129,6 +129,8 @@ export const LinkList = styled.ul`
 		gap: 16px;
 	}
 	@media ${props => props.theme.breakpoints.sm} {
+		display: grid;
+		grid-template-columns: 1fr;
 		width: 100%;
 		padding: 32px 4px 16px;
 		gap: 5px;

@@ -2,23 +2,36 @@
 import styled from 'styled-components';
 
 // In StatsStyles.js or wherever <Section> is defined
-export const StatonBG = styled.div`
+export const StatDiv = styled.div `
+  grid-row: 1;
+  grid-column: 2;
+  z-index: 2;
+  @media ${(props) => props.theme.breakpoints.md} {
+  display: grid;
+  }
 
-    display: block;
-    position: absolute;
-    top: 100px;
-    right: 15px;
-`;
+`
 export const StatsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 150px;
   margin-top: 32px;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
+  @media ${(props) => props.theme.breakpoints.lg} {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 2fr 2fr;
+    gap: 150px;  
+  }
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
 `;
 
 export const StatCard = styled.div`
@@ -28,7 +41,9 @@ export const StatCard = styled.div`
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease;
-
+  @media ${(props) => props.theme.breakpoints.md} {
+  width: 190px
+  }
   &:hover {
     transform: translateY(-4px);
   }

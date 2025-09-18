@@ -1,11 +1,11 @@
 // Stats.js
 import React from 'react';
 import { Section } from '../../styles/GlobalComponents';
-import { StatsContainer, StatCard, StatValue, StatLabel, StatIconWrapper, StatonBG } from './StatsStyles';
+import { StatsContainer, StatCard, StatValue, StatLabel, StatIconWrapper, StatDiv } from './StatsStyles';
 import { statistics } from '../../constants/constants';
 
 const Stats = () => (
-  <StatonBG>
+    <StatDiv>
   <Section id="stats">
     <StatsContainer>
       {statistics.map((stat) => (
@@ -18,8 +18,9 @@ const Stats = () => (
         </StatCard>
       ))}
     </StatsContainer>
+
   </Section>
-  </StatonBG>
+</StatDiv>
 );
 
 export default Stats;
