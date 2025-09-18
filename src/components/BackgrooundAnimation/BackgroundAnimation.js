@@ -1,4 +1,6 @@
 import React from 'react';
+import Stats from '../Stats/Stats'
+
 
 const BackgroundAnimation = () => (
   <div>
@@ -359,7 +361,9 @@ const BackgroundAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
+    <Stats/>
   </div>
+  
 );
 
 export default BackgroundAnimation;

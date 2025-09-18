@@ -1,3 +1,5 @@
+import { FaCalendar, FaUsers, FaClock } from 'react-icons/fa';
+import { FiTarget } from "react-icons/fi";
 export const ProjectsData = [
   {
     title: 'EcoLink',
@@ -36,12 +38,12 @@ export const ProjectsData = [
     id: 3,
   },
   {
-      title: 'Local Serv',
-      category: 'AI Automation',
-      description: 'Local Serv is an AI-powered service marketplace that enables customers to seamlessly book and purchase local services such as car washing and home renovation through natural AI-driven conversations. Built with Databutton, it showcases rapid prototyping with generative AI—transforming service discovery into an intuitive, conversational experience.',
-      tags: ['Prompt Engineering', 'Generative AI', 'Databutton', 'OpenAI GPT', 'API Integrations', 'Rapid Prototyping', 'JavaScript', 'Python'],
-      visit: 'https://barhoumholdings.databutton.app/local-serv',
-      id: 4,
+    title: 'Local Serv',
+    category: 'AI Automation',
+    description: 'Local Serv is an AI-powered service marketplace that enables customers to seamlessly book and purchase local services such as car washing and home renovation through natural AI-driven conversations. Built with Databutton, it showcases rapid prototyping with generative AI—transforming service discovery into an intuitive, conversational experience.',
+    tags: ['Prompt Engineering', 'Generative AI', 'Databutton', 'OpenAI GPT', 'API Integrations', 'Rapid Prototyping', 'JavaScript', 'Python'],
+    visit: 'https://barhoumholdings.databutton.app/local-serv',
+    id: 4,
   },
   {
   title: 'Evolutionary Algorithm',
@@ -90,6 +92,13 @@ export const AccomplishmentsData = [
     role: 'Software Engineer',
     duration: 'June 2021 – June 2022',
   }
+];
+
+export const statistics = [
+  { id: 1, value: "4+", label: "Years Experience", icon: <FaCalendar /> },
+  { id: 2, value: "15+", label: "Projects Delivered", icon: <FiTarget /> },
+  { id: 3, value: "4+", label: "Companies Worked", icon: <FaUsers /> },
+  { id: 4, value: "24/7", label: "Support Available", icon: <FaClock/>},
 ];
 
 export const TimeLineData = [

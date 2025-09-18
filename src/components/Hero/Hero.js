@@ -1,7 +1,8 @@
 import React from 'react';
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
 import { LeftSection, StyledButtonLink } from './HeroStyles';
-
+import { StatsContainer, StatCard, StatLabel, StatValue } from '../Stats/StatsStyles';
+import { statistics } from '../../constants/constants';
 const Hero = (props) => {
   return (
     <>
@@ -11,10 +12,10 @@ const Hero = (props) => {
             Zia Ur Rehman
           </SectionTitle>
           <SectionText>
-            Software Developer with 4+ years of experience building scalable web applications in real estate, healthcare, and e-commerce industries. Expertise in RESTful/GraphQL API design, MVC architecture, relational database optimization (PostgreSQL, MySQL), and Agile workflows. Proven track record in refactoring legacy systems, performance tuning, and implementing serverless solutions (AWS Lambda). Enhanced system efficiency by 33% through query optimization and metaprogramming, while driving team productivity by 70% via CI/CD pipelines and automated workflows.
+            Software Developer with 4+ years of experience delivering high-performance web applications across real estate, healthcare, e-commerce, and call-center industries. Proficient in Ruby on Rails, React, and Django, with expertise in RESTful/GraphQL API design, MVC architecture, and both relational (PostgreSQL, MySQL) and non-relational (Firebase, Redis) databases. Skilled in building real-time communication systems with ActionCable, WebSockets, and Hotwire, and developing HIPAA-compliant healthcare solutions with HL7 APIs. Adept at modernizing legacy platforms, optimizing system performance, and designing scalable architectures that support seamless integrations and long-term growth.
           </SectionText>
           <StyledButtonLink
-            href={`${process.env.NEXT_PUBLIC_BASE_PATH}/files/resume_latest.pdf`}
+            href="/files/Zia_Rehman_Full_Stack_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
