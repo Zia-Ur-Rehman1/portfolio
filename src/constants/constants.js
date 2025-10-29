@@ -1,4 +1,4 @@
-import { FaCalendar, FaUsers, FaClock } from 'react-icons/fa';
+import { FaCalendar, FaUsers, FaClock, FaCogs, FaServer } from 'react-icons/fa';
 import { FiTarget } from "react-icons/fi";
 export const ProjectsData = [
   {
@@ -97,8 +97,10 @@ export const AccomplishmentsData = [
 export const statistics = [
   { id: 1, value: "4+", label: "Years Experience", icon: <FaCalendar /> },
   { id: 2, value: "15+", label: "Projects Delivered", icon: <FiTarget /> },
-  { id: 3, value: "4+", label: "Companies Worked", icon: <FaUsers /> },
-  { id: 4, value: "24/7", label: "Support Available", icon: <FaClock/>},
+  { id: 3, value: "4+", label: "Live Products", icon: <FaUsers /> },
+  { id: 4, value: "150+", label: "Features Integrated", icon: <FaCogs /> },
+  { id: 5, value: "3+", label: "Production Experience", icon: <FaServer /> },
+  { id: 6, value: "24/7", label: "Support Available", icon: <FaClock /> },
 ];
 
 export const TimeLineData = [
@@ -110,4 +112,57 @@ export const TimeLineData = [
   { year: 2021, text: 'Survived COVID-19 and got my first Job at Primebook.', },
   { year: 2022, text: 'Completed B.Tech in Information Technology.', },
   { year: 2023, text: 'Year under progress....', },
+];
+
+export const AchievementsData = [
+  {
+    role: 'Full-Stack Engineer',
+    company: 'Ecolink – Communication Platform for Insurance Agencies',
+    location: 'California – Remote',
+    duration: 'Dec 2024 – Present',
+    achievements: [
+      'Built multi-tenant real-time communication workflows using ActionCable, WebSockets, and Turbo Streams for live call routing, chat, SMS, and compliance logging.',
+      'Developed scalable Rails architecture supporting integrations with RingCentral and AMS360.',
+      'Delivered responsive UI/UX using the Bootstrap framework, improving engagement by 50%.',
+      'Integrated Slack bot to automate bi-weekly user reports (PDF/CSV), reducing manual effort by 80%.',
+      'Extended session duration from day to week and re-engineered the subscription reset and refresh flow to ensure long-term integration stability',
+      'Collaborated cross-functionally in Agile sprints with design, product, and QA teams.',
+    ],
+  },
+  {
+    role: 'Full-Stack Engineer',
+    company: 'Intellirent – Real Estate & Rental Marketing',
+    location: 'Texas – Remote',
+    duration: 'Jan 2023 – Dec 2024',
+    achievements: [
+      'Refactored legacy Rails architecture using DRY principles, delivering a 33% performance gain.',
+      'Automated applicant screening via REST API integrations (Stripe, Experian), reducing manual work by 30%.',
+      'Optimized relational schemas with ActiveRecord, improving memory use by 23%.',
+      'Accelerated debugging by 50% using structured logging and monitoring (Papertrail, Airbrake).',
+      'Enhanced test coverage with RSpec for critical modules, reducing production bugs.'
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    company: 'Biomark – Healthcare Connectivity Platform',
+    location: 'Singapore – Remote',
+    duration: 'June 2022 – Jan 2023',
+    achievements: [
+      'Reduced codebase size by 12% using hash-based metaprogramming, achieving O(1) complexity in key workflows.',
+      'Developed HIPAA-compliant pipelines using HL7 APIs, reducing manual data processing by 47%.',
+      'Automated onboarding workflows and modularized healthcare microservices, improving productivity by 70%.'
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    company: 'SaaS LTV Growth – E-commerce Revenue Optimization',
+    location: 'Wilmington – Remote',
+    duration: 'June 2021 – June 2022',
+    achievements: [
+      'Migrated REST endpoints to Shopify GraphQL API and implemented CI/CD via GitHub Actions, reducing server load by 36%.',
+      'Optimized Redis batch processing queues, resolving N+1 queries and improving efficiency by 43%.',
+      'Delivered product customization features (engraving, swatches, uploads), increasing customer engagement by 37%.',
+      'Reduced LCP by 72% using Redis caching and database indexing optimizations.'
+    ],
+  },
 ];

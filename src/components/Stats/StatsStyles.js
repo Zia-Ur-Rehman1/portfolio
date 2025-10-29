@@ -14,7 +14,7 @@ export const StatDiv = styled.div `
 export const StatsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 150px;
+  gap: 50px;
   margin-top: 32px;
 
   @media ${(props) => props.theme.breakpoints.lg} {
@@ -41,6 +41,7 @@ export const StatCard = styled.div`
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease;
+  width: 85%;
   @media ${(props) => props.theme.breakpoints.md} {
   width: 190px
   }

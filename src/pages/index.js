@@ -7,6 +7,7 @@ import Technologies from '../components/Technologies/Technologies';
 import { Layout } from '../layout/Layout';
 import {BgAnimationContainer} from '../components/BackgrooundAnimation/BackgroundAnimationStyles'
 import { Section } from '../styles/GlobalComponents';
+import Achievements from '../components/Achievements/Achievements';
 const Home = () => {
   return (
     <Layout>
@@ -15,6 +16,7 @@ const Home = () => {
         <BgAnimation />
       <Stats/>
       </Section>
+      <Achievements />
       <Projects />
       <Technologies />
       <Acomplishments />
