@@ -21,7 +21,7 @@ const Projects = () => (
             <Category>{p.category}</Category>
             <Hr />
             <CardInfo className="card-info">{p.description}</CardInfo>
-            <div>
+            {/* <div>
               <TitleContent>Tech Stack</TitleContent>
               <Hr />
               <TagList>
@@ -29,7 +29,7 @@ const Projects = () => (
                   return <Tag key={i}>{t}</Tag>;
                 })}
               </TagList>
-            </div>
+            </div> */}
           </BlogCard>
         );
       })}

@@ -45,30 +45,30 @@ export const ProjectsData = [
     visit: 'https://barhoumholdings.databutton.app/local-serv',
     id: 4,
   },
-  {
-  title: 'Evolutionary Algorithm',
-  category: 'Academic / AI Project',
-  description: 'An AI-driven evolutionary algorithm implementation that mimics natural selection to solve optimization problems. It evolves a population of solutions via fitness evaluation, selection, crossover, and mutation—demonstrating core concepts in action.',
-  tags: ['Python', 'Genetic Algorithm', 'Optimization', 'Evolutionary Computation', 'Fitness Function'],
-  visit: 'https://github.com/Zia-Ur-Rehman1/Evolutionary_Algorithm',
-  id: 5,
-  },
-  {
-    title: 'Tickting Umrah Reserve Portal',
-    description: 'A comprehensive web-based system for managing Umrah travel bookings. It enables users to handle ticket reservations, process service requests & payments. Uses AI-powered document parsing and a secure, live & transparent payment tracking system.',
-    tags: ['Django', 'Python', 'PostgreSQL', 'Docker', 'REST API', 'Tesseract OCR', 'PDF Parsing', 'CI/CD'],
-    category: 'Ticket & Umrah Reservation',
-    visit: 'https://github.com/Zia-Ur-Rehman1/Tickting_Umrah_Reserve_Portal',
-    id: 6,
-  },
-  {
-    title: 'Namhal',
-    category: 'CRM | Residency Complaint Management',
-    description: 'An Android application tailored for managing residency complaint workflows. Namhal enables administrators, managers, and staff to log, track, and resolve resident service requests, featuring real-time dashboards with actionable statistics for effective decision-making.',
-    tags: ['Flutter (Dart)', 'Firebase', 'Android', 'Figma', 'Balsamiq', 'UX/UI Design'],
-    visit: 'https://github.com/Zia-Ur-Rehman1/namhal',
-    id: 7
-  }
+  // {
+  // title: 'Evolutionary Algorithm',
+  // category: 'Academic / AI Project',
+  // description: 'An AI-driven evolutionary algorithm implementation that mimics natural selection to solve optimization problems. It evolves a population of solutions via fitness evaluation, selection, crossover, and mutation—demonstrating core concepts in action.',
+  // tags: ['Python', 'Genetic Algorithm', 'Optimization', 'Evolutionary Computation', 'Fitness Function'],
+  // visit: 'https://github.com/Zia-Ur-Rehman1/Evolutionary_Algorithm',
+  // id: 5,
+  // },
+  // {
+  //   title: 'Tickting Umrah Reserve Portal',
+  //   description: 'A comprehensive web-based system for managing Umrah travel bookings. It enables users to handle ticket reservations, process service requests & payments. Uses AI-powered document parsing and a secure, live & transparent payment tracking system.',
+  //   tags: ['Django', 'Python', 'PostgreSQL', 'Docker', 'REST API', 'Tesseract OCR', 'PDF Parsing', 'CI/CD'],
+  //   category: 'Ticket & Umrah Reservation',
+  //   visit: 'https://github.com/Zia-Ur-Rehman1/Tickting_Umrah_Reserve_Portal',
+  //   id: 6,
+  // },
+  // {
+  //   title: 'Namhal',
+  //   category: 'CRM | Residency Complaint Management',
+  //   description: 'An Android application tailored for managing residency complaint workflows. Namhal enables administrators, managers, and staff to log, track, and resolve resident service requests, featuring real-time dashboards with actionable statistics for effective decision-making.',
+  //   tags: ['Flutter (Dart)', 'Firebase', 'Android', 'Figma', 'Balsamiq', 'UX/UI Design'],
+  //   visit: 'https://github.com/Zia-Ur-Rehman1/namhal',
+  //   id: 7
+  // }
 ];
 
 export const AccomplishmentsData = [

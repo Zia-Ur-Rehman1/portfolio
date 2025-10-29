@@ -21,9 +21,9 @@ const Technologies = () => (
               </picture>
               <ListContainer>
                 <ListTitle>{skill.title}</ListTitle>
-                <ListParagraph>
-                  <skill.Description />
-                </ListParagraph>
+                  {/* <ListParagraph>
+                    <skill.Description />
+                  </ListParagraph> */}
               </ListContainer>
             </ListItem>
           ))}
