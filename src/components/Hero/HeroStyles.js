@@ -1,7 +1,20 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeInUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const LeftSection = styled.div`
   width: 100%;
+  animation: ${fadeInUp} 1s ease-out;
+
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 80%;
     display: flex;
@@ -17,6 +30,20 @@ export const LeftSection = styled.div`
     margin: 0 auto;
   }
 `;
+
+export const GradientText = styled.span`
+  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  
+  /* Optional: Add a subtle second gradient or keep it clean white-to-transparent which looks premium on dark */
+  /* OR a color gradient if preferred: */
+   background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+`;
+
 
 export const StyledButtonLink = styled.a`
   display: flex;

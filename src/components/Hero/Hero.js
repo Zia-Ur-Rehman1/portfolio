@@ -1,6 +1,6 @@
 import React from 'react';
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { LeftSection, StyledButtonLink } from './HeroStyles';
+import { GradientText, LeftSection, StyledButtonLink } from './HeroStyles';
 import { StatsContainer, StatCard, StatLabel, StatValue } from '../Stats/StatsStyles';
 import { statistics } from '../../constants/constants';
 const Hero = (props) => {
@@ -9,7 +9,7 @@ const Hero = (props) => {
       <Section row nopadding>
         <LeftSection>
           <SectionTitle main center>
-            Zia Ur Rehman
+            <GradientText>Zia Ur Rehman</GradientText>
           </SectionTitle>
           <SectionText>
             FullStack Software Developer with 4+ years of experience delivering high-performance web applications across real estate, healthcare, e-commerce, and call-center industries. Proficient in Ruby on Rails, React, and Django, with expertise in RESTful/GraphQL API design, MVC architecture, and both relational (PostgreSQL, MySQL) and non-relational (Firebase, Redis) databases.
