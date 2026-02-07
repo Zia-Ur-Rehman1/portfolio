@@ -12,10 +12,10 @@ const Hero = (props) => {
             <GradientText>Zia Ur Rehman</GradientText>
           </SectionTitle>
           <SectionText>
-            FullStack Software Developer with 4+ years of experience delivering high-performance web applications across real estate, healthcare, e-commerce, and call-center industries. Proficient in Ruby on Rails, React, and Django, with expertise in RESTful/GraphQL API design, MVC architecture, and both relational (PostgreSQL, MySQL) and non-relational (Firebase, Redis) databases.
+            Full‑Stack Software Engineer (Rails + React) with 4+ years building and scaling production systems in real estate, healthcare, e‑commerce, and communications. I focus on Ruby on Rails, React, and modern cloud tooling to ship reliable, maintainable products.
           </SectionText>
           <SectionText>
-            Skilled in building real-time communication systems with ActionCable, WebSockets, and Hotwire/Stimulus, and integrating HIPAA-compliant healthcare solutions with HL7 APIs. Adept at modernizing legacy platforms, optimizing system performance, and designing scalable architectures that support seamless integrations and long-term growth.
+            Strong in performance work, real‑time features (ActionCable, Turbo, WebSockets), and complex integrations (HL7/healthcare, Experian, RingCentral, AMS360, EPIC, Shopify). Recently, I’ve been adding AI/MCP‑driven automation on top of existing systems.
           </SectionText>
           <StyledButtonLink
             href="files/Zia_Rehman_Full_Stack_Developer.pdf"

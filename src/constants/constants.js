@@ -4,7 +4,7 @@ export const ProjectsData = [
   {
     title: 'EcoLink',
     category: 'Insurance Communications',
-    description: 'EcoLink is a cloud communications platform integrating RingCentral with agency management systems like AMS360, enabling seamless call routing, SMS, voicemails, and compliance for insurance agencies.',
+    description: 'Cloud communications platform for insurance agencies that connects RingCentral with AMS360 and EPIC to unify calls, SMS, voicemail, and compliance logging.' ,
     tags: ['Ruby on Rails', 'JavaScript', 'Slim', 'Turbo', 'ActionCable', 'PostgreSQL', 'Sidekiq', 'Redis', 'RingCentral', 'AMS360', 'Epic', 'Infobip', '8x8', 'Slack', 'WebSockets', 'Multi-Tenancy', 'AWS ( EC2, S3 )'],
     visit: 'https://ecolink.inteveo.com',
     id: 0,
@@ -12,7 +12,7 @@ export const ProjectsData = [
   {
     title: 'Intellirent',
     category: 'Real Estate & Rental Marketing',
-    description: 'Intellirent is a B2B paperless transactions software for residential leasing. Automated rental marketing and tenant screening software providing secure paperless transactions for residential leasing.',
+    description: 'Paperless rental marketing and tenant screening platform used by residential leasing teams to collect applications, documents, and Experian-backed reports in one place.',
     tags: ['Ruby', 'Rails', 'React', 'AWS (S3, EventBridge, Lambda)', 'JavaScript', 'Jira', 'Heroku','HAML','HTML/CSS (Bootstrap)', 'Atlassian', 'Stripe', 'PostgreSQL', 'Redis', 'PDF Prawn/Wicked', 'Experian', 'Hubspot'],
     visit: 'https://myintellirent.com',
     id: 1,
@@ -20,7 +20,7 @@ export const ProjectsData = [
   {
     title: 'PC - Product Customization',
     category: 'SaaS & E-Commerce',
-    description: 'PC enabling merchants to offer unlimited product customization, including custom fields like engravings, color swatches, image uploads, and more, with interactive visuals and premium upcharges, boosting revenue and personalization.',
+    description: 'Shopify app that lets merchants offer deep product customization (engraving, swatches, image uploads, pricing rules) with interactive visuals, boosting AOV and personalization.',
     tags: [
       'Rails', 'PostgreSQL', 'Ruby', 'React', 'Shopify',
       'Remix', 'Polaris', 'Redis', 'JavaScript (ES6)', 'TypeScript',
@@ -32,7 +32,7 @@ export const ProjectsData = [
   {
     title: 'Biomark',
     category: 'HealthCare',
-    description: 'BioMark is a platform that helps patients, doctors, and labs stay connected and updated with secure data transmission between them.',
+    description: 'Healthcare connectivity platform that keeps patients, doctors, and labs in sync through secure, HL7-powered data pipelines and dashboards.',
     tags: ['Rails', 'Ruby', 'Docker', 'PostMan', 'Ngrok', 'Jenkins', 'JavaScript (ES6)', 'PostgreSQL', 'Sidekiq', 'HL7'],
     visit: 'https://biomarking.com',
     id: 3,
@@ -40,7 +40,7 @@ export const ProjectsData = [
   {
     title: 'Local Serv',
     category: 'AI Automation',
-    description: 'Local Serv is an AI-powered service marketplace that enables customers to seamlessly book and purchase local services such as car washing and home renovation through natural AI-driven conversations. Built with Databutton, it showcases rapid prototyping with generative AI—transforming service discovery into an intuitive, conversational experience.',
+    description: 'AI-powered service marketplace built with Databutton that lets customers book local services (car wash, home renovation, etc.) via conversational AI flows.',
     tags: ['Prompt Engineering', 'Generative AI', 'Databutton', 'OpenAI GPT', 'API Integrations', 'Rapid Prototyping', 'JavaScript', 'Python', 'Figma'],
     visit: 'https://barhoumholdings.databutton.app/local-serv',
     id: 4,
@@ -94,13 +94,19 @@ export const AccomplishmentsData = [
   }
 ];
 
+// export const statistics = [
+//   { id: 1, value: "4+", label: "Years Experience", icon: <FaCalendar /> },
+//   { id: 2, value: "15+", label: "Projects Delivered", icon: <FiTarget /> },
+//   { id: 3, value: "4+", label: "Live Products", icon: <FaUsers /> },
+//   { id: 4, value: "150+", label: "Features Integrated", icon: <FaCogs /> },
+//   { id: 5, value: "3+", label: "Production Experience", icon: <FaServer /> },
+//   { id: 6, value: "24/7", label: "Support Available", icon: <FaClock /> },
+// ];
 export const statistics = [
-  { id: 1, value: "4+", label: "Years Experience", icon: <FaCalendar /> },
-  { id: 2, value: "15+", label: "Projects Delivered", icon: <FiTarget /> },
-  { id: 3, value: "4+", label: "Live Products", icon: <FaUsers /> },
-  { id: 4, value: "150+", label: "Features Integrated", icon: <FaCogs /> },
-  { id: 5, value: "3+", label: "Production Experience", icon: <FaServer /> },
-  { id: 6, value: "24/7", label: "Support Available", icon: <FaClock /> },
+  { id: 1, value: "4+", label: "Years of Full‑Stack Experience", icon: <FaCalendar /> },
+  { id: 2, value: "15+", label: "Projects Shipped", icon: <FiTarget /> },
+  { id: 3, value: "4", label: "Long‑Running Products", icon: <FaUsers /> },
+  { id: 4, value: "30–70%", label: "Performance Improvements", icon: <FaCogs /> },
 ];
 
 export const TimeLineData = [
@@ -121,10 +127,9 @@ export const AchievementsData = [
     location: 'California – Remote',
     duration: 'Dec 2024 – Present',
     achievements: [
-      'Architected multi-tenant real-time workflows using ActionCable and Turbo Streams for live call routing and compliance logging.',
-      'Integrated and enhanced complex CRM ecosystems including RingCentral, AMS360, and Applied EPIC.',
-      'Automated bi-weekly user reporting via a custom Slack bot (PDF/CSV), reducing manual data compilation by 80%.',
-      'Adopted a TDD approach with Stimulus and Agile methodologies to ensure high-velocity, bug-free feature delivery.'
+      'Designed multi-tenant real-time call, SMS, and chat workflows using ActionCable, WebSockets, and Turbo Streams for insurance agencies.',
+      'Integrated RingCentral, AMS360, and Applied EPIC into a unified communication and compliance platform.',
+      'Built a Slack reporting bot (PDF/CSV) that automated bi-weekly usage reports and cut manual reporting effort by ~80%.',
     ],
   },
   {
@@ -133,10 +138,9 @@ export const AchievementsData = [
     location: 'Texas – Remote',
     duration: 'Jan 2023 – Dec 2024',
     achievements: [
-      'Revamped a 10-year-old legacy PDF system, achieving a 77% memory reduction and 63% faster execution, verified by Scout APM.',
-      'Built automated fraud/identity checks via Experian APIs, reducing manual verification time by 90%.',
-      'Redesigned React front-end with GraphQL integration, reducing API load by 40% and improving responsiveness by 55%.',
-      'Refactored legacy Rails architecture using DRY principles, delivering 33% performance gains and 20% lower server costs.'
+      'Revamped a 10-year legacy PDF system in Rails, reducing memory allocations by 77% and execution time by 63% (Scout APM).',
+      'Integrated Experian-based fraud and identity checks, reducing manual verification time by roughly 90%.',
+      'Redesigned the React + GraphQL front-end, cutting API load by ~40% and improving responsiveness by ~55%, while DRY refactors delivered ~33% performance gains and lower server costs.',
     ],
   },
   {
@@ -145,9 +149,9 @@ export const AchievementsData = [
     location: 'Singapore – Remote',
     duration: 'June 2022 – Jan 2023',
     achievements: [
-      'Developed HIPAA-compliant data pipelines using HL7 APIs, reducing manual data processing by 47%.',
-      'Designed modular healthcare microservices and automated onboarding, boosting developer efficiency by 30%.',
-      'Applied Rails best practices for separation of concerns to build a foundation for scalable, secure API architecture.'
+      'Developed HIPAA-aware data pipelines using HL7 APIs for secure data exchange between labs, doctors, and patients.',
+      'Designed modular microservice-style components and automated onboarding flows, boosting developer efficiency by ~30%.',
+      'Helped establish a scalable Rails API architecture with clear separation of concerns and security in mind.',
     ],
   },
   {
@@ -156,10 +160,9 @@ export const AchievementsData = [
     location: 'Wilmington – Remote',
     duration: 'June 2021 – June 2022',
     achievements: [
-      'Migrated REST endpoints to Shopify GraphQL API and implemented GitHub Actions CI/CD, reducing server load by 36%.',
-      'Optimized Redis batch processing to eliminate N+1 queries, improving overall resource utilization by 43%.',
-      'Reduced Largest Contentful Paint (LCP) by 72% through strategic Redis caching and database query optimization.',
-      'Developed subscription management workflows for merchant plan upgrades and usage tracking, stabilizing recurring revenue.'
+      'Migrated key REST endpoints to Shopify GraphQL and added GitHub Actions CI/CD, reducing server load by ~36% and speeding releases.',
+      'Optimized Redis-backed background jobs to eliminate N+1 queries, improving overall resource utilization by ~43%.',
+      'Improved storefront performance by reducing LCP by ~72% via Redis caching and backend query tuning, and built subscription workflows that stabilized recurring revenue.',
     ],
   },
 ];
@@ -185,17 +188,34 @@ export const CurrentFocusData = [
 
 export const TestimonialsData = [
   {
-    name: 'Rabbiya Noor',
-    role: 'Software Engineer | ROR | React',
-    image: 'https://media.licdn.com/dms/image/v2/D4D03AQF0tC9YyX-xrg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1718210350686?e=1743638400&v=beta&t=Zz2wW-g6gQ0wW-g6gQ0wW-g6gQ0wW-g6gQ0wW-g6gQ0', // Placeholder or use if user provided, sticking to text for now if no image provided, but user copied from LinkedIn so maybe I can find placeholders or just use initials
-    text: "I’ve had the chance to work with Zia, and it’s been an absolute pleasure. He is smart, reliable, and just genuinely great to work with. Whether it’s solving tough problems or helping teammates, Zia shows up with clarity, care, and a can-do attitude. It’s rare to find someone who’s both technically sharp and such a positive team presence. I’d happily work with him again—and any team would be lucky to have him on board. Highly recommended",
+    name: 'Azan Arif',
+    role: 'Mob / Web / Application Development · AWS',
+    text: 'I managed Zia Ur Rehman and worked closely with him on real production features. He’s a reliable full-stack developer who consistently delivers solid work using Ruby on Rails and React. Zia handled backend logic, frontend updates, and deployments with minimal supervision and a strong sense of ownership. He communicates clearly, works well in a remote setup, and can be trusted to get things done. I’d happily work with him again :)',
     id: 0,
   },
   {
-    name: 'Abdul Wahab',
-    role: 'Programme Officer | QA Engineer',
-    text: "Zia was a QA's dream at Intellirent. His clean Ruby on Rails code simplified test automation, while his robust RESTful APIs reduced edge cases by 40%. By modernizing legacy systems, he cut crashes by 33% and fixed N+1 queries that tripled our performance testing efficiency. His quality-first approach - anticipating failure points and thorough documentation - elevated our entire testing process. I recommend Zia for any role requiring a strong technical and quality-first mindset.",
+    name: 'Salman Saeed',
+    role: 'Ruby on Rails · Hotwire · Django · React · AWS (Co‑founder cto.sa)',
+    text: 'I had the pleasure of working with Zia and can confidently say he is one of the most reliable and supportive engineers on a team. He is the kind of person who never hesitates to step in and help others, whether it’s solving a complex technical issue or unblocking a teammate under pressure. Zia takes full ownership of his work and handles challenges with a calm, problem-solving mindset. No matter how difficult the task, he approaches it with responsibility and determination, always focusing on delivering high-quality results. His technical skills in Ruby on Rails and full-stack development are strong, but what truly sets him apart is his attitude. He is collaborative, proactive, and genuinely invested in the success of the team and the product. Any team would benefit from having Zia onboard. He is not just a skilled engineer, but also a dependable team player you can trust with critical work.',
     id: 1,
+  },
+  {
+    name: 'Rabbiya Noor',
+    role: 'Software Engineer | ROR | React',
+    text: 'I’ve had the chance to work with Zia, and it’s been an absolute pleasure. He is smart, reliable, and just genuinely great to work with. Whether it’s solving tough problems or helping teammates, Zia shows up with clarity, care, and a can-do attitude. It’s rare to find someone who’s both technically sharp and such a positive team presence. I’d happily work with him again—and any team would be lucky to have him on board. Highly recommended',
+    id: 2,
+  },
+  {
+    name: 'Abdul Wahab',
+    role: 'Programme Officer · QA / UAT / Business Analysis',
+    text: "Zia was a QA's dream at Intellirent. His clean Ruby on Rails code simplified test automation, while his robust RESTful APIs reduced edge cases by 40%. By modernizing legacy systems, he cut crashes by 33% and fixed N+1 queries that tripled our performance testing efficiency. His quality-first approach - anticipating failure points and thorough documentation - elevated our entire testing process. I recommend Zia for any role requiring a strong technical and quality-first mindset. He would be an asset to any forward-thinking engineering team.",
+    id: 3,
+  },
+  {
+    name: 'Muhammad Ali Raza',
+    role: 'Software Engineer · Full Stack (Nuxt/Next/Node/Nest)',
+    text: 'I highly recommend Zia ur Rehman as an excellent developer and a true team player. He consistently delivers high-quality work, approaches problems with a strong technical mindset, and is always willing to support teammates. His collaborative attitude and dedication make him a valuable asset to any team. It’s a pleasure working with him.',
+    id: 4,
   },
   {
     name: 'Ali Raza Khan',

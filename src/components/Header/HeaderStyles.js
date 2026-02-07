@@ -34,12 +34,14 @@ export const Div2 = styled.div`
 export const Div3 = styled.div`
   grid-area: 1 / 4 / 2 / 6;
   display: flex;
-  justify-content: flex-end; /* Align social icons to the right */
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 4 / 2 / 6;
-    justify-content: center; /* Center social icons on smaller screens */
+    grid-area: 1 / 1 / 2 / 6;
+    align-items: center;
   }
 `;
 
@@ -106,6 +108,20 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   }
 `;
 
+
+export const Tagline = styled.p`
+  font-size: 12px;
+  color: #6ee7b7; /* greenish accent */
+  margin: 0 0 4px 0;
+  text-align: right;
+  max-width: 420px;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    text-align: center;
+    font-size: 11px;
+    max-width: 100%;
+  }
+`;
 
 // Social Icons 
 

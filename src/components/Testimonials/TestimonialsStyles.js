@@ -166,3 +166,51 @@ export const AuthorRole = styled.p`
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
 `;
+
+export const ReadMoreButton = styled.button`
+  background: transparent;
+  border: none;
+  color: #93c5fd;
+  font-size: 12px;
+  padding: 0;
+  margin-top: 8px;
+  cursor: pointer;
+  text-align: left;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const ModalOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+`;
+
+export const ModalContent = styled.div`
+  background: #111827;
+  border-radius: 16px;
+  max-width: 640px;
+  width: 90vw;
+  padding: 24px 24px 20px;
+  color: #e5e7eb;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+`;
+
+export const ModalClose = styled.button`
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 14px;
+  cursor: pointer;
+  float: right;
+
+  &:hover {
+    color: #f9fafb;
+  }
+`;

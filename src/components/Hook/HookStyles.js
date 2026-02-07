@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const HookBanner = styled.div`
   width: 100%;
-  max-width: 1100px;
+  max-width: 740px;
   padding: 1.0rem 2.4rem;
   border-radius: 26px;
   border: 1px solid rgba(148, 93, 214, 0.45);
