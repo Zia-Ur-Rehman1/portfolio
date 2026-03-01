@@ -197,6 +197,10 @@ export const CurrentFocusData = [
     hook: 'Deep-diving into Turbo Streams and Stimulus to build reactive, real-time interfaces that minimize JavaScript overhead and maximize performance.',
   },
   {
+    title: 'Vibe Coding + AI Execution',
+    hook: 'Using vibe coding to shape architecture and ship features faster, while delegating problem-solving and web scraping workflows to AI for rapid iteration.',
+  },
+  {
     title: 'Scalable System Architecture',
     hook: 'Optimizing Rails performance through service-oriented design, background processing strategies, and custom scaffolding to ensure long-term maintainability.',
   }
