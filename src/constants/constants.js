@@ -18,6 +18,22 @@ export const ProjectsData = [
     id: 1,
   },
   {
+    title: 'Mindrift (Tendem Data Collection)',
+    category: 'AI Data Operations',
+    description: 'Contributed to Tendem data collection by running web scraping/parsing workflows with Apify and delivering clean, structured datasets for AI tasks.',
+    tags: ['Apify', 'Web Scraping', 'Data Parsing', 'Data Validation', 'AI Data Collection', 'Quality Assurance'],
+    visit: 'https://toloka.ai/blog/introducing-tendem/',
+    id: 2,
+  },
+  {
+    title: 'Revelo (Behavioral Data Annotation)',
+    category: 'AI Model Quality',
+    description: 'Worked on Behavioral Data - Architecture & Strategy Annotation, evaluating strategy-level responses with structured rubrics to improve consistency and quality.',
+    tags: ['LLM Evaluation', 'Behavioral Data Annotation', 'Quality Rubrics', 'Prompt Quality', 'AI Training'],
+    visit: 'https://www.revelo.com/',
+    id: 3,
+  },
+  {
     title: 'PC - Product Customization',
     category: 'SaaS & E-Commerce',
     description: 'Shopify app that lets merchants offer deep product customization (engraving, swatches, image uploads, pricing rules) with interactive visuals, boosting AOV and personalization.',
@@ -27,7 +43,7 @@ export const ProjectsData = [
       'DigitalOcean', 'Hetzner', 'Coolify', 'Sidekiq', 'GraphQL', 'Azure', 'Tailwind CSS'
     ],
     visit: 'https://apps.shopify.com/product-customizer',
-    id: 2,
+    id: 4,
   },
   {
     title: 'Biomark',
@@ -35,7 +51,7 @@ export const ProjectsData = [
     description: 'Healthcare connectivity platform that keeps patients, doctors, and labs in sync through secure, HL7-powered data pipelines and dashboards.',
     tags: ['Rails', 'Ruby', 'Docker', 'PostMan', 'Ngrok', 'Jenkins', 'JavaScript (ES6)', 'PostgreSQL', 'Sidekiq', 'HL7'],
     visit: 'https://biomarking.com',
-    id: 3,
+    id: 5,
   },
   {
     title: 'Local Serv',
@@ -43,24 +59,8 @@ export const ProjectsData = [
     description: 'AI-powered service marketplace built with Databutton that lets customers book local services (car wash, home renovation, etc.) via conversational AI flows.',
     tags: ['Prompt Engineering', 'Generative AI', 'Databutton', 'OpenAI GPT', 'API Integrations', 'Rapid Prototyping', 'JavaScript', 'Python', 'Figma'],
     visit: 'https://barhoumholdings.databutton.app/local-serv',
-    id: 4,
-  },,
-  {
-    title: 'Mindrift (Tendem Data Collection)',
-    category: 'AI Data Operations',
-    description: 'Contributed to Tendem data collection by running web scraping/parsing workflows with Apify and delivering clean, structured datasets for AI tasks.',
-    tags: ['Apify', 'Web Scraping', 'Data Parsing', 'Data Validation', 'AI Data Collection', 'Quality Assurance'],
-    visit: 'https://toloka.ai/blog/introducing-tendem/',
-    id: 5,
-  },
-  {
-    title: 'Revelo (Behavioral Data Annotation)',
-    category: 'AI Model Quality',
-    description: 'Worked on Behavioral Data - Architecture & Strategy Annotation, evaluating strategy-level responses with structured rubrics to improve consistency and quality.',
-    tags: ['LLM Evaluation', 'Behavioral Data Annotation', 'Quality Rubrics', 'Prompt Quality', 'AI Training'],
-    visit: 'https://www.revelo.com/',
     id: 6,
-  }
+  },
   // {
   // title: 'Evolutionary Algorithm',
   // category: 'Academic / AI Project',
