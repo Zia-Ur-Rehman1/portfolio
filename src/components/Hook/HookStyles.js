@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 
 export const HookBanner = styled.div`
+  position: relative;
   width: 100%;
   max-width: 740px;
   padding: 1.0rem 2.4rem;
@@ -10,6 +11,18 @@ export const HookBanner = styled.div`
   background: radial-gradient(circle at top, rgba(13, 202, 240, 0.35), rgba(15, 23, 42, 0.6));
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(12px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+  }
 `;
 
 export const HookLabel = styled.span`
