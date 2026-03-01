@@ -8,8 +8,8 @@ const CurrentFocus = () => (
     <SectionDivider colorAlt />
     <SectionTitle>Currently Working On</SectionTitle>
     <FocusGrid>
-      {CurrentFocusData.map((item, index) => (
-        <FocusCard key={index}>
+      {CurrentFocusData.map((item) => (
+        <FocusCard key={item.title}>
           <FocusTitle>{item.title}</FocusTitle>
           <FocusHook>{item.hook}</FocusHook>
         </FocusCard>
