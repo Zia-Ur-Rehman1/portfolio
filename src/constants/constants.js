@@ -44,7 +44,23 @@ export const ProjectsData = [
     tags: ['Prompt Engineering', 'Generative AI', 'Databutton', 'OpenAI GPT', 'API Integrations', 'Rapid Prototyping', 'JavaScript', 'Python', 'Figma'],
     visit: 'https://barhoumholdings.databutton.app/local-serv',
     id: 4,
+  },,
+  {
+    title: 'Mindrift (Tendem Data Collection)',
+    category: 'AI Data Operations',
+    description: 'Contributed to Tendem data collection by running web scraping/parsing workflows with Apify and delivering clean, structured datasets for AI tasks.',
+    tags: ['Apify', 'Web Scraping', 'Data Parsing', 'Data Validation', 'AI Data Collection', 'Quality Assurance'],
+    visit: 'https://toloka.ai/blog/introducing-tendem/',
+    id: 5,
   },
+  {
+    title: 'Revelo (Behavioral Data Annotation)',
+    category: 'AI Model Quality',
+    description: 'Worked on Behavioral Data - Architecture & Strategy Annotation, evaluating strategy-level responses with structured rubrics to improve consistency and quality.',
+    tags: ['LLM Evaluation', 'Behavioral Data Annotation', 'Quality Rubrics', 'Prompt Quality', 'AI Training'],
+    visit: 'https://www.revelo.com/',
+    id: 6,
+  }
   // {
   // title: 'Evolutionary Algorithm',
   // category: 'Academic / AI Project',
