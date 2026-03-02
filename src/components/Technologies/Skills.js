@@ -4,18 +4,60 @@ import { RiReactjsLine } from "react-icons/ri";
 
 export const Skills = [
   {
+    category: "Top Skills",
+    skills: [
+      {
+        slug: "ruby-on-rails",
+        Component: DiRuby,
+        title: "Ruby on Rails",
+        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
+        Description: () => <>Primary backend framework for scalable products</>,
+      },
+      {
+        slug: "react-js",
+        Component: RiReactjsLine,
+        title: "React.js",
+        usedIn: ["Intellirent", "PC - Product Customization", "Portfolio"],
+        Description: () => <>Frontend for dynamic product interfaces</>,
+      },
+      {
+        slug: "postgresql-top",
+        Component: DiPostgresql,
+        title: "PostgreSQL",
+        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
+        Description: () => <>Core relational database across production apps</>,
+      },
+      {
+        slug: "redis-top",
+        Component: SiRedis,
+        title: "Redis",
+        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization"],
+        Description: () => <>Caching and background-job performance layer</>,
+      },
+      {
+        slug: "aws-top",
+        Component: SiAmazonwebservices,
+        title: "AWS",
+        usedIn: ["EcoLink", "Intellirent"],
+        Description: () => <>Cloud infra, storage and integrations</>,
+      },
+    ],
+  },
+  {
     category: "Languages",
     skills: [
       {
         slug: "ruby",
         Component: DiRuby,
         title: "Ruby",
+        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Backend development with Ruby on Rails</>,
       },
       {
         slug: "python",
         Component: DiPython,
         title: "Python",
+        usedIn: ["Local Serv", "Mindrift (Tendem Data Collection)"],
         Description: () => <>Scripting and automation tasks</>,
       },
       {
@@ -28,12 +70,14 @@ export const Skills = [
         slug: "javascript",
         Component: DiJavascript1,
         title: "JavaScript",
+        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark", "Local Serv"],
         Description: () => <>Proficient in ES6+ for web and app development</>,
       },
       {
         slug: "typescript",
         Component: SiTypescript,
         title: "TypeScript",
+        usedIn: ["PC - Product Customization", "Portfolio"],
         Description: () => <>Strongly typed JavaScript for scalable applications</>,
       },
     ],
@@ -45,6 +89,7 @@ export const Skills = [
         slug: "rails",
         Component: DiRuby,
         title: "Rails",
+        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Web application framework for Ruby</>,
       },
       {
@@ -57,6 +102,7 @@ export const Skills = [
         slug: "react",
         Component: RiReactjsLine,
         title: "React.js",
+        usedIn: ["Intellirent", "PC - Product Customization", "Portfolio"],
         Description: () => <>Frontend development for dynamic web apps</>,
       },
       {
@@ -92,6 +138,7 @@ export const Skills = [
         slug: "postgresql",
         Component: DiPostgresql,
         title: "PostgreSQL",
+        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Relational database management</>,
       },
       {
@@ -110,6 +157,7 @@ export const Skills = [
         slug: "redis",
         Component: SiRedis,
         title: "Redis",
+        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization"],
         Description: () => <>In-memory data structure store</>,
       },
     ],
@@ -121,6 +169,7 @@ export const Skills = [
         slug: "aws",
         Component: SiAmazonwebservices,
         title: "AWS",
+        usedIn: ["EcoLink", "Intellirent"],
         Description: () => <>Cloud services for hosting and deployment</>,
       },
       {
@@ -139,12 +188,14 @@ export const Skills = [
         slug: "docker",
         Component: SiDocker,
         title: "Docker",
+        usedIn: ["Biomark"],
         Description: () => <>Containerization for development and deployment</>,
       },
       {
         slug: "jenkins",
         Component: SiJenkins,
         title: "Jenkins",
+        usedIn: ["Biomark"],
         Description: () => <>CI/CD pipelines for automated deployments</>,
       },
     ],
@@ -156,12 +207,14 @@ export const Skills = [
         slug: "shopify",
         Component: SiShopify,
         title: "Shopify API",
+        usedIn: ["PC - Product Customization"],
         Description: () => <>E-commerce platform integration</>,
       },
       {
         slug: "graphql",
         Component: SiGraphql,
         title: "GraphQL",
+        usedIn: ["Intellirent", "PC - Product Customization"],
         Description: () => <>Efficient data querying and API integration</>,
       },
       {

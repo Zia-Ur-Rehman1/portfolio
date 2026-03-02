@@ -21,9 +21,13 @@ const Technologies = () => (
               </picture>
               <ListContainer>
                 <ListTitle>{skill.title}</ListTitle>
-                  {/* <ListParagraph>
+                {skill.usedIn?.length ? (
+                  <ListParagraph>Used in: {skill.usedIn.join(', ')}</ListParagraph>
+                ) : (
+                  <ListParagraph>
                     <skill.Description />
-                  </ListParagraph> */}
+                  </ListParagraph>
+                )}
               </ListContainer>
             </ListItem>
           ))}
