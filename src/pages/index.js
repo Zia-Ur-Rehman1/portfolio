@@ -17,8 +17,9 @@ const Home = () => {
   return (
     <Layout>
       <SEO 
-        title="Full Stack Software Engineer"
-        description="Expert in Ruby on Rails, React, and modern web technologies. View my portfolio involved in FinTech, HealthTech and E-commerce."
+        title="Ruby on Rails Developer in Pakistan"
+        description="Zia Ur Rehman is a Ruby on Rails and React full-stack engineer in Pakistan. Explore production projects in FinTech, HealthTech, e-commerce, APIs, and AI-enabled workflows."
+        path="/"
       />
       <Hook />
       <Section grid align="center">
