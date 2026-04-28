@@ -8,6 +8,8 @@ import {
   TextArea,
   SubmitButton,
   StatusMessage,
+  FallbackText,
+  FallbackLink,
 } from './ContactStyles';
 
 const initialState = {
@@ -15,6 +17,7 @@ const initialState = {
   email: '',
   company: '',
   message: '',
+  website: '',
 };
 
 const Contact = () => {
@@ -33,7 +36,8 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('/api/contact', {
+      const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || '/api/contact';
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -101,14 +105,40 @@ const Contact = () => {
             onChange={handleChange}
             required
           />
+          {/* Honeypot — bots fill this, humans never see it. Submissions with a value are silently rejected server-side. */}
+          <input
+            type="text"
+            name="website"
+            tabIndex="-1"
+            autoComplete="off"
+            value={formValues.website}
+            onChange={handleChange}
+            style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+            aria-hidden="true"
+          />
           <SubmitButton type="submit" disabled={isSubmitting}>
-            {isSubmitting ? 'Sending...' : 'Send Email'}
+            {isSubmitting ? 'Sending...' : 'Send message'}
           </SubmitButton>
           {status.message && (
             <StatusMessage error={status.type === 'error'}>
               {status.message}
             </StatusMessage>
           )}
+          <FallbackText>
+            Or email me directly at{' '}
+            <FallbackLink href="mailto:zia.rehman.web@gmail.com">
+              zia.rehman.web@gmail.com
+            </FallbackLink>
+            {' '}— prefer to talk?{' '}
+            <FallbackLink
+              href="https://calendly.com/zia-rehman-web/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a 30-min call
+            </FallbackLink>
+            .
+          </FallbackText>
         </Form>
       </ContactCard>
     </Section>

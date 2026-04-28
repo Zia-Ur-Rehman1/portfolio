@@ -1,4 +1,4 @@
-import { FaCalendar, FaUsers, FaClock, FaCogs, FaServer } from 'react-icons/fa';
+import { FaCalendar, FaUsers, FaClock, FaCogs, FaServer, FaRocket, FaGlobe, FaPlug } from 'react-icons/fa';
 import { FiTarget } from "react-icons/fi";
 export const ProjectsData = [
   {
@@ -18,7 +18,7 @@ export const ProjectsData = [
   {
     title: 'AgencyPortal (AI Umrah Portal)',
     category: 'Travel SaaS · Multi-Tenant',
-    description: 'Multi-tenant Rails 8 SaaS for Umrah travel agencies. Unifies inventory from 12 supplier portals (Laravel cookie sessions, JWT SPAs, TOTP-secured Selenium flows), handles agent pricing with stacked markups, bookings with hold/auto-cancel, per-agency branded landing pages, and platform-wide observability (Hetzner + Cloudflare metrics, threshold alerts). Live in production.',
+    description: 'A self-serve booking platform for Umrah travel agencies. Pulls live availability and prices from 12 different supplier systems into a single dashboard, lets each agency set its own pricing and branded landing page, manages bookings with automatic hold and cancellation timers, and surfaces system health alerts so issues are caught before customers notice. Live in production.',
     tags: [
       'Ruby on Rails 8.1', 'Ruby 3.3', 'PostgreSQL (JSONB)', 'Hotwire (Turbo/Stimulus)', 'Tailwind v4',
       'SolidQueue', 'SolidCache', 'SolidCable', 'Selenium', 'Pundit', 'Active Storage',
@@ -127,9 +127,14 @@ export const AccomplishmentsData = [
     duration: '2025 – Present',
   },
   {
+    title: 'EcoLink',
+    role: 'Full-Stack Engineer',
+    duration: 'Dec 2024 – Present',
+  },
+  {
     title: 'Devsinc',
     role: 'Senior Software Engineer',
-    duration: 'Jan 2024 – Present',
+    duration: 'June 2021 – Present',
   },
   {
     title: 'Intellirent',
@@ -157,10 +162,10 @@ export const AccomplishmentsData = [
 //   { id: 6, value: "24/7", label: "Support Available", icon: <FaClock /> },
 // ];
 export const statistics = [
-  { id: 1, value: "4+", label: "Years of Full‑Stack Experience", icon: <FaCalendar /> },
-  { id: 2, value: "15+", label: "Projects Shipped", icon: <FiTarget /> },
-  { id: 3, value: "4", label: "Long‑Running Products", icon: <FaUsers /> },
-  { id: 4, value: "30–70%", label: "Performance Improvements", icon: <FaCogs /> },
+  { id: 1, value: "4+", label: "Years senior full‑stack", icon: <FaCalendar /> },
+  { id: 2, value: "2", label: "Production launches in 3 months (Escrow.sa · AgencyPortal)", icon: <FaRocket /> },
+  { id: 3, value: "3", label: "Timezones — US · UAE · KSA", icon: <FaGlobe /> },
+  { id: 4, value: "20+", label: "Production integrations shipped", icon: <FaPlug /> },
 ];
 
 export const TimeLineData = [
@@ -181,9 +186,10 @@ export const AchievementsData = [
     location: 'Riyadh – Remote',
     duration: 'Mar 2026 – May 2026',
     achievements: [
-      'Architected a tri-party software escrow platform on Rails 8 + Hotwire + PostgreSQL with Solid Queue, action_policy RBAC, and bilingual Arabic/English UI with full RTL.',
-      'Built an encrypted code vault with scheduled mirroring, SHA-256 deposit integrity verification, and a senior-engineer manual review workflow — replacing brittle automated checks with a reliable human-in-the-loop process.',
-      'Designed a multi-stage release-approval pipeline (claim-triggered → moderator → lawyer → super admin) using AASM state machines and PaperTrail change tracking, with KMS-backed per-agreement encryption and append-only audit logs on a separate database for Saudi data-residency compliance.',
+      'Architected a tri-party software escrow platform on Rails 8 + Hotwire with bilingual Arabic/English UI and full RTL support.',
+      'Built an encrypted Forgejo Vault for source-code deposits with SHA-256 integrity checks and a senior-engineer manual review workflow.',
+      'Designed a multi-stage release-approval pipeline (moderator → lawyer → super admin) using AASM state machines and PaperTrail audit trails.',
+      'Provisioned the platform inside the KSA data-residency zone with KMS-backed per-agreement encryption and append-only audit logs on a separate database.',
     ],
   },
   {
@@ -192,11 +198,11 @@ export const AchievementsData = [
     location: 'Pakistan — Self-directed',
     duration: '2025 – Present',
     achievements: [
-      'Architected and shipped a multi-tenant Rails 8 SaaS end-to-end — tenant resolution (custom domain → subdomain → apex), Pundit-based authorization across super_admin / admin / agent roles, and the Rails 8 solid stack (SolidQueue / SolidCache / SolidCable) with zero Redis dependency.',
-      'Built a portal-integration layer that normalizes 12 heterogeneous supplier APIs (Laravel cookie sessions, JWT SPAs, TOTP-secured Selenium logins) behind common Fetcher / Booker / SessionManager services, with JWT-exp-aware refresh that cut login failures dramatically.',
-      'Designed a booking state machine with audience-aware hold timers (admins get a 30-min buffer before agents) and a double-entry ledger that stacks per-agent + per-portal markups and discounts on confirm.',
-      'Streamed Hetzner + Cloudflare metrics into the super-admin dashboard with threshold-based SystemLog alerts so CPU, egress, and R2 limits surface before customers notice.',
-      'Deployed to production on Hetzner Cloud with Caddy (on-demand TLS for tenant custom domains), Cloudflare R2 for Active Storage, and nightly encrypted PostgreSQL backups to R2.',
+      'Shipped a multi-tenant Rails 8 SaaS end-to-end with custom-domain → subdomain → apex tenant resolution and Pundit RBAC across super_admin / admin / agent roles.',
+      'Built a portal-integration layer that normalizes 12 heterogeneous supplier APIs (cookie sessions, JWT SPAs, TOTP Selenium logins) behind common Fetcher / Booker / SessionManager services.',
+      'Designed a booking state machine with audience-aware hold timers and a double-entry ledger that stacks per-agent and per-portal markups on confirm.',
+      'Streamed Hetzner + Cloudflare metrics into the admin dashboard with threshold-based alerts so CPU, egress, and R2 limits surface before customers notice.',
+      'Deployed to Hetzner Cloud with Caddy (on-demand TLS for tenant domains), Cloudflare R2 storage, and nightly encrypted PostgreSQL backups.',
     ],
   },
   {
@@ -247,25 +253,20 @@ export const AchievementsData = [
 
 export const CurrentFocusData = [
   {
-    title: 'Model Context Protocol (MCP)',
-    hook: 'Building specialized servers and web apps that bridge AI models with local data sources and third-party APIs for secure, context-aware interactions.',
+    title: 'AgencyPortal',
+    hook: 'Multi-tenant Umrah travel SaaS — actively shipping booking flows, supplier integrations, and per-agency analytics. Live at hasnaintravel.com.',
+    link: 'https://hasnaintravel.com',
   },
   {
-    title: 'AI-Driven Automation',
-    hook: 'Architecting intelligent chat systems and workflows that leverage LLMs to automate complex task management and multi-channel data handling.',
+    title: 'EcoLink',
+    hook: 'Cloud communications platform for insurance agencies — building real-time call, SMS, and chat workflows on Rails 8 + ActionCable with RingCentral, AMS360, and EPIC integrations.',
+    link: 'https://ecolink.inteveo.com',
   },
   {
-    title: 'Modern Rails UX (Hotwire/Turbo)',
-    hook: 'Deep-diving into Turbo Streams and Stimulus to build reactive, real-time interfaces that minimize JavaScript overhead and maximize performance.',
+    title: 'Cloth E-commerce',
+    hook: 'Personal side project — a modern clothing storefront exploring product catalog, cart, and checkout flows. Source on GitHub.',
+    link: 'https://github.com/Zia-Ur-Rehman1/cloth-ecommerce',
   },
-  {
-    title: 'Vibe Coding + AI Execution',
-    hook: 'Using vibe coding to shape architecture and ship features faster, while delegating problem-solving and web scraping workflows to AI for rapid iteration.',
-  },
-  {
-    title: 'Scalable System Architecture',
-    hook: 'Optimizing Rails performance through service-oriented design, background processing strategies, and custom scaffolding to ensure long-term maintainability.',
-  }
 ];
 
 export const TestimonialsData = [

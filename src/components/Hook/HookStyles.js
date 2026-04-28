@@ -3,10 +3,13 @@ import styled from 'styled-components';
 
 export const HookBanner = styled.div`
   position: relative;
-  width: 100%;
-  max-width: 740px;
-  padding: 1.0rem 2.4rem;
-  border-radius: 26px;
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  max-width: min(720px, 90vw);
+  margin: 0 auto;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
   border: 1px solid ${(props) => props.theme.colors.borderPurple};
   background: ${(props) => props.theme.colors.hookGradient};
   box-shadow: ${(props) => props.theme.colors.shadowDeep};
@@ -15,13 +18,14 @@ export const HookBanner = styled.div`
   &::after {
     content: '';
     position: absolute;
-    top: 14px;
-    right: 14px;
-    width: 12px;
-    height: 12px;
+    top: -4px;
+    right: -4px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: ${(props) => props.theme.colors.accentGreen};
-    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
+    border: 2px solid ${(props) => props.theme.colors.background || '#0f172a'};
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
   }
 `;
 
@@ -39,8 +43,11 @@ export const HookLabel = styled.span`
 `;
 
 export const HookText = styled.p`
-  font-size: 1.65rem;
-  line-height: 1.6;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
   color: ${(props) => props.theme.colors.textBody};
   font-weight: 500;
+  white-space: normal;
+  text-align: center;
 `;

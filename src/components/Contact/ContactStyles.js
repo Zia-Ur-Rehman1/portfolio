@@ -117,3 +117,22 @@ export const StatusMessage = styled.p`
   color: ${(props) => (props.error ? props.theme.colors.statusErrorText : props.theme.colors.statusSuccessText)};
   font-weight: 500;
 `;
+
+export const FallbackText = styled.p`
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: ${(props) => props.theme.colors.textMuted};
+`;
+
+export const FallbackLink = styled.a`
+  color: ${(props) => props.theme.colors.borderInputFocus};
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.textBright};
+    text-decoration: underline;
+  }
+`;

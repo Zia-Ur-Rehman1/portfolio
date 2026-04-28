@@ -5,7 +5,8 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   basePath: isProd ? '/portfolio' : '',
   assetPrefix: isProd ? '/portfolio/' : '',
-  output: 'export',
+  // Only static-export in production builds so dev keeps API routes working.
+  ...(isProd ? { output: 'export' } : {}),
   trailingSlash: true,
   images: {
     unoptimized: true

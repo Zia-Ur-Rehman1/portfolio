@@ -20,8 +20,23 @@ const Header = () => {
     <Container>
       <Div2>
         <li>
+          <NavLink href="#current-focus" onClick={(e) => handleSmoothScroll(e, 'current-focus')}>
+            Now
+          </NavLink>
+        </li>
+        <li>
+          <NavLink href="#achievements" onClick={(e) => handleSmoothScroll(e, 'achievements')}>
+            Experience
+          </NavLink>
+        </li>
+        <li>
           <NavLink href="#projects" onClick={(e) => handleSmoothScroll(e, 'projects')}>
             Projects
+          </NavLink>
+        </li>
+        <li>
+          <NavLink href="#testimonials" onClick={(e) => handleSmoothScroll(e, 'testimonials')}>
+            Testimonials
           </NavLink>
         </li>
         <li>
@@ -30,11 +45,10 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink href="#about" onClick={(e) => handleSmoothScroll(e, 'about')}>
-            About
+          <NavLink href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')}>
+            Contact
           </NavLink>
         </li>
-      
       </Div2>
 
       <Div3>

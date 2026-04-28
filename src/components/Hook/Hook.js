@@ -7,9 +7,7 @@ const Hook = () => {
       <Section align="center">
         <HookBanner>
             <HookText>
-              Open to global remote roles and onsite opportunities in Pakistan<br />
-              Looking for Ruby on Rails & React full‑stack opportunities<br />
-              Comfortable owning end‑to‑end features and collaborating closely with product teams.
+              Open to global remote roles and onsite opportunities in Pakistan
             </HookText>
         </HookBanner>
       </Section>

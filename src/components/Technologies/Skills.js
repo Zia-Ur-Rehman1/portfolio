@@ -1,5 +1,5 @@
 import { DiJavascript1,  DiRuby, DiPostgresql, DiPython, DiDjango } from "react-icons/di";
-import { SiTypescript, SiFlutter, SiGraphql, SiDocker, SiJenkins, SiHeroku, SiShopify,SiBootstrap, SiMui, SiRedis, SiDigitalocean, SiAmazonwebservices, SiFirebase, SiTailwindcss, SiNgrok, SiDart } from "react-icons/si";
+import { SiTypescript, SiFlutter, SiGraphql, SiDocker, SiJenkins, SiHeroku, SiShopify,SiBootstrap, SiMui, SiRedis, SiDigitalocean, SiAmazonwebservices, SiFirebase, SiTailwindcss, SiNgrok, SiDart, SiHetzner, SiCloudflare, SiCaddy } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 
 export const Skills = [
@@ -171,6 +171,27 @@ export const Skills = [
         title: "AWS",
         usedIn: ["EcoLink", "Intellirent"],
         Description: () => <>Cloud services for hosting and deployment</>,
+      },
+      {
+        slug: "hetzner",
+        Component: SiHetzner,
+        title: "Hetzner Cloud",
+        usedIn: ["AgencyPortal", "PC - Product Customization"],
+        Description: () => <>Production VPS hosting with cost-efficient compute</>,
+      },
+      {
+        slug: "cloudflare",
+        Component: SiCloudflare,
+        title: "Cloudflare (R2 + Analytics)",
+        usedIn: ["AgencyPortal"],
+        Description: () => <>Object storage, edge analytics, and DNS for tenants</>,
+      },
+      {
+        slug: "caddy",
+        Component: SiCaddy,
+        title: "Caddy",
+        usedIn: ["AgencyPortal"],
+        Description: () => <>On-demand TLS for tenant custom domains</>,
       },
       {
         slug: "heroku",

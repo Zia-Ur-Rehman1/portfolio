@@ -15,6 +15,7 @@ export const FocusCard = styled.div`
   backdrop-filter: blur(8px);
   box-shadow: ${(props) => props.theme.colors.shadowFocusCard};
   min-height: 90px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;

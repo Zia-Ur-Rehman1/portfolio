@@ -1,0 +1,8 @@
+name = "portfolio-contact"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Secrets are set via the CLI, not committed to the repo:
+#   wrangler secret put RESEND_API_KEY
+#   wrangler secret put CONTACT_RECIPIENT
+#   wrangler secret put RESEND_FROM   # optional, defaults to onboarding@resend.dev
