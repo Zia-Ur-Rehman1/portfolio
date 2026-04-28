@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
+import { FaEnvelope, FaWhatsapp, FaRegCalendarCheck, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { Section, SectionDivider, SectionSubText, SectionTitle } from '../../styles/GlobalComponents';
 import {
   ContactCard,
   Form,
   FormRow,
+  Field,
+  Label,
   Input,
   TextArea,
+  SubmitRow,
   SubmitButton,
+  SubmitHint,
   StatusMessage,
-  FallbackText,
-  FallbackLink,
+  InfoPanel,
+  InfoHeading,
+  InfoSubText,
+  InfoChannelList,
+  InfoChannel,
+  InfoFootnote,
 } from './ContactStyles';
 
 const initialState = {
@@ -39,9 +48,7 @@ const Contact = () => {
       const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || '/api/contact';
       const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formValues),
       });
 
@@ -53,7 +60,7 @@ const Contact = () => {
 
       setStatus({
         type: 'success',
-        message: "Thanks! I've logged your message and will reach back ASAP.",
+        message: "Thanks! I've got your message and will reply within one business day.",
       });
       setFormValues(initialState);
     } catch (error) {
@@ -70,42 +77,103 @@ const Contact = () => {
     <Section id="contact">
       <SectionDivider colorAlt />
       <SectionTitle>Let's Build Together</SectionTitle>
-      <SectionSubText style={{maxWidth: '1200px', fontWeight: '400'}}>
-        Share what you need, whether it’s a new build, integration, automation, deploy, or bug fix. You’ll hear back from me within one business day.
+      <SectionSubText style={{ maxWidth: '720px', fontWeight: '400' }}>
+        Share what you need — a new build, integration, automation, deploy, or bug fix. You'll hear back within one business day.
       </SectionSubText>
+
       <ContactCard>
+        <InfoPanel>
+          <div>
+            <InfoHeading>Quick to reply.</InfoHeading>
+            <InfoSubText>
+              I read every message myself. Expect a thoughtful response within one business day.
+            </InfoSubText>
+          </div>
+
+          <InfoChannelList>
+            <InfoChannel>
+              <FaEnvelope size="1.1rem" />
+              <a href="mailto:zia.rehman.web@gmail.com">zia.rehman.web@gmail.com</a>
+            </InfoChannel>
+            <InfoChannel>
+              <FaWhatsapp size="1.1rem" />
+              <a href="https://wa.me/+923131407828" target="_blank" rel="noopener noreferrer">
+                +92 313 1407828
+              </a>
+            </InfoChannel>
+            <InfoChannel>
+              <FaRegCalendarCheck size="1.1rem" />
+              <a
+                href="https://calendly.com/zia-rehman-web/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book a 30-min call
+              </a>
+            </InfoChannel>
+          </InfoChannelList>
+
+          <InfoFootnote>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
+              <FaMapMarkerAlt size="0.85rem" /> Based in Pakistan (PKT, UTC+5)
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <FaClock size="0.85rem" /> Comfortable overlap with US, UAE, KSA timezones
+            </div>
+          </InfoFootnote>
+        </InfoPanel>
+
         <Form onSubmit={handleSubmit}>
           <FormRow>
-            <Input
-              name="name"
-              placeholder="Your name"
-              value={formValues.name}
-              onChange={handleChange}
-              required
-            />
-            <Input
-              name="email"
-              type="email"
-              placeholder="Email address"
-              value={formValues.email}
-              onChange={handleChange}
-              required
-            />
+            <Field>
+              <Label htmlFor="contact-name">Name</Label>
+              <Input
+                id="contact-name"
+                name="name"
+                placeholder="Jane Doe"
+                value={formValues.name}
+                onChange={handleChange}
+                required
+              />
+            </Field>
+            <Field>
+              <Label htmlFor="contact-email">Email</Label>
+              <Input
+                id="contact-email"
+                name="email"
+                type="email"
+                placeholder="jane@company.com"
+                value={formValues.email}
+                onChange={handleChange}
+                required
+              />
+            </Field>
           </FormRow>
-          <Input
-            name="company"
-            placeholder="Company / Project / Task"
-            value={formValues.company}
-            onChange={handleChange}
-          />
-          <TextArea
-            name="message"
-            placeholder="Tell me about the outcome you're targeting..."
-            value={formValues.message}
-            onChange={handleChange}
-            required
-          />
-          {/* Honeypot — bots fill this, humans never see it. Submissions with a value are silently rejected server-side. */}
+
+          <Field>
+            <Label htmlFor="contact-company">Company / Project (optional)</Label>
+            <Input
+              id="contact-company"
+              name="company"
+              placeholder="Acme Inc · Internal CRM"
+              value={formValues.company}
+              onChange={handleChange}
+            />
+          </Field>
+
+          <Field>
+            <Label htmlFor="contact-message">What are you trying to build or fix?</Label>
+            <TextArea
+              id="contact-message"
+              name="message"
+              placeholder="A short description is enough — I'll follow up with the right questions."
+              value={formValues.message}
+              onChange={handleChange}
+              required
+            />
+          </Field>
+
+          {/* Honeypot — bots fill this, humans never see it. */}
           <input
             type="text"
             name="website"
@@ -116,29 +184,19 @@ const Contact = () => {
             style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
             aria-hidden="true"
           />
-          <SubmitButton type="submit" disabled={isSubmitting}>
-            {isSubmitting ? 'Sending...' : 'Send message'}
-          </SubmitButton>
+
+          <SubmitRow>
+            <SubmitButton type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending…' : 'Send message'}
+            </SubmitButton>
+            <SubmitHint>Replies within 1 business day</SubmitHint>
+          </SubmitRow>
+
           {status.message && (
             <StatusMessage error={status.type === 'error'}>
               {status.message}
             </StatusMessage>
           )}
-          <FallbackText>
-            Or email me directly at{' '}
-            <FallbackLink href="mailto:zia.rehman.web@gmail.com">
-              zia.rehman.web@gmail.com
-            </FallbackLink>
-            {' '}— prefer to talk?{' '}
-            <FallbackLink
-              href="https://calendly.com/zia-rehman-web/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Book a 30-min call
-            </FallbackLink>
-            .
-          </FallbackText>
         </Form>
       </ContactCard>
     </Section>
