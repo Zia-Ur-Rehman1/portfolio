@@ -2,6 +2,34 @@ import { FaCalendar, FaUsers, FaClock, FaCogs, FaServer } from 'react-icons/fa';
 import { FiTarget } from "react-icons/fi";
 export const ProjectsData = [
   {
+    title: 'Escrow.sa',
+    category: 'Software Escrow & Compliance (KSA)',
+    description: 'Tri-party software escrow platform for the Saudi market — holds vendor source code in an encrypted vault, verifies each deposit via senior-engineer review, and releases code to beneficiaries only when legally defined conditions are met. Bilingual Arabic/English with full RTL and Saudi data residency.',
+    tags: [
+      'Ruby on Rails 8', 'Hotwire', 'Turbo', 'Stimulus', 'Tailwind CSS',
+      'PostgreSQL', 'Solid Queue', 'Solid Cache', 'Solid Cable',
+      'action_policy', 'AASM', 'PaperTrail', 'HexaPDF',
+      'i18n (ar/en, RTL)', 'KMS Encryption', 'Audit Logs',
+      'Forgejo', 'Multi-tenant', 'Saudi Data Residency'
+    ],
+    visit: 'https://escrow.sa',
+    id: 8,
+  },
+  {
+    title: 'AgencyPortal (AI Umrah Portal)',
+    category: 'Travel SaaS · Multi-Tenant',
+    description: 'Multi-tenant Rails 8 SaaS for Umrah travel agencies. Unifies inventory from 12 supplier portals (Laravel cookie sessions, JWT SPAs, TOTP-secured Selenium flows), handles agent pricing with stacked markups, bookings with hold/auto-cancel, per-agency branded landing pages, and platform-wide observability (Hetzner + Cloudflare metrics, threshold alerts). Live in production.',
+    tags: [
+      'Ruby on Rails 8.1', 'Ruby 3.3', 'PostgreSQL (JSONB)', 'Hotwire (Turbo/Stimulus)', 'Tailwind v4',
+      'SolidQueue', 'SolidCache', 'SolidCable', 'Selenium', 'Pundit', 'Active Storage',
+      'Multi-Tenancy (subdomain + custom domain)', 'JWT', 'TOTP', 'OCR (Groq / Llama 4 Scout)',
+      'Cloudflare R2', 'Cloudflare Analytics', 'Hetzner Cloud', 'Caddy (on-demand TLS)',
+      'Observability & Alerting',
+    ],
+    visit: 'https://hasnaintravel.com',
+    id: 7,
+  },
+  {
     title: 'EcoLink',
     category: 'Insurance Communications',
     description: 'Cloud communications platform for insurance agencies that connects RingCentral with AMS360 and EPIC to unify calls, SMS, voicemail, and compliance logging.' ,
@@ -89,6 +117,16 @@ export const ProjectsData = [
 
 export const AccomplishmentsData = [
   {
+    title: 'Escrow.sa',
+    role: 'Full-Stack Engineer',
+    duration: 'Mar 2026 – May 2026',
+  },
+  {
+    title: 'AgencyPortal (Self-directed SaaS)',
+    role: 'Founder · Lead Engineer',
+    duration: '2025 – Present',
+  },
+  {
     title: 'Devsinc',
     role: 'Senior Software Engineer',
     duration: 'Jan 2024 – Present',
@@ -137,6 +175,30 @@ export const TimeLineData = [
 ];
 
 export const AchievementsData = [
+  {
+    role: 'Full-Stack Engineer',
+    company: 'Escrow.sa — Software Escrow Platform for the Saudi Market',
+    location: 'Riyadh – Remote',
+    duration: 'Mar 2026 – May 2026',
+    achievements: [
+      'Architected a tri-party software escrow platform on Rails 8 + Hotwire + PostgreSQL with Solid Queue, action_policy RBAC, and bilingual Arabic/English UI with full RTL.',
+      'Built an encrypted code vault with scheduled mirroring, SHA-256 deposit integrity verification, and a senior-engineer manual review workflow — replacing brittle automated checks with a reliable human-in-the-loop process.',
+      'Designed a multi-stage release-approval pipeline (claim-triggered → moderator → lawyer → super admin) using AASM state machines and PaperTrail change tracking, with KMS-backed per-agreement encryption and append-only audit logs on a separate database for Saudi data-residency compliance.',
+    ],
+  },
+  {
+    role: 'Founder · Lead Engineer',
+    company: 'AgencyPortal — Multi-Tenant SaaS for Umrah Travel Agencies',
+    location: 'Pakistan — Self-directed',
+    duration: '2025 – Present',
+    achievements: [
+      'Architected and shipped a multi-tenant Rails 8 SaaS end-to-end — tenant resolution (custom domain → subdomain → apex), Pundit-based authorization across super_admin / admin / agent roles, and the Rails 8 solid stack (SolidQueue / SolidCache / SolidCable) with zero Redis dependency.',
+      'Built a portal-integration layer that normalizes 12 heterogeneous supplier APIs (Laravel cookie sessions, JWT SPAs, TOTP-secured Selenium logins) behind common Fetcher / Booker / SessionManager services, with JWT-exp-aware refresh that cut login failures dramatically.',
+      'Designed a booking state machine with audience-aware hold timers (admins get a 30-min buffer before agents) and a double-entry ledger that stacks per-agent + per-portal markups and discounts on confirm.',
+      'Streamed Hetzner + Cloudflare metrics into the super-admin dashboard with threshold-based SystemLog alerts so CPU, egress, and R2 limits surface before customers notice.',
+      'Deployed to production on Hetzner Cloud with Caddy (on-demand TLS for tenant custom domains), Cloudflare R2 for Active Storage, and nightly encrypted PostgreSQL backups to R2.',
+    ],
+  },
   {
     role: 'Full-Stack Engineer',
     company: 'Ecolink – Communication Platform for Insurance Agencies',
