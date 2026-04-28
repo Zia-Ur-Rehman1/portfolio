@@ -32,14 +32,14 @@ export const LeftSection = styled.div`
 `;
 
 export const GradientText = styled.span`
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  background: ${(props) => props.theme.colors.heroTextGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  
+
   /* Optional: Add a subtle second gradient or keep it clean white-to-transparent which looks premium on dark */
   /* OR a color gradient if preferred: */
-   background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
+   background: ${(props) => props.theme.colors.brandGradientCool};
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
 `;
@@ -54,11 +54,11 @@ export const StyledButtonLink = styled.a`
   border-radius: 50px;
   font-size: ${({ alt }) => (alt ? '20px' : '24px')};
   font-weight: 600;
-  color: #fff;
-  background: ${({ alt }) =>
+  color: ${(props) => props.theme.colors.textBright};
+  background: ${({ alt, theme }) =>
     alt
-      ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)'
-      : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)'};
+      ? theme.colors.brandGradientWarm
+      : theme.colors.brandGradientCool};
   text-decoration: none;
   cursor: pointer;
   transition: 0.5s ease;
@@ -71,13 +71,13 @@ export const StyledButtonLink = styled.a`
   }
 
   &:active {
-    background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
+    background: ${(props) => props.theme.colors.brandGradientCool};
     box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15),
       inset 0px 0px 4px rgba(20, 20, 55, 0.3);
   }
 
   &:disabled {
-    background: linear-gradient(270deg, #00DBD8 0%, #B133FF 100%);
+    background: ${(props) => props.theme.colors.brandGradientCool};
     opacity: 0.5;
     cursor: not-allowed;
   }

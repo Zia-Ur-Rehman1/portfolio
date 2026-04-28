@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ContactCard = styled.div`
   width: 100%;
@@ -6,9 +6,9 @@ export const ContactCard = styled.div`
   margin: 1rem 0 0 0;
   padding: 3rem;
   border-radius: 34px;
-  background: rgba(9, 15, 28, 0.9);
-  border: 1px solid rgba(110, 112, 255, 0.35);
-  box-shadow: 0 45px 120px rgba(2, 6, 23, 0.75);
+  background: ${(props) => props.theme.colors.contactCardBg};
+  border: 1px solid ${(props) => props.theme.colors.borderIndigo};
+  box-shadow: ${(props) => props.theme.colors.shadowContact};
   position: relative;
   overflow: hidden;
 
@@ -18,7 +18,7 @@ export const ContactCard = styled.div`
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(120deg, rgba(56, 189, 248, 0.55), rgba(148, 93, 214, 0.55));
+    background: ${(props) => props.theme.colors.contactDecorative};
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);
@@ -48,25 +48,25 @@ export const FormRow = styled.div`
   gap: 1.25rem;
 `;
 
-const fieldStyles = `
+const fieldStyles = css`
   width: 100%;
   padding: 1rem 1.25rem;
   border-radius: 16px;
-  border: 1px solid rgba(148, 93, 214, 0.35);
-  background: rgba(15, 23, 42, 0.65);
-  color: #eef2ff;
+  border: 1px solid ${(props) => props.theme.colors.borderPurpleSoft};
+  background: ${(props) => props.theme.colors.inputBg};
+  color: ${(props) => props.theme.colors.contactInputText};
   font-size: 1rem;
   transition: border 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 
   &::placeholder {
-    color: rgba(226, 232, 240, 0.75);
+    color: ${(props) => props.theme.colors.contactInputPlaceholder};
     font-size: 1.5rem;
   }
 
   &:focus {
     outline: none;
-    border-color: #38bdf8;
-    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+    border-color: ${(props) => props.theme.colors.borderInputFocus};
+    box-shadow: 0 0 0 2px ${(props) => props.theme.colors.borderInputFocusGlow};
     transform: translateY(-1px);
   }
 `;
@@ -86,8 +86,8 @@ export const SubmitButton = styled.button`
   padding: 0.95rem 2.9rem;
   border-radius: 40px;
   border: none;
-  background: linear-gradient(120deg, #13adc7 0%, #945dd6 100%);
-  color: #0f172a;
+  background: ${(props) => props.theme.colors.ctaGradient};
+  color: ${(props) => props.theme.colors.textOnGradient};
   font-size: 1.05rem;
   font-weight: 700;
   cursor: pointer;
@@ -95,12 +95,12 @@ export const SubmitButton = styled.button`
 
   &:hover {
     transform: translateY(-2px) scale(1.01);
-    box-shadow: 0 18px 30px rgba(148, 93, 214, 0.35);
+    box-shadow: ${(props) => props.theme.colors.shadowSubmit};
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(19, 173, 199, 0.45);
+    box-shadow: ${(props) => props.theme.colors.shadowSubmitFocus};
   }
 
   &:disabled {
@@ -114,6 +114,6 @@ export const SubmitButton = styled.button`
 export const StatusMessage = styled.p`
   margin-top: 1rem;
   font-size: 1rem;
-  color: ${(props) => (props.error ? '#fecdd3' : '#a5f3fc')};
+  color: ${(props) => (props.error ? props.theme.colors.statusErrorText : props.theme.colors.statusSuccessText)};
   font-weight: 500;
 `;

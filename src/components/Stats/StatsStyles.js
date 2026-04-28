@@ -35,11 +35,11 @@ export const StatsContainer = styled.div`
 `;
 
 export const StatCard = styled.div`
-  background: #1e293b;
+  background: ${(props) => props.theme.colors.cardBg};
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: ${(props) => props.theme.colors.shadowStat};
   transition: transform 0.2s ease;
   width: 85%;
   @media ${(props) => props.theme.breakpoints.md} {
@@ -54,29 +54,29 @@ export const StatIconWrapper = styled.div`
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: radial-gradient(circle, #3b82f6, #8b5cf6);
+  background: ${(props) => props.theme.colors.statIconGradient};
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px; /* Center horizontally, space below */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: ${(props) => props.theme.colors.shadowStatIcon};
 
   svg {
     width: 24px;
     height: 24px;
-    color: white;
+    color: ${(props) => props.theme.colors.textBright};
   }
 `;
 
 export const StatValue = styled.h3`
   font-size: 24px;
   font-weight: bold;
-  color: #f8fafc;
+  color: ${(props) => props.theme.colors.textPrimary};
   margin-bottom: 6px;
 `;
 
 export const StatLabel = styled.p`
   font-size: 14px;
-  color: #cbd5e1;
+  color: ${(props) => props.theme.colors.textSoft};
   line-height: 1.4;
 `;

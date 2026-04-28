@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ImageContainer = styled.div`
   text-align: center;
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%);
+  background-image: ${(props) => props.theme.colors.techRadial};
   width: 100%;
   padding: 60px;
   margin-top: 48px;
@@ -71,7 +71,7 @@ export const ListTitle = styled.h4`
   font-size: 22px;
   line-height: 32px;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+  color: ${(props) => props.theme.colors.textBright};
   margin-bottom: 8px;
 
 @media ${props => props.theme.breakpoints.md}{
@@ -90,7 +90,7 @@ export const ListTitle = styled.h4`
 export const ListParagraph = styled.div`
   font-size: 18px;
   line-height: 30px;
-  color: rgba(255, 255, 255, 0.75);
+  color: ${(props) => props.theme.colors.textTertiary};
 
   @media ${props => props.theme.breakpoints.md}{
     font-size: 16px;

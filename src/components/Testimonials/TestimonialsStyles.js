@@ -42,7 +42,7 @@ export const CardsContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  background: #212d45;
+  background: ${(props) => props.theme.colors.cardBgAlt};
   border-radius: 16px;
   padding: 24px; /* Reduced from 32px */
   flex: 0 0 auto; /* Prevent shrinking */
@@ -51,16 +51,16 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.1);
+  box-shadow: ${(props) => props.theme.colors.shadowCard};
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid ${(props) => props.theme.colors.borderFaint};
   scroll-snap-align: center;
   height: auto; /* allow content to define height */
 
   &:hover {
     transform: translateY(-4px); /* reduced hover lift */
-    box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.25);
-    background: #2b3952;
+    box-shadow: ${(props) => props.theme.colors.shadowCardHover};
+    background: ${(props) => props.theme.colors.cardBgHover};
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
@@ -83,7 +83,7 @@ export const CarouselButtons = styled.div`
 `;
 
 export const CarouselButton = styled.button`
-  background: rgba(255, 255, 255, 0.1);
+  background: ${(props) => props.theme.colors.borderSoft};
   border: none;
   border-radius: 50%;
   width: 48px;
@@ -91,13 +91,13 @@ export const CarouselButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: ${(props) => props.theme.colors.textBright};
   cursor: pointer;
   transition: 0.3s ease;
   font-size: 20px;
 
   &:hover {
-    background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+    background: ${(props) => props.theme.colors.brandGradient};
     transform: scale(1.1);
   }
 `;
@@ -108,7 +108,7 @@ export const Quote = styled.p`
   font-weight: 300;
   font-size: 14px; /* Reduced from 16px */
   line-height: 24px; /* Reduced from 26px */
-  color: rgba(255, 255, 255, 0.8);
+  color: ${(props) => props.theme.colors.textSecondary};
   margin-bottom: 16px; /* Reduced from 24px */
   position: relative;
   z-index: 1;
@@ -116,7 +116,7 @@ export const Quote = styled.p`
   &::before {
     content: '"';
     font-size: 48px; /* Reduced from 60px */
-    color: rgba(255, 255, 255, 0.1);
+    color: ${(props) => props.theme.colors.textVeryFaint};
     position: absolute;
     top: -20px;
     left: -10px;
@@ -131,20 +131,20 @@ export const AuthorInfo = styled.div`
   gap: 16px;
   margin-top: auto;
   padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid ${(props) => props.theme.colors.borderSoft};
 `;
 
 export const AuthorImage = styled.div`
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: linear-gradient(270deg, #13ADC7 0%, #945DD6 100%);
+  background: ${(props) => props.theme.colors.brandGradient};
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   font-size: 18px;
-  color: white;
+  color: ${(props) => props.theme.colors.textBright};
   text-transform: uppercase;
 `;
 
@@ -156,21 +156,21 @@ export const AuthorText = styled.div`
 export const AuthorName = styled.h4`
   font-weight: 700;
   font-size: 16px;
-  color: #fff;
+  color: ${(props) => props.theme.colors.textBright};
   margin: 0;
   margin-bottom: 4px;
 `;
 
 export const AuthorRole = styled.p`
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: ${(props) => props.theme.colors.textMuted};
   margin: 0;
 `;
 
 export const ReadMoreButton = styled.button`
   background: transparent;
   border: none;
-  color: #93c5fd;
+  color: ${(props) => props.theme.colors.accentReadMore};
   font-size: 12px;
   padding: 0;
   margin-top: 8px;
@@ -185,7 +185,7 @@ export const ReadMoreButton = styled.button`
 export const ModalOverlay = styled.div`
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: ${(props) => props.theme.colors.overlayDim};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,19 +193,19 @@ export const ModalOverlay = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  background: #111827;
+  background: ${(props) => props.theme.colors.modalBg};
   border-radius: 16px;
   max-width: 640px;
   width: 90vw;
   padding: 24px 24px 20px;
-  color: #e5e7eb;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  color: ${(props) => props.theme.colors.textBodyAlt};
+  box-shadow: ${(props) => props.theme.colors.shadowModal};
 `;
 
 export const ModalClose = styled.button`
   background: transparent;
   border: none;
-  color: #9ca3af;
+  color: ${(props) => props.theme.colors.textModalRole};
   font-size: 14px;
   cursor: pointer;
   float: right;

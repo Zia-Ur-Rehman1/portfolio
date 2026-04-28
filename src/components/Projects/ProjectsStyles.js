@@ -25,9 +25,9 @@ export const GridContainer = styled.section`
 `;
 
 export const BlogCard = styled.div`
-  background: #1e293b; /* Dark background for the card */
+  background: ${(props) => props.theme.colors.cardBg}; /* Dark background for the card */
   border-radius: 15px; /* Rounded corners */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  box-shadow: ${(props) => props.theme.colors.shadowMd}; /* Subtle shadow for depth */
   overflow: hidden; /* Ensure content stays within the card */
   width: 100%;
   max-width: 400px; /* Limit the card width */
@@ -41,7 +41,7 @@ export const BlogCard = styled.div`
 
   &:hover {
     transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    box-shadow: ${(props) => props.theme.colors.shadowMdHover}; /* Enhanced shadow on hover */
   }
 `;
 
@@ -51,14 +51,14 @@ export const TitleContent = styled.div`
   width: 100%;
   margin-top: 1rem;
   margin-bottom: 0.7em;
-  color: #9cc9e3;
+  color: ${(props) => props.theme.colors.accentLightBlue};
   font-size: 1.8rem;
 `;
 
 export const HeaderThree = styled.h3`
   font-weight: 600;
   font-size: 2rem;
-  color: #9cc9e3; /* Light blue color for the title */
+  color: ${(props) => props.theme.colors.accentLightBlue}; /* Light blue color for the title */
   text-align: left; /* Align the title to the left */
   margin: 0; /* Remove default margin */
   flex: 1; /* Allow the title to take up available space */
@@ -66,7 +66,7 @@ export const HeaderThree = styled.h3`
 
 export const Category = styled.div`
   display: flex;
-  background-color: #334155; /* Dark gray background */
+  background-color: ${(props) => props.theme.colors.pillBg}; /* Dark gray background */
   color: #f1f5f9; /* Light text color */
   font-size: 1.2rem;
   font-weight: 500;
@@ -82,7 +82,7 @@ export const Hr = styled.hr`
   height: 3px;
   margin: 8px auto;
   border: 0;
-  background: #d0bb57;
+  background: ${(props) => props.theme.colors.tagYellow};
 `;
 
 export const Intro = styled.div`
@@ -96,7 +96,7 @@ export const Intro = styled.div`
 `;
 
 export const CardInfo = styled.p`
-  color: #e4e6e7; /* Light text color */
+  color: ${(props) => props.theme.colors.textBodyAlt2}; /* Light text color */
   font-size: 1.4rem;
   line-height: 1.3;
   margin: 15px 0;
@@ -115,31 +115,31 @@ export const ExternalLinks = styled.a`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: ${(props) => props.theme.colors.textBright};
   font-size: 1.4rem;
   width: 50px; /* Fixed width for the button */
   height: 25px; /* Fixed height for the button */
-  background: linear-gradient(270deg, #6a11cb 0%, #2575fc 100%); /* Gradient background */
+  background: ${(props) => props.theme.colors.buttonGradient}; /* Gradient background */
   border-radius: 25px; /* Rounded corners for a pill-like shape */
   text-decoration: none;
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  box-shadow: ${(props) => props.theme.colors.shadowProjectBtn}; /* Subtle shadow for depth */
 
   &:hover {
-    background: linear-gradient(270deg, #2575fc 0%, #6a11cb 100%); /* Reverse gradient on hover */
+    background: ${(props) => props.theme.colors.buttonGradientHover}; /* Reverse gradient on hover */
     transform: translateY(-3px); /* Slight lift effect */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    box-shadow: ${(props) => props.theme.colors.shadowProjectBtnHover}; /* Enhanced shadow on hover */
   }
 
   &:active {
     transform: translateY(1px); /* Slight press effect */
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+    box-shadow: ${(props) => props.theme.colors.shadowProjectBtnActive}; /* Reduced shadow on click */
   }
 `;
 
 export const Tag = styled.li`
-  background-color: #2575fc; /* Primary color for the pill */
-  color: #fff;
+  background-color: ${(props) => props.theme.colors.accentBlue}; /* Primary color for the pill */
+  color: ${(props) => props.theme.colors.textBright};
   padding: 5px 10px;
   margin: 5px;
   border-radius: 20px; /* Rounded corners for the pill shape */

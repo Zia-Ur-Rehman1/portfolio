@@ -49,10 +49,10 @@ export const Div3 = styled.div`
 export const NavLink = styled.a`
   font-size: 2rem;
   line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  color: ${(props) => props.theme.colors.textTertiary};
   transition: 0.4s ease;
   &:hover {
-    color: #fff;
+    color: ${(props) => props.theme.colors.textBright};
     opacity: 1;
     cursor: pointer;
   }
@@ -71,7 +71,7 @@ export const ContactDropDown = styled.button`
   font-size: 1.7rem;
 
   line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  color: ${(props) => props.theme.colors.textTertiary};
   cursor: pointer;
   transition: 0.3s ease;
 
@@ -79,7 +79,7 @@ export const ContactDropDown = styled.button`
     outline: none;
   }
   &:hover {
-    color: #fff;
+    color: ${(props) => props.theme.colors.textBright};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -111,7 +111,7 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
 
 export const Tagline = styled.p`
   font-size: 12px;
-  color: #6ee7b7; /* greenish accent */
+  color: ${(props) => props.theme.colors.tagline}; /* greenish accent */
   margin: 0 0 4px 0;
   text-align: right;
   max-width: 420px;
@@ -138,13 +138,13 @@ export const SocialContainer = styled.div`
 
 export const SocialIcons = styled.a`
 transition: 0.3s ease;
-color: white;
+color: ${(props) => props.theme.colors.textBright};
 border-radius: 50px;
   padding: 8px;
 &:hover {
-    background-color: #212d45;
+    background-color: ${(props) => props.theme.colors.socialIconHoverBg};
     transform: scale(1.2);
     cursor: pointer;
-    
+
   }
 `

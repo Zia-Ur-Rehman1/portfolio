@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import { Container, Div2, Div3, NavLink, SocialContainer, SocialIcons, Tagline } from './HeaderStyles';
 
 const Header = () => {
@@ -39,14 +40,15 @@ const Header = () => {
       <Div3>
        
         <SocialContainer>
+          <ThemeToggle />
           <SocialIcons href="https://github.com/Zia-Ur-Rehman1" target="_blank" rel="noopener noreferrer">
             <AiFillGithub size="3rem" />
           </SocialIcons>
-       
+
           <SocialIcons href="https://www.linkedin.com/in/zia1/" target="_blank" rel="noopener noreferrer">
             <AiFillLinkedin size="3rem" />
           </SocialIcons>
-       
+
         </SocialContainer>
       </Div3>
     </Container>

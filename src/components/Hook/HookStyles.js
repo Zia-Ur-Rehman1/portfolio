@@ -7,9 +7,9 @@ export const HookBanner = styled.div`
   max-width: 740px;
   padding: 1.0rem 2.4rem;
   border-radius: 26px;
-  border: 1px solid rgba(148, 93, 214, 0.45);
-  background: radial-gradient(circle at top, rgba(13, 202, 240, 0.35), rgba(15, 23, 42, 0.6));
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+  border: 1px solid ${(props) => props.theme.colors.borderPurple};
+  background: ${(props) => props.theme.colors.hookGradient};
+  box-shadow: ${(props) => props.theme.colors.shadowDeep};
   backdrop-filter: blur(12px);
 
   &::after {
@@ -20,7 +20,7 @@ export const HookBanner = styled.div`
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #22c55e;
+    background: ${(props) => props.theme.colors.accentGreen};
     box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.25);
   }
 `;
@@ -30,17 +30,17 @@ export const HookLabel = styled.span`
   align-items: center;
   padding: 0.25rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid rgba(248, 250, 252, 0.5);
+  border: 1px solid ${(props) => props.theme.colors.borderHero};
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   font-size: 0.78rem;
-  color: #f8fafc;
+  color: ${(props) => props.theme.colors.textPrimary};
   opacity: 0.85;
 `;
 
 export const HookText = styled.p`
   font-size: 1.65rem;
   line-height: 1.6;
-  color: #e2e8f0;
+  color: ${(props) => props.theme.colors.textBody};
   font-weight: 500;
 `;

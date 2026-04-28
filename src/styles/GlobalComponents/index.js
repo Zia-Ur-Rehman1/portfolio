@@ -31,7 +31,7 @@ export const SectionTitle = styled.h2`
   line-height: ${(props) => props.main ? '72px' : '67px'};
   width: max-content;
   max-width: 100%;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  background: ${(props) => props.theme.colors.sectionTitleGradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
@@ -61,7 +61,7 @@ export const SectionText = styled.p`
   line-height: 35px;
   font-weight: 200;
   padding-bottom: 3.6rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: ${(props) => props.theme.colors.textSecondary};
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
@@ -82,10 +82,10 @@ export const SectionDivider = styled.div`
   width: 64px;
   height: 6px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.textBright};
   background: ${(props) => props.colorAlt ?
-    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
-    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+    props.theme.colors.brandGradientDividerAlt :
+    props.theme.colors.brandGradient};
 
     margin: ${(props) => props.divider ? "4rem 0" : ""};
 
@@ -104,7 +104,7 @@ export const SectionSubText = styled.p`
   font-weight: 300;
   font-size: 18px;
   line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  color: ${(props) => props.theme.colors.textTertiary};
 
 @media ${(props) => props.theme.breakpoints.md} {
     max-width: 672px;
@@ -118,9 +118,9 @@ export const SectionSubText = styled.p`
   }
 `
 export const SecondaryBtn = styled.button`
-  color: #FFF;
+  color: ${(props) => props.theme.colors.textBright};
   background: none;
-  border: 1px solid rgba(255, 255, 255, 0.33);
+  border: 1px solid ${(props) => props.theme.colors.secondaryBtnBorder};
   box-sizing: border-box;
   border-radius: 999px;
   padding: 16px 24px;
@@ -137,9 +137,9 @@ export const SecondaryBtn = styled.button`
   }
 
   &:hover {
-    color: #0f1624;
-    background: #fff;
-    border: 1px solid #fff;
+    color: ${(props) => props.theme.colors.secondaryBtnHoverText};
+    background: ${(props) => props.theme.colors.textBright};
+    border: 1px solid ${(props) => props.theme.colors.textBright};
   }
 
   &:active {
