@@ -214,6 +214,9 @@ export const AchievementsData = [
       'Designed multi-tenant real-time call, SMS, and chat workflows using ActionCable, WebSockets, and Turbo Streams for insurance agencies.',
       'Integrated RingCentral, AMS360, and Applied EPIC into a unified communication and compliance platform.',
       'Built a Slack reporting bot (PDF/CSV) that automated bi-weekly usage reports and cut manual reporting effort by ~80%.',
+      'Shipped a RingCentral Call Analytics Reporting Module with scheduled SendGrid email delivery, downloadable PDF reports, saved schedule views, and an aggregation service for daily/bi-weekly call metrics.',
+      'Built an AI call pipeline that converts audio into transcripts and summaries via an internal AI microservice with live ActionCable updates, reducing manual effort by ~50%.',
+      'Shipped Inteveo IQ, an AI-driven Priority Task Board that turns each transcribed call into prioritized actionable items (Growth / Maintenance / Relationship) with sentiment scoring and AI insights, boosting agent follow-up efficiency by ~90%.',
     ],
   },
   {
