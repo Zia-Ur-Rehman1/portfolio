@@ -10,7 +10,7 @@ export const Skills = [
         slug: "ruby",
         Component: DiRuby,
         title: "Ruby",
-        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
+        usedIn: ["Escrow.sa", "AgencyPortal", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Backend development with Ruby on Rails</>,
       },
       {
@@ -30,7 +30,7 @@ export const Skills = [
         slug: "javascript",
         Component: DiJavascript1,
         title: "JavaScript",
-        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark", "Local Serv"],
+        usedIn: ["Escrow.sa", "AgencyPortal", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark", "Local Serv"],
         Description: () => <>Proficient in ES6+ for web and app development</>,
       },
       {
@@ -49,7 +49,7 @@ export const Skills = [
         slug: "rails",
         Component: DiRuby,
         title: "Rails",
-        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
+        usedIn: ["Escrow.sa (Rails 8)", "AgencyPortal (Rails 8)", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Web application framework for Ruby</>,
       },
       {
@@ -81,12 +81,14 @@ export const Skills = [
         slug: "bootstrap",
         Component: SiBootstrap,
         title: "Bootstrap",
+        usedIn: ["Escrow.sa", "Intellirent"],
         Description: () => <>CSS framework for responsive design</>,
       },
       {
         slug: "tailwind",
         Component: SiTailwindcss,
         title: "Tailwind CSS",
+        usedIn: ["Escrow.sa", "AgencyPortal (v4)", "EcoLink", "PC - Product Customization"],
         Description: () => <>Utility-first CSS framework for rapid UI development</>,
       },
     ],
@@ -98,7 +100,7 @@ export const Skills = [
         slug: "postgresql",
         Component: DiPostgresql,
         title: "PostgreSQL",
-        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
+        usedIn: ["Escrow.sa", "AgencyPortal (4 logical DBs: primary/cache/queue/cable)", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Relational database management</>,
       },
       {
@@ -157,12 +159,14 @@ export const Skills = [
         slug: "heroku",
         Component: SiHeroku,
         title: "Heroku",
+        usedIn: ["Intellirent"],
         Description: () => <>Cloud platform for app deployment</>,
       },
       {
         slug: "digitalocean",
         Component: SiDigitalocean,
         title: "DigitalOcean",
+        usedIn: ["PC - Product Customization"],
         Description: () => <>Cloud services for hosting and deployment</>,
       },
       {
@@ -202,12 +206,14 @@ export const Skills = [
         slug: "ngrok",
         Component: SiNgrok,
         title: "Ngrok",
+        usedIn: ["Biomark"],
         Description: () => <>Secure tunneling for local development</>,
       },
       {
         slug: "postman",
         Component: DiPostgresql,
         title: "Postman",
+        usedIn: ["Biomark"],
         Description: () => <>API testing and documentation</>,
       }
     ],
