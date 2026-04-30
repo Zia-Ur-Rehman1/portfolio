@@ -123,7 +123,7 @@ export const ListIcon = styled.img`
   width: 48px;
   height: 48px;
   margin-bottom: 10px;
-  
+
   @media ${props => props.theme.breakpoints.md}{
     width: 40px;
     height: 40px;
@@ -135,4 +135,135 @@ export const ListIcon = styled.img`
     height: 32px;
     margin-bottom: 0px;
   }
+`
+
+export const CategoryHeading = styled.h3`
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: ${(props) => props.theme.colors.textBright};
+  margin: 2.5rem 0 1.25rem;
+  text-align: center;
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 22px;
+    margin: 2rem 0 1rem;
+  }
+`
+
+export const PillRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto 1rem;
+  max-width: 1100px;
+  padding: 0 1rem;
+
+  @media ${props => props.theme.breakpoints.sm} {
+    gap: 0.6rem;
+  }
+`
+
+export const Pill = styled.button`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  background: ${(props) =>
+    props.isActive ? props.theme.colors.borderInputFocus : props.theme.colors.cardBg};
+  border: 2px solid ${(props) =>
+    props.isActive ? props.theme.colors.borderInputFocus : props.theme.colors.borderSoft};
+  color: ${(props) =>
+    props.isActive ? props.theme.colors.textOnGradient : props.theme.colors.textBright};
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: ${(props) => props.theme.colors.borderInputFocus};
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px ${(props) => props.theme.colors.borderInputFocusGlow};
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    padding: 0.65rem 1.1rem;
+    font-size: 1.05rem;
+    gap: 0.55rem;
+  }
+`
+
+export const PillIcon = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+
+  svg {
+    display: block;
+  }
+`
+
+export const PillLabel = styled.span`
+  white-space: nowrap;
+`
+
+export const DetailPanel = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 0.75rem auto 2rem;
+  padding: 1.1rem 1.4rem;
+  border-radius: 16px;
+  background: ${(props) => props.theme.colors.cardBg};
+  border: 1px solid ${(props) => props.theme.colors.borderInputFocus};
+  box-shadow: ${(props) => props.theme.colors.shadowMd};
+  animation: skillDetailFadeIn 0.25s ease;
+
+  @keyframes skillDetailFadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    padding: 1rem 1.2rem;
+    gap: 1rem;
+  }
+`
+
+export const DetailIcon = styled.div`
+  flex-shrink: 0;
+  color: ${(props) => props.theme.colors.borderInputFocus};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const DetailText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+`
+
+export const DetailTitle = styled.h4`
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: ${(props) => props.theme.colors.textBright};
+`
+
+export const DetailDescription = styled.div`
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: ${(props) => props.theme.colors.textTertiary};
 `

@@ -162,8 +162,8 @@ export const AccomplishmentsData = [
 //   { id: 6, value: "24/7", label: "Support Available", icon: <FaClock /> },
 // ];
 export const statistics = [
-  { id: 1, value: "4+", label: "Years senior full‑stack", icon: <FaCalendar /> },
-  { id: 2, value: "2", label: "Production launches in 3 months (Escrow.sa · AgencyPortal)", icon: <FaRocket /> },
+  { id: 1, value: "5", label: "Years senior full‑stack", icon: <FaCalendar /> },
+  { id: 2, value: "3", label: "Production launches in 3 months", icon: <FaRocket /> },
   { id: 3, value: "3", label: "Timezones — US · UAE · KSA", icon: <FaGlobe /> },
   { id: 4, value: "20+", label: "Production integrations shipped", icon: <FaPlug /> },
 ];
@@ -187,8 +187,12 @@ export const AchievementsData = [
     duration: 'Mar 2026 – May 2026',
     achievements: [
       'Architected a tri-party software escrow platform on Rails 8 + Hotwire with bilingual Arabic/English UI and full RTL support.',
+      'Built a Rails 8 platform that securely holds vendor source code and releases it to beneficiaries only when legally defined release conditions are approved.',
       'Built an encrypted Forgejo Vault for source-code deposits with SHA-256 integrity checks and a senior-engineer manual review workflow.',
+      'Implemented a senior-engineer manual verification workflow where each deposit is downloaded, set up, run, reviewed, and approved before being marked as verified.',
       'Designed a multi-stage release-approval pipeline (moderator → lawyer → super admin) using AASM state machines and PaperTrail audit trails.',
+      'Built multi-portal access for platform staff, vendors, and beneficiaries with role-based authorization using action_policy.',
+      'Added per-agreement encrypted environment variables so moderators can securely access the secrets needed to verify deposited software.',
       'Provisioned the platform inside the KSA data-residency zone with KMS-backed per-agreement encryption and append-only audit logs on a separate database.',
     ],
   },
@@ -198,7 +202,9 @@ export const AchievementsData = [
     location: 'Pakistan — Self-directed',
     duration: '2025 – Present',
     achievements: [
+      'Designed and shipped a branded agency platform that unifies live inventory and bookings from 12 supplier portals into one customer-facing interface.',
       'Shipped a multi-tenant Rails 8 SaaS end-to-end with custom-domain → subdomain → apex tenant resolution and Pundit RBAC across super_admin / admin / agent roles.',
+      'Implemented per-agency landing pages, custom domains, markup pricing, hold timers, auto-cancel flows, and booking lifecycle management.',
       'Built a portal-integration layer that normalizes 12 heterogeneous supplier APIs (cookie sessions, JWT SPAs, TOTP Selenium logins) behind common Fetcher / Booker / SessionManager services.',
       'Designed a booking state machine with audience-aware hold timers and a double-entry ledger that stacks per-agent and per-portal markups on confirm.',
       'Streamed Hetzner + Cloudflare metrics into the admin dashboard with threshold-based alerts so CPU, egress, and R2 limits surface before customers notice.',
@@ -228,6 +234,10 @@ export const AchievementsData = [
       'Revamped a 10-year legacy PDF system in Rails, reducing memory allocations by 77% and execution time by 63% (Scout APM).',
       'Integrated Experian-based fraud and identity checks, reducing manual verification time by roughly 90%.',
       'Redesigned the React + GraphQL front-end, cutting API load by ~40% and improving responsiveness by ~55%, while DRY refactors delivered ~33% performance gains and lower server costs.',
+      'Engineered containerized microservices with AWS Lambda and Docker, cutting infrastructure costs by ~27% while enhancing scalability and deployment speed.',
+      'Restructured relational schemas with ActiveRecord, resolving memory issues (~23% improvement) while ensuring ACID compliance.',
+      'Enhanced frontend performance by ~15% via asset bundling and font caching.',
+      'Accelerated debugging by ~50% using structured logging and real-time monitoring tools such as Papertrail and Airbrake.',
     ],
   },
   {
@@ -239,6 +249,9 @@ export const AchievementsData = [
       'Developed HIPAA-aware data pipelines using HL7 APIs for secure data exchange between labs, doctors, and patients.',
       'Designed modular microservice-style components and automated onboarding flows, boosting developer efficiency by ~30%.',
       'Helped establish a scalable Rails API architecture with clear separation of concerns and security in mind.',
+      'Designed secure backend workflows for patient-doctor-lab coordination, improving reliability and real-time data availability across systems.',
+      'Optimized background processing and operational workflows with Sidekiq and CI/CD practices to improve release consistency.',
+      'Collaborated with cross-functional teams to ship compliant healthcare features while maintaining delivery velocity.',
     ],
   },
   {
@@ -250,6 +263,7 @@ export const AchievementsData = [
       'Migrated key REST endpoints to Shopify GraphQL and added GitHub Actions CI/CD, reducing server load by ~36% and speeding releases.',
       'Optimized Redis-backed background jobs to eliminate N+1 queries, improving overall resource utilization by ~43%.',
       'Improved storefront performance by reducing LCP by ~72% via Redis caching and backend query tuning, and built subscription workflows that stabilized recurring revenue.',
+      'Built product customization workflows (engraving, swatches, image uploads), improving customer engagement by ~37% and boosting merchant revenue.',
     ],
   },
 ];

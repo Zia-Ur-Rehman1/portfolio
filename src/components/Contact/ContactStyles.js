@@ -87,11 +87,18 @@ export const InfoChannel = styled.li`
   color: ${(props) => props.theme.colors.textPrimary};
 
   a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
+    color: ${(props) => props.theme.colors.borderInputFocus};
+    text-decoration: underline;
+    text-decoration-color: ${(props) => props.theme.colors.borderInputFocus};
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+    font-weight: 600;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
+
     &:hover {
       color: ${(props) => props.theme.colors.textBright};
+      text-decoration-color: ${(props) => props.theme.colors.textBright};
+      text-decoration-thickness: 2px;
     }
   }
 

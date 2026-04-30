@@ -4,46 +4,6 @@ import { RiReactjsLine } from "react-icons/ri";
 
 export const Skills = [
   {
-    category: "Top Skills",
-    skills: [
-      {
-        slug: "ruby-on-rails",
-        Component: DiRuby,
-        title: "Ruby on Rails",
-        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
-        Description: () => <>Primary backend framework for scalable products</>,
-      },
-      {
-        slug: "react-js",
-        Component: RiReactjsLine,
-        title: "React.js",
-        usedIn: ["Intellirent", "PC - Product Customization", "Portfolio"],
-        Description: () => <>Frontend for dynamic product interfaces</>,
-      },
-      {
-        slug: "postgresql-top",
-        Component: DiPostgresql,
-        title: "PostgreSQL",
-        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
-        Description: () => <>Core relational database across production apps</>,
-      },
-      {
-        slug: "redis-top",
-        Component: SiRedis,
-        title: "Redis",
-        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization"],
-        Description: () => <>Caching and background-job performance layer</>,
-      },
-      {
-        slug: "aws-top",
-        Component: SiAmazonwebservices,
-        title: "AWS",
-        usedIn: ["EcoLink", "Intellirent"],
-        Description: () => <>Cloud infra, storage and integrations</>,
-      },
-    ],
-  },
-  {
     category: "Languages",
     skills: [
       {
