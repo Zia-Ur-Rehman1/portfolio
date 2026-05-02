@@ -134,7 +134,7 @@ export const AccomplishmentsData = [
   {
     title: 'Devsinc',
     role: 'Senior Software Engineer',
-    duration: 'June 2021 – Present',
+    duration: 'June 2022 – Present',
   },
   {
     title: 'Intellirent',

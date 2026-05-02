@@ -33,3 +33,7 @@ yarn-error.log*
 # vercel
 .vercel
 node_modules
+
+# personal / local-only docs (never commit)
+profile.md
+recruiter_emails.md
