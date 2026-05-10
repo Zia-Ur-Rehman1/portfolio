@@ -124,7 +124,7 @@ export const AccomplishmentsData = [
   {
     title: 'AgencyPortal (Self-directed SaaS)',
     role: 'Founder · Lead Engineer',
-    duration: '2025 – Present',
+    duration: 'Jan 2025 – Present',
   },
   {
     title: 'EcoLink',
@@ -200,7 +200,7 @@ export const AchievementsData = [
     role: 'Founder · Lead Engineer',
     company: 'AgencyPortal — Multi-Tenant SaaS for Umrah Travel Agencies',
     location: 'Pakistan — Self-directed',
-    duration: '2025 – Present',
+    duration: 'Jan 2025 – Present',
     achievements: [
       'Designed and shipped a branded agency platform that unifies live inventory and bookings from 12 supplier portals into one customer-facing interface.',
       'Shipped a multi-tenant Rails 8 SaaS end-to-end with custom-domain → subdomain → apex tenant resolution and Pundit RBAC across super_admin / admin / agent roles.',
