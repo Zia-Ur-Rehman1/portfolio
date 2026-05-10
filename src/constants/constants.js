@@ -129,12 +129,17 @@ export const AccomplishmentsData = [
   {
     title: 'EcoLink',
     role: 'Full-Stack Engineer',
-    duration: 'Dec 2024 – Present',
+    duration: 'Dec 2024 – Apr 2026',
   },
   {
     title: 'Devsinc',
     role: 'Senior Software Engineer',
     duration: 'June 2022 – Present',
+  },
+  {
+    title: 'Saas LTV Growth Fund',
+    role: 'Software Engineer',
+    duration: 'Nov 2024 – Feb 2025',
   },
   {
     title: 'Intellirent',
@@ -146,11 +151,6 @@ export const AccomplishmentsData = [
     role: 'Software Engineer',
     duration: 'June 2022 – Jan 2023',
   },
-  {
-    title: 'Saas LTV Growth Fund',
-    role: 'Software Engineer',
-    duration: 'June 2021 – June 2022',
-  }
 ];
 
 // export const statistics = [
@@ -162,7 +162,7 @@ export const AccomplishmentsData = [
 //   { id: 6, value: "24/7", label: "Support Available", icon: <FaClock /> },
 // ];
 export const statistics = [
-  { id: 1, value: "5", label: "Years senior full‑stack", icon: <FaCalendar /> },
+  { id: 1, value: "4+", label: "Years senior full‑stack", icon: <FaCalendar /> },
   { id: 2, value: "3", label: "Production launches in 3 months", icon: <FaRocket /> },
   { id: 3, value: "3", label: "Timezones — US · UAE · KSA", icon: <FaGlobe /> },
   { id: 4, value: "20+", label: "Production integrations shipped", icon: <FaPlug /> },
@@ -215,7 +215,7 @@ export const AchievementsData = [
     role: 'Full-Stack Engineer',
     company: 'Ecolink – Communication Platform for Insurance Agencies',
     location: 'California – Remote',
-    duration: 'Dec 2024 – Present',
+    duration: 'Dec 2024 – Apr 2026',
     achievements: [
       'Designed multi-tenant real-time call, SMS, and chat workflows using ActionCable, WebSockets, and Turbo Streams for insurance agencies.',
       'Integrated RingCentral, AMS360, and Applied EPIC into a unified communication and compliance platform.',
@@ -223,6 +223,18 @@ export const AchievementsData = [
       'Shipped a RingCentral Call Analytics Reporting Module with scheduled SendGrid email delivery, downloadable PDF reports, saved schedule views, and an aggregation service for daily/bi-weekly call metrics.',
       'Built an AI call pipeline that converts audio into transcripts and summaries via an internal AI microservice with live ActionCable updates, reducing manual effort by ~50%.',
       'Shipped Inteveo IQ, an AI-driven Priority Task Board that turns each transcribed call into prioritized actionable items (Growth / Maintenance / Relationship) with sentiment scoring and AI insights, boosting agent follow-up efficiency by ~90%.',
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    company: 'SaaS LTV Growth – E-commerce Revenue Optimization',
+    location: 'Wilmington – Remote',
+    duration: 'Nov 2024 – Feb 2025',
+    achievements: [
+      'Migrated key REST endpoints to Shopify GraphQL and added GitHub Actions CI/CD, reducing server load by ~36% and speeding releases.',
+      'Optimized Redis-backed background jobs to eliminate N+1 queries, improving overall resource utilization by ~43%.',
+      'Improved storefront performance by reducing LCP by ~72% via Redis caching and backend query tuning, and built subscription workflows that stabilized recurring revenue.',
+      'Built product customization workflows (engraving, swatches, image uploads), improving customer engagement by ~37% and boosting merchant revenue.',
     ],
   },
   {
@@ -252,18 +264,6 @@ export const AchievementsData = [
       'Designed secure backend workflows for patient-doctor-lab coordination, improving reliability and real-time data availability across systems.',
       'Optimized background processing and operational workflows with Sidekiq and CI/CD practices to improve release consistency.',
       'Collaborated with cross-functional teams to ship compliant healthcare features while maintaining delivery velocity.',
-    ],
-  },
-  {
-    role: 'Software Engineer',
-    company: 'SaaS LTV Growth – E-commerce Revenue Optimization',
-    location: 'Wilmington – Remote',
-    duration: 'June 2021 – June 2022',
-    achievements: [
-      'Migrated key REST endpoints to Shopify GraphQL and added GitHub Actions CI/CD, reducing server load by ~36% and speeding releases.',
-      'Optimized Redis-backed background jobs to eliminate N+1 queries, improving overall resource utilization by ~43%.',
-      'Improved storefront performance by reducing LCP by ~72% via Redis caching and backend query tuning, and built subscription workflows that stabilized recurring revenue.',
-      'Built product customization workflows (engraving, swatches, image uploads), improving customer engagement by ~37% and boosting merchant revenue.',
     ],
   },
 ];

@@ -12,7 +12,7 @@ const Hero = (props) => {
             <GradientText>Zia Ur Rehman</GradientText>
           </SectionTitle>
           <SectionText>
-            Full‑Stack Software Engineer (Ruby on Rails + React) based in Pakistan, with 5 years shipping production systems across real estate, healthcare, e‑commerce, communications, travel SaaS, and Saudi software escrow. I own features end‑to‑end and work remote with distributed teams across the US, UAE, and KSA.
+            Full‑Stack Software Engineer (Ruby on Rails + React) based in Pakistan, with 4+ years shipping production systems across real estate, healthcare, e‑commerce, communications, travel SaaS, and Saudi software escrow. I own features end‑to‑end and work remote with distributed teams across the US, UAE, and KSA.
           </SectionText>
           <SectionText>
             Strong in performance work, real‑time features (ActionCable, Turbo, WebSockets), and complex integrations — HL7, Experian, RingCentral, AMS360, EPIC, Shopify. Recently shipped Escrow.sa (Rails 8 software escrow inside the KSA data‑residency zone) and built AgencyPortal end‑to‑end (multi‑tenant Umrah travel SaaS), pairing with Claude on day‑to‑day engineering to ship faster without cutting corners.

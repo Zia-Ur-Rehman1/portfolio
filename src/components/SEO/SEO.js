@@ -5,7 +5,7 @@ const SEO = ({ title, description, path = '' }) => {
   const siteTitle = title ? `${title} | Zia Ur Rehman` : defaultTitle;
   const siteDescription =
     description ||
-    'Zia Ur Rehman is a Ruby on Rails and React full-stack software engineer in Pakistan with 5 years of experience building APIs, scalable web apps, and AI-enabled workflows.';
+    'Zia Ur Rehman is a Ruby on Rails and React full-stack software engineer in Pakistan with 4+ years of experience building APIs, scalable web apps, and AI-enabled workflows.';
 
   const siteUrl = 'https://zia-ur-rehman1.github.io/portfolio';
   const canonicalUrl = `${siteUrl}${path}`;
