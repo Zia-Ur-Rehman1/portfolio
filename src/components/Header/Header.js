@@ -55,7 +55,7 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            href="files/Zia_Rehman_Full_Stack_Developer.pdf"
+            href="files/Zia_Rehman_Full_Stack_Developer.pdf?v=2026-06-02"
             target="_blank"
             rel="noopener noreferrer"
           >
