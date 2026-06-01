@@ -49,14 +49,14 @@ export const StyledButtonLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${({ alt }) => (alt ? '150px' : '262px')};
-  height: ${({ alt }) => (alt ? '52px' : '64px')};
+  width: ${({ $alt }) => ($alt ? '150px' : '262px')};
+  height: ${({ $alt }) => ($alt ? '52px' : '64px')};
   border-radius: 50px;
-  font-size: ${({ alt }) => (alt ? '20px' : '24px')};
+  font-size: ${({ $alt }) => ($alt ? '20px' : '24px')};
   font-weight: 600;
   color: ${(props) => props.theme.colors.textBright};
-  background: ${({ alt, theme }) =>
-    alt
+  background: ${({ $alt, theme }) =>
+    $alt
       ? theme.colors.brandGradientWarm
       : theme.colors.brandGradientCool};
   text-decoration: none;
@@ -83,14 +83,51 @@ export const StyledButtonLink = styled.a`
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
-    width: ${({ alt }) => (alt ? '150px' : '184px')};
-    height: ${({ alt }) => (alt ? '52px' : '48px')};
-    font-size: ${({ alt }) => (alt ? '20px' : '16px')};
+    width: ${({ $alt }) => ($alt ? '150px' : '184px')};
+    height: ${({ $alt }) => ($alt ? '52px' : '48px')};
+    font-size: ${({ $alt }) => ($alt ? '20px' : '16px')};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     width: 100%;
     height: 32px;
+    font-size: 14px;
+  }
+`;
+
+export const CtaRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 1.25rem;
+  align-items: center;
+`;
+
+export const SecondaryButtonLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 22px;
+  height: 52px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${(props) => props.theme.colors.textBright};
+  background: transparent;
+  border: 1.5px solid ${(props) => props.theme.colors.secondaryBtnBorder};
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  &:hover {
+    background: ${(props) => props.theme.colors.cardBgHover};
+    color: ${(props) => props.theme.colors.secondaryBtnHoverText};
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    width: 100%;
+    height: 44px;
     font-size: 14px;
   }
 `;

@@ -1,5 +1,5 @@
-import { FaCalendar, FaUsers, FaClock, FaCogs, FaServer, FaRocket, FaGlobe, FaPlug } from 'react-icons/fa';
-import { FiTarget } from "react-icons/fi";
+import { FaCalendar, FaRocket, FaPlug, FaBolt } from 'react-icons/fa';
+
 export const ProjectsData = [
   {
     title: 'Escrow.sa',
@@ -89,109 +89,56 @@ export const ProjectsData = [
     visit: 'https://barhoumholdings.databutton.app/local-serv',
     id: 6,
   },
-  // {
-  // title: 'Evolutionary Algorithm',
-  // category: 'Academic / AI Project',
-  // description: 'An AI-driven evolutionary algorithm implementation that mimics natural selection to solve optimization problems. It evolves a population of solutions via fitness evaluation, selection, crossover, and mutation—demonstrating core concepts in action.',
-  // tags: ['Python', 'Genetic Algorithm', 'Optimization', 'Evolutionary Computation', 'Fitness Function'],
-  // visit: 'https://github.com/Zia-Ur-Rehman1/Evolutionary_Algorithm',
-  // id: 5,
-  // },
-  // {
-  //   title: 'Tickting Umrah Reserve Portal',
-  //   description: 'A comprehensive web-based system for managing Umrah travel bookings. It enables users to handle ticket reservations, process service requests & payments. Uses AI-powered document parsing and a secure, live & transparent payment tracking system.',
-  //   tags: ['Django', 'Python', 'PostgreSQL', 'Docker', 'REST API', 'Tesseract OCR', 'PDF Parsing', 'CI/CD'],
-  //   category: 'Ticket & Umrah Reservation',
-  //   visit: 'https://github.com/Zia-Ur-Rehman1/Tickting_Umrah_Reserve_Portal',
-  //   id: 6,
-  // },
-  // {
-  //   title: 'Namhal',
-  //   category: 'CRM | Residency Complaint Management',
-  //   description: 'An Android application tailored for managing residency complaint workflows. Namhal enables administrators, managers, and staff to log, track, and resolve resident service requests, featuring real-time dashboards with actionable statistics for effective decision-making.',
-  //   tags: ['Flutter (Dart)', 'Firebase', 'Android', 'Figma', 'Balsamiq', 'UX/UI Design'],
-  //   visit: 'https://github.com/Zia-Ur-Rehman1/namhal',
-  //   id: 7
-  // }
 ];
 
 export const AccomplishmentsData = [
-  {
-    title: 'Escrow.sa',
-    role: 'Full-Stack Engineer',
-    duration: 'Mar 2026 – May 2026',
-  },
-  {
-    title: 'AgencyPortal (Self-directed SaaS)',
-    role: 'Founder · Lead Engineer',
-    duration: 'Jan 2025 – Present',
-  },
-  {
-    title: 'EcoLink',
-    role: 'Full-Stack Engineer',
-    duration: 'Dec 2024 – Apr 2026',
-  },
   {
     title: 'Devsinc',
     role: 'Senior Software Engineer',
     duration: 'June 2022 – Present',
   },
   {
-    title: 'Saas LTV Growth Fund',
-    role: 'Software Engineer',
+    title: 'EcoLink',
+    role: 'Full-Stack Engineer (via Devsinc)',
+    duration: 'Feb 2025 – Apr 2026',
+  },
+  {
+    title: 'SaaS LTV Growth Fund',
+    role: 'Software Engineer (via Devsinc)',
     duration: 'Nov 2024 – Feb 2025',
   },
   {
     title: 'Intellirent',
-    role: 'Full Stack Software Engineer',
+    role: 'Full-Stack Engineer (via Devsinc)',
     duration: 'Jan 2023 – Dec 2024',
   },
   {
     title: 'Biomark',
-    role: 'Software Engineer',
+    role: 'Software Engineer (via Devsinc)',
     duration: 'June 2022 – Jan 2023',
   },
 ];
 
-// export const statistics = [
-//   { id: 1, value: "4+", label: "Years Experience", icon: <FaCalendar /> },
-//   { id: 2, value: "15+", label: "Projects Delivered", icon: <FiTarget /> },
-//   { id: 3, value: "4+", label: "Live Products", icon: <FaUsers /> },
-//   { id: 4, value: "150+", label: "Features Integrated", icon: <FaCogs /> },
-//   { id: 5, value: "3+", label: "Production Experience", icon: <FaServer /> },
-//   { id: 6, value: "24/7", label: "Support Available", icon: <FaClock /> },
-// ];
 export const statistics = [
   { id: 1, value: "4+", label: "Years senior full‑stack", icon: <FaCalendar /> },
-  { id: 2, value: "3", label: "Production launches in 3 months", icon: <FaRocket /> },
-  { id: 3, value: "3", label: "Timezones — US · UAE · KSA", icon: <FaGlobe /> },
-  { id: 4, value: "20+", label: "Production integrations shipped", icon: <FaPlug /> },
+  { id: 2, value: "77%", label: "Memory cut on legacy PDF system", icon: <FaBolt /> },
+  { id: 3, value: "12", label: "Supplier portals unified behind one layer", icon: <FaPlug /> },
+  { id: 4, value: "~50%", label: "Manual effort cut via AI call pipeline", icon: <FaRocket /> },
 ];
 
-export const TimeLineData = [
-  { year: 2016, text: 'Started my journey as a developer.', },
-  { year: 2017, text: 'Worked intensively on ROMs & Kernels.', },
-  { year: 2018, text: 'Learned Android app development.', },
-  { year: 2019, text: 'Finished Diploma in Computer Engineering.', },
-  { year: 2020, text: 'Aquired new skills while trying not to catch COVID-19', },
-  { year: 2021, text: 'Survived COVID-19 and got my first Job at Primebook.', },
-  { year: 2022, text: 'Completed B.Tech in Information Technology.', },
-  { year: 2023, text: 'Year under progress....', },
-];
-
-export const AchievementsData = [
+export const AiNativeProjectsData = [
   {
     role: 'Full-Stack Engineer',
     company: 'Escrow.sa — Software Escrow Platform for the Saudi Market',
     location: 'Riyadh – Remote',
-    duration: 'Mar 2026 – May 2026',
+    link: 'https://escrow.sa',
     achievements: [
       'Architected a tri-party software escrow platform on Rails 8 + Hotwire with bilingual Arabic/English UI and full RTL support.',
-      'Built a Rails 8 platform that securely holds vendor source code and releases it to beneficiaries only when legally defined release conditions are approved.',
-      'Built an encrypted Forgejo Vault for source-code deposits with SHA-256 integrity checks and a senior-engineer manual review workflow.',
+      'Bootstrapped a Rails 8 platform that securely holds vendor source code and releases it to beneficiaries only when legally defined release conditions are approved.',
+      'Engineered an encrypted Forgejo Vault for source-code deposits with SHA-256 integrity checks and a senior-engineer manual review workflow.',
       'Implemented a senior-engineer manual verification workflow where each deposit is downloaded, set up, run, reviewed, and approved before being marked as verified.',
       'Designed a multi-stage release-approval pipeline (moderator → lawyer → super admin) using AASM state machines and PaperTrail audit trails.',
-      'Built multi-portal access for platform staff, vendors, and beneficiaries with role-based authorization using action_policy.',
+      'Crafted multi-portal access for platform staff, vendors, and beneficiaries with role-based authorization using action_policy.',
       'Added per-agreement encrypted environment variables so moderators can securely access the secrets needed to verify deposited software.',
       'Provisioned the platform inside the KSA data-residency zone with KMS-backed per-agreement encryption and append-only audit logs on a separate database.',
     ],
@@ -199,34 +146,62 @@ export const AchievementsData = [
   {
     role: 'Founder · Lead Engineer',
     company: 'AgencyPortal — Multi-Tenant SaaS for Umrah Travel Agencies',
-    location: 'Pakistan — Self-directed',
-    duration: 'Jan 2025 – Present',
+    location: 'Self-directed',
+    link: 'https://hasnaintravel.com',
     achievements: [
-      'Designed and shipped a branded agency platform that unifies live inventory and bookings from 12 supplier portals into one customer-facing interface.',
-      'Shipped a multi-tenant Rails 8 SaaS end-to-end with custom-domain → subdomain → apex tenant resolution and Pundit RBAC across super_admin / admin / agent roles.',
+      'Launched a branded agency platform that unifies live inventory and bookings from 12 supplier portals into one customer-facing interface.',
+      'Pioneered a multi-tenant Rails 8 SaaS end-to-end with custom-domain → subdomain → apex tenant resolution and Pundit RBAC across super_admin / admin / agent roles.',
       'Implemented per-agency landing pages, custom domains, markup pricing, hold timers, auto-cancel flows, and booking lifecycle management.',
-      'Built a portal-integration layer that normalizes 12 heterogeneous supplier APIs (cookie sessions, JWT SPAs, TOTP Selenium logins) behind common Fetcher / Booker / SessionManager services.',
-      'Designed a booking state machine with audience-aware hold timers and a double-entry ledger that stacks per-agent and per-portal markups on confirm.',
+      'Authored a portal-integration layer with scripted logins and data fetchers against 12 supplier portals (cookie sessions, JWT SPAs, TOTP-secured Selenium flows) behind common Fetcher / Booker / SessionManager services.',
+      'Mapped a booking state machine with audience-aware hold timers and a double-entry ledger that stacks per-agent and per-portal markups on confirm.',
       'Streamed Hetzner + Cloudflare metrics into the admin dashboard with threshold-based alerts so CPU, egress, and R2 limits surface before customers notice.',
       'Deployed to Hetzner Cloud with Caddy (on-demand TLS for tenant domains), Cloudflare R2 storage, and nightly encrypted PostgreSQL backups.',
     ],
   },
   {
-    role: 'Full-Stack Engineer',
-    company: 'Ecolink – Communication Platform for Insurance Agencies',
-    location: 'California – Remote',
-    duration: 'Dec 2024 – Apr 2026',
+    role: 'Founder · Lead Engineer',
+    company: 'Yushas Collection — Rails 8 Storefront for Pakistani Unstitched Fabric',
+    location: 'Self-directed',
+    link: 'https://yushascollection.com',
     achievements: [
-      'Designed multi-tenant real-time call, SMS, and chat workflows using ActionCable, WebSockets, and Turbo Streams for insurance agencies.',
-      'Integrated RingCentral, AMS360, and Applied EPIC into a unified communication and compliance platform.',
-      'Built a Slack reporting bot (PDF/CSV) that automated bi-weekly usage reports and cut manual reporting effort by ~80%.',
-      'Shipped a RingCentral Call Analytics Reporting Module with scheduled SendGrid email delivery, downloadable PDF reports, saved schedule views, and an aggregation service for daily/bi-weekly call metrics.',
-      'Built an AI call pipeline that converts audio into transcripts and summaries via an internal AI microservice with live ActionCable updates, reducing manual effort by ~50%.',
-      'Shipped Inteveo IQ, an AI-driven Priority Task Board that turns each transcribed call into prioritized actionable items (Growth / Maintenance / Relationship) with sentiment scoring and AI insights, boosting agent follow-up efficiency by ~90%.',
+      'Stood up a greenfield Rails 8.1 storefront end-to-end on PostgreSQL 18 multi-DB (primary / cache / queue / cable) with Hotwire (Turbo + Stimulus) and Tailwind v4 — zero Node toolchain via importmap-rails.',
+      'Modeled the full catalog domain — Category, Collection, Product, ProductVariant, ProductPhoto — with admin-side photo↔color binding and nested-form Stimulus controllers for variant management.',
+      'Shipped a complete order lifecycle for the local market: bank transfer + cash-on-delivery (no payment gateway), confirm → ship → mark_delivered → cancel state transitions.',
+      'Themed the storefront via SiteSetting (colors, fonts, contact, shipping) plus data-driven homepage blocks (Banner, HomepageSection) so the brand can re-skin without code changes.',
+      'Added rich-text editing on every body field via ActionText, PDP lightbox with full photo navigation + mobile swipe, and a storefront perf pass (fragment cache, Thruster + Puma tuning, font trim).',
+      'Wired Solid Queue / Solid Cache / Solid Cable on PostgreSQL — zero Redis dependency — and deployed live on yushascollection.com via Kamal with Caddy TLS.',
+    ],
+  },
+];
+
+export const AchievementsData = [
+  {
+    role: 'Senior Software Engineer',
+    company: 'Devsinc — Full-Stack Engineer staffed across US and global client engagements',
+    location: 'Lahore, Pakistan – Hybrid',
+    duration: 'June 2022 – Present',
+    isParent: true,
+    achievements: [
+      'Senior full-stack engineer at Devsinc working on production Rails + React systems for distributed teams across the US, UAE, and KSA.',
+      'Client engagements below — each shipped as part of the Devsinc team.',
     ],
   },
   {
-    role: 'Software Engineer',
+    role: 'Full-Stack Engineer (via Devsinc)',
+    company: 'Ecolink – Communication Platform for Insurance Agencies',
+    location: 'California – Remote',
+    duration: 'Feb 2025 – Apr 2026',
+    achievements: [
+      'Forged an AI call pipeline that converts audio into transcripts and summaries via an internal AI microservice with live ActionCable updates, reducing manual effort by ~50%.',
+      'Productionized Inteveo IQ, an AI-driven Priority Task Board that turns each transcribed call into prioritized actionable items (Growth / Maintenance / Relationship) with sentiment scoring and AI insights, boosting agent follow-up efficiency by ~90%.',
+      'Composed multi-tenant real-time call, SMS, and chat workflows using ActionCable, WebSockets, and Turbo Streams for insurance agencies.',
+      'Integrated RingCentral, AMS360, and Applied EPIC into a unified communication and compliance platform.',
+      'Rolled out a Slack reporting bot (PDF/CSV) that automated bi-weekly usage reports and cut manual reporting effort by ~80%.',
+      'Delivered a RingCentral Call Analytics Reporting Module with scheduled SendGrid email delivery, downloadable PDF reports, saved schedule views, and an aggregation service for daily/bi-weekly call metrics.',
+    ],
+  },
+  {
+    role: 'Software Engineer (via Devsinc)',
     company: 'SaaS LTV Growth – E-commerce Revenue Optimization',
     location: 'Wilmington – Remote',
     duration: 'Nov 2024 – Feb 2025',
@@ -234,11 +209,11 @@ export const AchievementsData = [
       'Migrated key REST endpoints to Shopify GraphQL and added GitHub Actions CI/CD, reducing server load by ~36% and speeding releases.',
       'Optimized Redis-backed background jobs to eliminate N+1 queries, improving overall resource utilization by ~43%.',
       'Improved storefront performance by reducing LCP by ~72% via Redis caching and backend query tuning, and built subscription workflows that stabilized recurring revenue.',
-      'Built product customization workflows (engraving, swatches, image uploads), improving customer engagement by ~37% and boosting merchant revenue.',
+      'Owned product customization workflows (engraving, swatches, image uploads), improving customer engagement by ~37% and boosting merchant revenue.',
     ],
   },
   {
-    role: 'Full-Stack Engineer',
+    role: 'Full-Stack Engineer (via Devsinc)',
     company: 'Intellirent – Real Estate & Rental Marketing',
     location: 'Texas – Remote',
     duration: 'Jan 2023 – Dec 2024',
@@ -253,15 +228,15 @@ export const AchievementsData = [
     ],
   },
   {
-    role: 'Software Engineer',
+    role: 'Software Engineer (via Devsinc)',
     company: 'Biomark – Healthcare Connectivity Platform',
     location: 'Singapore – Remote',
     duration: 'June 2022 – Jan 2023',
     achievements: [
       'Developed HIPAA-aware data pipelines using HL7 APIs for secure data exchange between labs, doctors, and patients.',
-      'Designed modular microservice-style components and automated onboarding flows, boosting developer efficiency by ~30%.',
+      'Drafted modular microservice-style components and automated onboarding flows, boosting developer efficiency by ~30%.',
       'Helped establish a scalable Rails API architecture with clear separation of concerns and security in mind.',
-      'Designed secure backend workflows for patient-doctor-lab coordination, improving reliability and real-time data availability across systems.',
+      'Orchestrated secure backend workflows for patient-doctor-lab coordination, improving reliability and real-time data availability across systems.',
       'Optimized background processing and operational workflows with Sidekiq and CI/CD practices to improve release consistency.',
       'Collaborated with cross-functional teams to ship compliant healthcare features while maintaining delivery velocity.',
     ],
@@ -271,18 +246,13 @@ export const AchievementsData = [
 export const CurrentFocusData = [
   {
     title: 'AgencyPortal',
-    hook: 'Multi-tenant Umrah travel SaaS — actively shipping booking flows, supplier integrations, and per-agency analytics. Live at hasnaintravel.com.',
+    hook: 'Multi-tenant Umrah travel SaaS — scripted Selenium logins against 12 supplier portals, booking flows, per-agency analytics. Live at hasnaintravel.com.',
     link: 'https://hasnaintravel.com',
   },
   {
-    title: 'EcoLink',
-    hook: 'Cloud communications platform for insurance agencies — building real-time call, SMS, and chat workflows on Rails 8 + ActionCable with RingCentral, AMS360, and EPIC integrations.',
-    link: 'https://ecolink.inteveo.com',
-  },
-  {
-    title: 'Cloth E-commerce',
-    hook: 'Personal side project — a modern clothing storefront exploring product catalog, cart, and checkout flows. Source on GitHub.',
-    link: 'https://github.com/Zia-Ur-Rehman1/cloth-ecommerce',
+    title: 'Yushas Collection',
+    hook: 'Greenfield Rails 8 storefront for a Pakistani unstitched-fabric brand — catalog, theming, full order lifecycle (bank transfer + COD), admin-managed homepage blocks. Live at yushascollection.com.',
+    link: 'https://yushascollection.com',
   },
 ];
 
@@ -321,6 +291,6 @@ export const TestimonialsData = [
     name: 'Ali Raza Khan',
     role: 'SSE - Full Stack | Node.js | AWS',
     text: "Zia Ur Rehman was an amazing colleague, and person! He is very motivated and hard working and inspires the team. Zia has consistently overachieved his targets. I worked closely with Zia for, around, 3½ years during my Bachelors, he was always a professional, approachable and helping. He is self driven and wants to reach his goals while still enabling others to succeed. Zia is also very creative and always wants to find new and innovative ways when it problem solving.",
-    id: 2,
+    id: 5,
   }
 ];

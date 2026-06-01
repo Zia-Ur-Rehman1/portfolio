@@ -22,7 +22,6 @@ const sharedAccents = {
   accentGreen: '#22c55e',
   accentMint: '#6ee7b7',
   accentSky: '#38bdf8',
-  accentLightBlue: '#9cc9e3',
   accentBlue: '#2575fc',
   accentDeepPurple: '#6a11cb',
   accentReadMore: '#93c5fd',
@@ -109,6 +108,7 @@ export const darkTheme = {
     hookGradient: 'radial-gradient(circle at top, rgba(13, 202, 240, 0.35), rgba(15, 23, 42, 0.6))',
     focusCardGradient: 'linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(147, 51, 234, 0.15))',
     focusCardBorder: 'rgba(147, 51, 234, 0.35)',
+    focusCardTitle: '#a5f3fc',
     techRadial: 'radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.25) 53.8%, rgba(79, 108, 176, 0) 100%)',
     contactDecorative: 'linear-gradient(120deg, rgba(56, 189, 248, 0.55), rgba(148, 93, 214, 0.55))',
 
@@ -141,6 +141,7 @@ export const darkTheme = {
 
     // Accents (shared brand)
     ...sharedAccents,
+    accentLightBlue: '#9cc9e3',
     accent1: 'hsl(34.9,98.6%,72.9%)',
     button: 'hsl(205.1,100%,36.1%)',
     link: '#18C5DD',
@@ -214,14 +215,15 @@ export const lightTheme = {
     hookGradient: 'linear-gradient(135deg, rgba(19, 173, 199, 0.12), rgba(148, 93, 214, 0.12))',
     focusCardGradient: 'linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(147, 51, 234, 0.1))',
     focusCardBorder: 'rgba(147, 51, 234, 0.3)',
+    focusCardTitle: '#0e7490',
     techRadial: 'radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.12) 53.8%, rgba(79, 108, 176, 0) 100%)',
     contactDecorative: 'linear-gradient(120deg, rgba(56, 189, 248, 0.45), rgba(148, 93, 214, 0.45))',
 
     // Hero text gradient — white-on-light is invisible, use brand gradient instead
     heroTextGradient: 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)',
 
-    // Section title gradient — use a dark gradient on light bg
-    sectionTitleGradient: 'linear-gradient(121.57deg, #0f172a 18.77%, rgba(15, 23, 42, 0.66) 60.15%)',
+    // Section title gradient — strong dark-to-brand on light bg for readability
+    sectionTitleGradient: 'linear-gradient(121.57deg, #0f172a 0%, #0e7490 60%, #6a11cb 100%)',
 
     // Header social hover bg
     socialIconHoverBg: '#e2e8f0',
@@ -246,6 +248,7 @@ export const lightTheme = {
 
     // Accents (shared brand)
     ...sharedAccents,
+    accentLightBlue: '#0e7490',
     accent1: '#f59e0b',
     button: '#2563eb',
     link: '#0891b2',

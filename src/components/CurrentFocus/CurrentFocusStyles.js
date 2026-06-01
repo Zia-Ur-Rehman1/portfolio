@@ -31,7 +31,7 @@ export const FocusTitle = styled.h4`
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.08rem;
-  color: ${(props) => props.theme.colors.accentCyanGlow};
+  color: ${(props) => props.theme.colors.focusCardTitle};
   margin: 0;
 `;
 

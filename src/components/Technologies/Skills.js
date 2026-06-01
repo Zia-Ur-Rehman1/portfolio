@@ -1,5 +1,5 @@
 import { DiJavascript1,  DiRuby, DiPostgresql, DiPython, DiDjango } from "react-icons/di";
-import { SiTypescript, SiFlutter, SiGraphql, SiDocker, SiJenkins, SiHeroku, SiShopify,SiBootstrap, SiMui, SiRedis, SiDigitalocean, SiAmazonwebservices, SiFirebase, SiTailwindcss, SiNgrok, SiDart, SiHetzner, SiCloudflare, SiCaddy } from "react-icons/si";
+import { SiTypescript, SiFlutter, SiGraphql, SiDocker, SiJenkins, SiHeroku, SiShopify,SiBootstrap, SiMui, SiRedis, SiDigitalocean, SiAmazonwebservices, SiFirebase, SiTailwindcss, SiNgrok, SiDart, SiHetzner, SiCloudflare, SiCaddy, SiSelenium } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 
 export const Skills = [
@@ -188,6 +188,13 @@ export const Skills = [
   {
     category: "Tools & APIs",
     skills: [
+      {
+        slug: "selenium",
+        Component: SiSelenium,
+        title: "Selenium",
+        usedIn: ["AgencyPortal"],
+        Description: () => <>Browser automation for scripted logins & TOTP-secured portal flows</>,
+      },
       {
         slug: "shopify",
         Component: SiShopify,

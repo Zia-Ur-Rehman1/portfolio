@@ -1,32 +1,47 @@
 import React from 'react';
+import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { FiDownload } from 'react-icons/fi';
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { GradientText, LeftSection, StyledButtonLink } from './HeroStyles';
-import { StatsContainer, StatCard, StatLabel, StatValue } from '../Stats/StatsStyles';
-import { statistics } from '../../constants/constants';
-const Hero = (props) => {
+import { CtaRow, GradientText, LeftSection, SecondaryButtonLink, StyledButtonLink } from './HeroStyles';
+
+const Hero = () => {
   return (
-    <>
-      <Section row nopadding>
-        <LeftSection>
-          <SectionTitle main center>
-            <GradientText>Zia Ur Rehman</GradientText>
-          </SectionTitle>
-          <SectionText>
-            Full‑Stack Software Engineer (Ruby on Rails + React) based in Pakistan, with 4+ years shipping production systems across real estate, healthcare, e‑commerce, communications, travel SaaS, and Saudi software escrow. I own features end‑to‑end and work remote with distributed teams across the US, UAE, and KSA.
-          </SectionText>
-          <SectionText>
-            Strong in performance work, real‑time features (ActionCable, Turbo, WebSockets), and complex integrations — HL7, Experian, RingCentral, AMS360, EPIC, Shopify. Recently shipped Escrow.sa (Rails 8 software escrow inside the KSA data‑residency zone) and built AgencyPortal end‑to‑end (multi‑tenant Umrah travel SaaS), pairing with Claude on day‑to‑day engineering to ship faster without cutting corners.
-          </SectionText>
+    <Section row nopadding>
+      <LeftSection>
+        <SectionTitle main center>
+          <GradientText>Zia Ur Rehman</GradientText>
+        </SectionTitle>
+        <SectionText>
+          Rails 8 + React engineer. I ship multi-tenant SaaS, real-time integrations, and AI pipelines end-to-end — production-grade, not prototypes.
+        </SectionText>
+        <SectionText>
+          4+ years across FinTech, HealthTech, e-commerce, communications, travel SaaS, and Saudi software escrow. Remote with US, UAE, and KSA teams. Strong in performance work, ActionCable / Turbo real-time, and complex integrations (HL7, Experian, RingCentral, AMS360, EPIC, Shopify). Pair daily with Claude / Codex to ship faster without cutting corners.
+        </SectionText>
+        <SectionText>
+          Independently shipped three AI-native production builds: <strong>Escrow.sa</strong> (KSA software escrow on Rails 8), <strong>AgencyPortal</strong> (multi-tenant travel SaaS, 12 supplier portals via scripted Selenium), and <strong>Yushas Collection</strong> (Rails 8 storefront).
+        </SectionText>
+        <CtaRow>
           <StyledButtonLink
             href="files/Zia_Rehman_Full_Stack_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            $alt
           >
-            My Resume
+            <FiDownload style={{ marginRight: '8px' }} /> Resume
           </StyledButtonLink>
-        </LeftSection>
-      </Section>
-    </>
+          <SecondaryButtonLink href="mailto:zia.rehman.web@gmail.com">
+            <FaEnvelope /> Email
+          </SecondaryButtonLink>
+          <SecondaryButtonLink
+            href="https://wa.me/923131407828"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp /> WhatsApp
+          </SecondaryButtonLink>
+        </CtaRow>
+      </LeftSection>
+    </Section>
   );
 };
 

@@ -30,6 +30,11 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink href="#ai-native" onClick={(e) => handleSmoothScroll(e, 'ai-native')}>
+            AI-Native
+          </NavLink>
+        </li>
+        <li>
           <NavLink href="#projects" onClick={(e) => handleSmoothScroll(e, 'projects')}>
             Projects
           </NavLink>
@@ -47,6 +52,15 @@ const Header = () => {
         <li>
           <NavLink href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')}>
             Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            href="files/Zia_Rehman_Full_Stack_Developer.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
           </NavLink>
         </li>
       </Div2>

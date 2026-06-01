@@ -8,6 +8,7 @@ import Technologies from '../components/Technologies/Technologies';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 import Achievements from '../components/Achievements/Achievements';
+import AiNativeProjects from '../components/AiNativeProjects/AiNativeProjects';
 import CurrentFocus from '../components/CurrentFocus/CurrentFocus';
 import Hook from '../components/Hook/Hook';
 import Contact from '../components/Contact/Contact';
@@ -29,6 +30,7 @@ const Home = () => {
       </Section>
       <CurrentFocus />
       <Achievements />
+      <AiNativeProjects />
       <Projects />
       <Testimonials />
       <Technologies />
