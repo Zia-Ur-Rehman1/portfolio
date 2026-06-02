@@ -37,3 +37,6 @@ node_modules
 # personal / local-only docs (never commit)
 profile.md
 recruiter_emails.md
+
+# playwright-mcp local logs
+.playwright-mcp/
