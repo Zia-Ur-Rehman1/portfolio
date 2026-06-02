@@ -1,0 +1,27 @@
+{
+  "name": "Zia Ur Rehman — Rails 8 + React Full-Stack Engineer",
+  "short_name": "Zia Ur Rehman",
+  "description": "Portfolio of Zia Ur Rehman — Ruby on Rails and React full-stack engineer building production SaaS, real-time integrations, and AI-native systems.",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0f172a",
+  "background_color": "#0f172a",
+  "display": "standalone",
+  "start_url": "./",
+  "scope": "./"
+}

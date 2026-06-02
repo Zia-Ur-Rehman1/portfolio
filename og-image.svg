@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1224"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13ADC7"/>
+      <stop offset="100%" stop-color="#945DD6"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F46737"/>
+      <stop offset="100%" stop-color="#945DD6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g transform="translate(80,90)">
+    <rect width="64" height="6" rx="3" fill="url(#brand)"/>
+    <text x="0" y="60" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="28" font-weight="500" fill="#94a3b8" letter-spacing="2">
+      ZIA UR REHMAN
+    </text>
+    <text x="0" y="180" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="96" font-weight="800" fill="#ffffff">
+      Rails 8 + React
+    </text>
+    <text x="0" y="290" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="96" font-weight="800" fill="url(#brand)">
+      Full-Stack Engineer
+    </text>
+    <text x="0" y="380" font-family="'Inter', sans-serif" font-size="32" font-weight="400" fill="#cbd5e1">
+      Multi-tenant SaaS · Real-time integrations · AI pipelines
+    </text>
+    <text x="0" y="430" font-family="'Inter', sans-serif" font-size="32" font-weight="400" fill="#cbd5e1">
+      Production-grade, not prototypes.
+    </text>
+  </g>
+
+  <g transform="translate(80,530)">
+    <circle cx="14" cy="14" r="8" fill="#22c55e"/>
+    <text x="38" y="22" font-family="'Inter', sans-serif" font-size="26" font-weight="600" fill="#e2e8f0">
+      Available for remote Senior Rails / Full-Stack roles
+    </text>
+  </g>
+
+  <g transform="translate(900,530)">
+    <text x="0" y="22" font-family="'Inter', sans-serif" font-size="22" font-weight="500" fill="#94a3b8">
+      zia-ur-rehman1.github.io/portfolio
+    </text>
+  </g>
+</svg>
