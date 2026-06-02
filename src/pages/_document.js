@@ -32,7 +32,20 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en-US'>
         <Head>
-          <link rel="icon" href={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}/favicon.ico`} />
+          {(() => {
+            const base = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+            return (
+              <>
+                <link rel="icon" href={`${base}/favicon.ico`} sizes="any" />
+                <link rel="icon" type="image/svg+xml" href={`${base}/icon.svg`} />
+                <link rel="icon" type="image/png" sizes="16x16" href={`${base}/favicon-16x16.png`} />
+                <link rel="icon" type="image/png" sizes="32x32" href={`${base}/favicon-32x32.png`} />
+                <link rel="apple-touch-icon" sizes="180x180" href={`${base}/apple-touch-icon.png`} />
+                <link rel="manifest" href={`${base}/site.webmanifest`} />
+                <meta name="theme-color" content="#0f172a" />
+              </>
+            );
+          })()}
           <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
           {plausibleDomain && (
             <script

@@ -9,7 +9,8 @@ const SEO = ({ title, description, path = '' }) => {
 
   const siteUrl = 'https://zia-ur-rehman1.github.io/portfolio';
   const canonicalUrl = `${siteUrl}${path}`;
-  const siteImage = `${siteUrl}/favicon.ico`;
+  const siteImage = `${siteUrl}/og-image.png`;
+  const siteName = 'Zia Ur Rehman';
 
   const keywords = [
     'Zia Ur Rehman',
@@ -59,17 +60,23 @@ const SEO = ({ title, description, path = '' }) => {
       <link rel="canonical" href={canonicalUrl} />
 
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content={siteName} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDescription} />
       <meta property="og:image" content={siteImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:alt" content="Zia Ur Rehman — Rails 8 + React full-stack engineer" />
       <meta property="og:locale" content="en_US" />
 
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={canonicalUrl} />
-      <meta property="twitter:title" content={siteTitle} />
-      <meta property="twitter:description" content={siteDescription} />
-      <meta property="twitter:image" content={siteImage} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={canonicalUrl} />
+      <meta name="twitter:title" content={siteTitle} />
+      <meta name="twitter:description" content={siteDescription} />
+      <meta name="twitter:image" content={siteImage} />
+      <meta name="twitter:image:alt" content="Zia Ur Rehman — Rails 8 + React full-stack engineer" />
 
       <script
         type="application/ld+json"
