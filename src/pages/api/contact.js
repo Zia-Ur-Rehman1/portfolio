@@ -25,7 +25,7 @@ export default async function handler(req, res) {
 
   const { name, email, company, message, website } = req.body || {};
 
-  // Honeypot — bots fill the hidden `website` field. Pretend success without sending.
+  // Honeypot, bots fill the hidden `website` field. Pretend success without sending.
   if (website) {
     return res.status(200).json({ success: true });
   }

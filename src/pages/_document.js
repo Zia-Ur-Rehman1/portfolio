@@ -28,11 +28,19 @@ export default class MyDocument extends Document {
     }
   }
   render() {
+    const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
     return (
       <Html lang='en-US'>
         <Head>
           <link rel="icon" href={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}/favicon.ico`} />
           <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+          {plausibleDomain && (
+            <script
+              defer
+              data-domain={plausibleDomain}
+              src="https://plausible.io/js/script.js"
+            />
+          )}
         </Head>
         <body>
           <Main />

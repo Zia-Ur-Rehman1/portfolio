@@ -78,7 +78,7 @@ const Contact = () => {
       <SectionDivider colorAlt />
       <SectionTitle>Let's Build Together</SectionTitle>
       <SectionSubText style={{ maxWidth: '720px', fontWeight: '400' }}>
-        Share what you need — a new build, integration, automation, deploy, or bug fix. You'll hear back within one business day.
+        Tell me what you're trying to build or fix in a few lines. <strong>Reply within one business day.</strong> If it's a fit, next step is a free 20-minute call to scope the work, no pressure either way.
       </SectionSubText>
 
       <ContactCard>
@@ -166,14 +166,14 @@ const Contact = () => {
             <TextArea
               id="contact-message"
               name="message"
-              placeholder="A short description is enough — I'll follow up with the right questions."
+              placeholder="A short description is enough, I'll follow up with the right questions."
               value={formValues.message}
               onChange={handleChange}
               required
             />
           </Field>
 
-          {/* Honeypot — bots fill this, humans never see it. */}
+          {/* Honeypot, bots fill this, humans never see it. */}
           <input
             type="text"
             name="website"
@@ -192,11 +192,15 @@ const Contact = () => {
             <SubmitHint>Replies within 1 business day</SubmitHint>
           </SubmitRow>
 
-          {status.message && (
-            <StatusMessage error={status.type === 'error'}>
-              {status.message}
-            </StatusMessage>
-          )}
+          <StatusMessage
+            error={status.type === 'error'}
+            role={status.type === 'error' ? 'alert' : 'status'}
+            aria-live={status.type === 'error' ? 'assertive' : 'polite'}
+            aria-atomic="true"
+            style={status.message ? undefined : { position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}
+          >
+            {status.message}
+          </StatusMessage>
         </Form>
       </ContactCard>
     </Section>

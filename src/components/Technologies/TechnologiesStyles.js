@@ -216,6 +216,62 @@ export const PillLabel = styled.span`
   white-space: nowrap;
 `
 
+export const TierBadge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.textBright};
+  background: ${(props) => {
+    if (props.tier === 'daily') return 'rgba(34, 197, 94, 0.18)';
+    if (props.tier === 'production') return 'rgba(59, 130, 246, 0.2)';
+    return 'rgba(148, 163, 184, 0.2)';
+  }};
+  border: 1px solid ${(props) => {
+    if (props.tier === 'daily') return 'rgba(34, 197, 94, 0.5)';
+    if (props.tier === 'production') return 'rgba(59, 130, 246, 0.5)';
+    return 'rgba(148, 163, 184, 0.45)';
+  }};
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.45rem;
+  }
+`
+
+export const TierLegend = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+  color: ${(props) => props.theme.colors.textTertiary};
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    font-style: normal;
+  }
+
+  i.daily { background: rgba(34, 197, 94, 0.7); }
+  i.production { background: rgba(59, 130, 246, 0.7); }
+  i.fluent { background: rgba(148, 163, 184, 0.7); }
+`
+
 export const DetailPanel = styled.div`
   display: flex;
   align-items: center;

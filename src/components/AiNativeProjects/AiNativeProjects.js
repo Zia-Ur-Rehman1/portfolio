@@ -29,7 +29,7 @@ const AiNativeProjects = () => {
       <SectionDivider />
       <SectionTitle main>AI-Native Projects</SectionTitle>
       <SectionSubText style={{ maxWidth: '780px', margin: '0 auto 2rem', textAlign: 'center' }}>
-        Independent, AI-assisted builds shipped end-to-end — architecture, code, deploy. Pairing daily with Claude / Codex to ship production systems faster without cutting corners.
+        Independent, AI-assisted builds shipped end-to-end, architecture, code, deploy. Pairing daily with Claude / Codex to ship production systems faster without cutting corners.
       </SectionSubText>
       <GridContainer>
         {AiNativeProjectsData.map((item, index) => {

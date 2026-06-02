@@ -135,6 +135,10 @@ export const SecondaryBtn = styled.button`
   &:focus {
     outline: none;
   }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px ${(props) => props.theme.colors.borderInputFocusGlow};
+  }
 
   &:hover {
     color: ${(props) => props.theme.colors.secondaryBtnHoverText};

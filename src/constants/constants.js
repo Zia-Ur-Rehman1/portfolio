@@ -1,10 +1,23 @@
-import { FaCalendar, FaRocket, FaPlug, FaBolt } from 'react-icons/fa';
+import { FaCalendar, FaRocket, FaPlug, FaBolt, FaCode, FaTachometerAlt, FaBug, FaTools, FaCloudUploadAlt, FaSearchPlus } from 'react-icons/fa';
 
 export const ProjectsData = [
   {
+    title: 'Yushas Collection',
+    category: 'E-Commerce · Pakistani Unstitched Fabric',
+    description: 'Greenfield Rails 8 storefront for a Pakistani unstitched-fabric brand. Full catalog with collections, products, variants, and color-bound photos. Complete order lifecycle for the local market (bank transfer + cash-on-delivery), admin-themable storefront (colors, fonts, homepage blocks), product detail lightbox with mobile swipe, and a rich-text admin for every page. Live in production at yushascollection.com.',
+    tags: [
+      'Ruby on Rails 8.1', 'Ruby 3.3', 'PostgreSQL 18', 'Hotwire (Turbo/Stimulus)',
+      'Tailwind v4', 'ActionText', 'Solid Queue', 'Solid Cache', 'Solid Cable',
+      'importmap-rails', 'Kamal', 'Caddy', 'Thruster + Puma',
+      'Multi-DB (primary/cache/queue/cable)', 'Active Storage',
+    ],
+    visit: 'https://yushascollection.com',
+    id: 9,
+  },
+  {
     title: 'Escrow.sa',
     category: 'Software Escrow & Compliance (KSA)',
-    description: 'Tri-party software escrow platform for the Saudi market — holds vendor source code in an encrypted vault, verifies each deposit via senior-engineer review, and releases code to beneficiaries only when legally defined conditions are met. Bilingual Arabic/English with full RTL and Saudi data residency.',
+    description: 'Tri-party software escrow platform for the Saudi market, holds vendor source code in an encrypted vault, verifies each deposit via senior-engineer review, and releases code to beneficiaries only when legally defined conditions are met. Bilingual Arabic/English with full RTL and Saudi data residency.',
     tags: [
       'Ruby on Rails 8', 'Hotwire', 'Turbo', 'Stimulus', 'Tailwind CSS',
       'PostgreSQL', 'Solid Queue', 'Solid Cache', 'Solid Cable',
@@ -129,7 +142,7 @@ export const statistics = [
 export const AiNativeProjectsData = [
   {
     role: 'Full-Stack Engineer',
-    company: 'Escrow.sa — Software Escrow Platform for the Saudi Market',
+    company: 'Escrow.sa, Software Escrow Platform for the Saudi Market',
     location: 'Riyadh – Remote',
     link: 'https://escrow.sa',
     achievements: [
@@ -145,7 +158,7 @@ export const AiNativeProjectsData = [
   },
   {
     role: 'Founder · Lead Engineer',
-    company: 'AgencyPortal — Multi-Tenant SaaS for Umrah Travel Agencies',
+    company: 'AgencyPortal, Multi-Tenant SaaS for Umrah Travel Agencies',
     location: 'Self-directed',
     link: 'https://hasnaintravel.com',
     achievements: [
@@ -160,16 +173,16 @@ export const AiNativeProjectsData = [
   },
   {
     role: 'Founder · Lead Engineer',
-    company: 'Yushas Collection — Rails 8 Storefront for Pakistani Unstitched Fabric',
+    company: 'Yushas Collection, Rails 8 Storefront for Pakistani Unstitched Fabric',
     location: 'Self-directed',
     link: 'https://yushascollection.com',
     achievements: [
-      'Stood up a greenfield Rails 8.1 storefront end-to-end on PostgreSQL 18 multi-DB (primary / cache / queue / cable) with Hotwire (Turbo + Stimulus) and Tailwind v4 — zero Node toolchain via importmap-rails.',
-      'Modeled the full catalog domain — Category, Collection, Product, ProductVariant, ProductPhoto — with admin-side photo↔color binding and nested-form Stimulus controllers for variant management.',
+      'Stood up a greenfield Rails 8.1 storefront end-to-end on PostgreSQL 18 multi-DB (primary / cache / queue / cable) with Hotwire (Turbo + Stimulus) and Tailwind v4, zero Node toolchain via importmap-rails.',
+      'Modeled the full catalog domain, Category, Collection, Product, ProductVariant, ProductPhoto, with admin-side photo↔color binding and nested-form Stimulus controllers for variant management.',
       'Shipped a complete order lifecycle for the local market: bank transfer + cash-on-delivery (no payment gateway), confirm → ship → mark_delivered → cancel state transitions.',
       'Themed the storefront via SiteSetting (colors, fonts, contact, shipping) plus data-driven homepage blocks (Banner, HomepageSection) so the brand can re-skin without code changes.',
       'Added rich-text editing on every body field via ActionText, PDP lightbox with full photo navigation + mobile swipe, and a storefront perf pass (fragment cache, Thruster + Puma tuning, font trim).',
-      'Wired Solid Queue / Solid Cache / Solid Cable on PostgreSQL — zero Redis dependency — and deployed live on yushascollection.com via Kamal with Caddy TLS.',
+      'Wired Solid Queue / Solid Cache / Solid Cable on PostgreSQL, zero Redis dependency, and deployed live on yushascollection.com via Kamal with Caddy TLS.',
     ],
   },
 ];
@@ -177,13 +190,13 @@ export const AiNativeProjectsData = [
 export const AchievementsData = [
   {
     role: 'Senior Software Engineer',
-    company: 'Devsinc — Full-Stack Engineer staffed across US and global client engagements',
+    company: 'Devsinc, Full-Stack Engineer staffed across US and global client engagements',
     location: 'Lahore, Pakistan – Hybrid',
     duration: 'June 2022 – Present',
     isParent: true,
     achievements: [
       'Senior full-stack engineer at Devsinc working on production Rails + React systems for distributed teams across the US, UAE, and KSA.',
-      'Client engagements below — each shipped as part of the Devsinc team.',
+      'Client engagements below, each shipped as part of the Devsinc team.',
     ],
   },
   {
@@ -246,23 +259,17 @@ export const AchievementsData = [
 export const CurrentFocusData = [
   {
     title: 'AgencyPortal',
-    hook: 'Multi-tenant Umrah travel SaaS — scripted Selenium logins against 12 supplier portals, booking flows, per-agency analytics. Live at hasnaintravel.com.',
+    hook: 'Multi-tenant Umrah travel SaaS, scripted Selenium logins against 12 supplier portals, booking flows, per-agency analytics. Live at hasnaintravel.com.',
     link: 'https://hasnaintravel.com',
   },
   {
     title: 'Yushas Collection',
-    hook: 'Greenfield Rails 8 storefront for a Pakistani unstitched-fabric brand — catalog, theming, full order lifecycle (bank transfer + COD), admin-managed homepage blocks. Live at yushascollection.com.',
+    hook: 'Greenfield Rails 8 storefront for a Pakistani unstitched-fabric brand, catalog, theming, full order lifecycle (bank transfer + COD), admin-managed homepage blocks. Live at yushascollection.com.',
     link: 'https://yushascollection.com',
   },
 ];
 
 export const TestimonialsData = [
-  {
-    name: 'Azan Arif',
-    role: 'Mob / Web / Application Development · AWS',
-    text: 'I managed Zia Ur Rehman and worked closely with him on real production features. He’s a reliable full-stack developer who consistently delivers solid work using Ruby on Rails and React. Zia handled backend logic, frontend updates, and deployments with minimal supervision and a strong sense of ownership. He communicates clearly, works well in a remote setup, and can be trusted to get things done. I’d happily work with him again :)',
-    id: 0,
-  },
   {
     name: 'Salman Saeed',
     role: 'Ruby on Rails · Hotwire · Django · React · AWS (Co‑founder cto.sa)',
@@ -272,8 +279,14 @@ export const TestimonialsData = [
   {
     name: 'Rabbiya Noor',
     role: 'Software Engineer | ROR | React',
-    text: 'I’ve had the chance to work with Zia, and it’s been an absolute pleasure. He is smart, reliable, and just genuinely great to work with. Whether it’s solving tough problems or helping teammates, Zia shows up with clarity, care, and a can-do attitude. It’s rare to find someone who’s both technically sharp and such a positive team presence. I’d happily work with him again—and any team would be lucky to have him on board. Highly recommended',
+    text: 'I’ve had the chance to work with Zia, and it’s been an absolute pleasure. He is smart, reliable, and just genuinely great to work with. Whether it’s solving tough problems or helping teammates, Zia shows up with clarity, care, and a can-do attitude. It’s rare to find someone who’s both technically sharp and such a positive team presence. I’d happily work with him again, and any team would be lucky to have him on board. Highly recommended',
     id: 2,
+  },
+  {
+    name: 'Azan Arif',
+    role: 'Mob / Web / Application Development · AWS',
+    text: 'I managed Zia Ur Rehman and worked closely with him on real production features. He’s a reliable full-stack developer who consistently delivers solid work using Ruby on Rails and React. Zia handled backend logic, frontend updates, and deployments with minimal supervision and a strong sense of ownership. He communicates clearly, works well in a remote setup, and can be trusted to get things done. I’d happily work with him again :)',
+    id: 0,
   },
   {
     name: 'Abdul Wahab',
@@ -293,4 +306,87 @@ export const TestimonialsData = [
     text: "Zia Ur Rehman was an amazing colleague, and person! He is very motivated and hard working and inspires the team. Zia has consistently overachieved his targets. I worked closely with Zia for, around, 3½ years during my Bachelors, he was always a professional, approachable and helping. He is self driven and wants to reach his goals while still enabling others to succeed. Zia is also very creative and always wants to find new and innovative ways when it problem solving.",
     id: 5,
   }
+];
+
+export const ServicesData = [
+  {
+    icon: <FaCode />,
+    title: 'Custom Web Development',
+    description: 'Take your idea from a blank page to a live, working product, design, build, and deploy handled end to end so you can focus on your customers, not the plumbing.',
+    points: [
+      'From first sketch to live website',
+      'Built for your business, not a template',
+      'Handed over running, with you in control',
+    ],
+  },
+  {
+    icon: <FaTachometerAlt />,
+    title: 'Performance Improvement',
+    description: 'Your site or app feels slow? I find what is actually causing it and make it faster, with clear before-and-after numbers so you can see the difference.',
+    points: [
+      'Faster page loads for your users',
+      'Lower hosting bills and crashes',
+      'Honest before-and-after results',
+    ],
+  },
+  {
+    icon: <FaBug />,
+    title: 'Bug Fixes & Incident Triage',
+    description: 'Something broken in production? I jump in, find the real cause, ship a clean fix, and leave behind a safety net so the same bug does not come back.',
+    points: [
+      'Quick response when things break',
+      'Real fix, not a patch on top of a patch',
+      'Safeguards so it does not return',
+    ],
+  },
+  {
+    icon: <FaTools />,
+    title: 'Refactoring & Code Quality',
+    description: 'Codebase getting scary to touch? I clean up the messy parts that slow your team down, so adding new features stops feeling risky.',
+    points: [
+      'Safer, easier-to-change code',
+      'Faster delivery for your team',
+      'Fewer surprises in production',
+    ],
+  },
+  {
+    icon: <FaPlug />,
+    title: 'API & Third-Party Integrations',
+    description: 'Need your product to talk to payments, messaging, or partner systems? I wire it up so the data flows reliably and you do not lose anything in between.',
+    points: [
+      'Payments, messaging, partner systems',
+      'Reliable, retries on failure',
+      'Clear logs when something goes wrong',
+    ],
+  },
+  {
+    icon: <FaCloudUploadAlt />,
+    title: 'Migration & Modernization',
+    description: 'Old app holding you back? I move it onto modern foundations without downtime, keeping all your data and customers right where they should be.',
+    points: [
+      'No downtime, no lost data',
+      'Lower running costs after move',
+      'Easier to maintain going forward',
+    ],
+  },
+  {
+    icon: <FaSearchPlus />,
+    title: 'Code Review & Technical Audit',
+    description: 'Inherited a project or vetting a team? I review the code and give you a clear, written report, what is solid, what is risky, and what to fix first.',
+    points: [
+      'Honest second opinion on your code',
+      'Risks ranked by what matters most',
+      'Plain-language report you can act on',
+    ],
+  },
+  {
+    icon: <FaRocket />,
+    title: 'AI-Native Feature Work',
+    description: 'Want to add real AI features to your product? I build them so they are useful, safe, and predictable, not a science experiment that surprises your users.',
+    points: [
+      'AI features that actually help users',
+      'Costs kept under control',
+      'Safe, predictable behavior',
+    ],
+  },
 ];

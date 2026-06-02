@@ -70,6 +70,11 @@ export const StyledButtonLink = styled.a`
     opacity: 0.8;
   }
 
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px ${(props) => props.theme.colors.borderInputFocusGlow};
+  }
+
   &:active {
     background: ${(props) => props.theme.colors.brandGradientCool};
     box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15),
@@ -123,6 +128,11 @@ export const SecondaryButtonLink = styled.a`
   &:hover {
     background: ${(props) => props.theme.colors.cardBgHover};
     color: ${(props) => props.theme.colors.secondaryBtnHoverText};
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px ${(props) => props.theme.colors.borderInputFocusGlow};
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {

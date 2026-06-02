@@ -81,25 +81,26 @@ export const ChevronWrap = styled.div`
 
 export const Role = styled.h3`
   color: ${(props) => props.theme.colors.accentLightBlue};
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   margin: 0;
 `;
 
 export const Company = styled.h4`
   color: ${(props) => props.theme.colors.borderInputFocus};
   font-weight: 500;
-  margin: 0.15rem 0 0;
+  font-size: 1.25rem;
+  margin: 0.25rem 0 0;
 `;
 
 export const Duration = styled.p`
   color: ${(props) => props.theme.colors.textMutedAlt};
-  font-size: 0.95rem;
-  margin: 0.15rem 0 0;
+  font-size: 1.1rem;
+  margin: 0.25rem 0 0;
 `;
 
 export const ToggleHint = styled.span`
   margin-top: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 500;
   color: ${(props) => props.theme.colors.textMutedAlt};
   letter-spacing: 0.02em;

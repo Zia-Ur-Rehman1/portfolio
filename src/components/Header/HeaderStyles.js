@@ -8,32 +8,84 @@ export const Container = styled.div`
   grid-column-gap: 2rem;
   padding: 1rem;
   padding-top: 2rem;
+  position: relative;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    padding: 1rem 1.25rem;
+    padding-top: 1.5rem;
   }
 `;
-export const Div2 = styled.div`
-  grid-area: 1 / 1 / 2 / 4; /* Adjusted grid area to span the left side */
+
+export const HamburgerButton = styled.button`
+  display: none;
+  background: transparent;
+  border: 1px solid ${(props) => props.theme.colors.borderSoft};
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => props.theme.colors.textBright};
+  cursor: pointer;
+  transition: background 0.2s ease;
+  z-index: 30;
+
+  &:hover {
+    background: ${(props) => props.theme.colors.cardBgHover};
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${(props) => props.theme.colors.borderInputFocus};
+    outline-offset: 2px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: inline-flex;
+    grid-column: 1 / 2;
+    justify-self: start;
+  }
+`;
+
+export const Div2 = styled.ul`
+  grid-area: 1 / 1 / 2 / 4;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Align links to the left */
+  justify-content: flex-start;
   align-items: center;
-  gap: 1.25rem; /* Add spacing between links */
+  gap: 1.25rem;
+  margin: 0;
   margin-top: 0.75em;
   list-style: none;
   padding: 0;
 
   li { list-style: none; }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 1 / 3 / 6;
-    justify-content: center; /* Center links on smaller screens */
-    gap: 0.75rem;
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: ${({ isOpen }) => (isOpen ? '1rem 1.25rem' : '0 1.25rem')};
+    max-height: ${({ isOpen }) => (isOpen ? '600px' : '0')};
+    opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+    visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+    overflow: hidden;
+    background: ${(props) => props.theme.colors.cardBg};
+    border: ${({ isOpen, theme }) =>
+      isOpen ? `1px solid ${theme.colors.borderSoft}` : '1px solid transparent'};
+    border-radius: 12px;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.25s ease,
+      padding 0.25s ease,
+      visibility 0s linear ${({ isOpen }) => (isOpen ? '0s' : '0.3s')};
+
+    li { width: 100%; }
   }
 `;
 
@@ -45,13 +97,13 @@ export const Div3 = styled.div`
   justify-content: center;
   gap: 4px;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 6;
-    align-items: center;
+  @media ${(props) => props.theme.breakpoints.md} {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-items: flex-end;
   }
 `;
 
-// Navigation Links
 export const NavLink = styled.a`
   font-size: 1.6rem;
   line-height: 32px;
@@ -64,40 +116,28 @@ export const NavLink = styled.a`
     cursor: pointer;
   }
   @media ${(props) => props.theme.breakpoints.md} {
-    font-size: 1.5rem;
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.25rem 0.4rem;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    display: block;
+    padding: 0.5rem 0;
   }
 `;
 
-/// DropDown Contact
 export const ContactDropDown = styled.button`
   border: none;
   display: flex;
   position: relative;
   background: none;
   font-size: 1.7rem;
-
   line-height: 32px;
   color: ${(props) => props.theme.colors.textTertiary};
   cursor: pointer;
   transition: 0.3s ease;
 
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    color: ${(props) => props.theme.colors.textBright};
-  }
+  &:focus { outline: none; }
+  &:hover { color: ${(props) => props.theme.colors.textBright}; }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0.4rem 0;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    padding: 0;
-  }
+  @media ${(props) => props.theme.breakpoints.sm} { padding: 0.4rem 0; }
+  @media ${(props) => props.theme.breakpoints.md} { padding: 0; }
 `;
 
 export const NavProductsIcon = styled(IoIosArrowDropdown)`
@@ -108,9 +148,7 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   opacity: ${({ isOpen }) => (isOpen ? '1' : '.75')};
   transform: ${({ isOpen }) => (isOpen ? 'scaleY(-1)' : 'scaleY(1)')};
 
-  &:hover {
-    opacity: 1;
-  }
+  &:hover { opacity: 1; }
 
   @media ${(props) => props.theme.breakpoints.sm} {
     margin: 2px 0 0 2px;
@@ -118,10 +156,9 @@ export const NavProductsIcon = styled(IoIosArrowDropdown)`
   }
 `;
 
-
 export const Tagline = styled.p`
   font-size: 12px;
-  color: ${(props) => props.theme.colors.tagline}; /* greenish accent */
+  color: ${(props) => props.theme.colors.tagline};
   margin: 0 0 4px 0;
   text-align: right;
   max-width: 420px;
@@ -133,28 +170,24 @@ export const Tagline = styled.p`
   }
 `;
 
-// Social Icons 
-
 export const SocialContainer = styled.div`
-	display: flex;
+  display: flex;
   align-items: center;
 
-	@media ${props => props.theme.breakpoints.md}{
-		justify-content: center;
-		padding-right: 16px;
-		flex-wrap: wrap;
-	}
-`
+  @media ${(props) => props.theme.breakpoints.md} {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+`;
 
 export const SocialIcons = styled.a`
-transition: 0.3s ease;
-color: ${(props) => props.theme.colors.textBright};
-border-radius: 50px;
+  transition: 0.3s ease;
+  color: ${(props) => props.theme.colors.textBright};
+  border-radius: 50px;
   padding: 8px;
-&:hover {
+  &:hover {
     background-color: ${(props) => props.theme.colors.socialIconHoverBg};
     transform: scale(1.2);
     cursor: pointer;
-
   }
-`
+`;

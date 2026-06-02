@@ -6,6 +6,8 @@ import {
   Pill,
   PillIcon,
   PillLabel,
+  TierBadge,
+  TierLegend,
   DetailPanel,
   DetailIcon,
   DetailText,
@@ -13,6 +15,16 @@ import {
   DetailDescription,
 } from "./TechnologiesStyles";
 import { Skills } from "./Skills";
+
+const tierFor = (skill) => {
+  const n = skill.usedIn?.length || 0;
+  if (n >= 4) return 'daily';
+  if (n >= 1) return 'production';
+  return 'fluent';
+};
+
+const tierLabel = { daily: 'Daily', production: 'Production', fluent: 'Fluent' };
+const tierRank = { daily: 0, production: 1, fluent: 2 };
 
 const Technologies = () => {
   const initialSlug = Skills[0]?.skills[0]?.slug ?? null;
@@ -25,17 +37,26 @@ const Technologies = () => {
       <SectionDivider divider />
       <SectionTitle>Skills</SectionTitle>
       <SectionText>
-        I have extensive experience working with a variety of technologies as a developer. Tap any skill to see where it's been used.
+        Honest tiers, not a logo soup. Tap any skill to see where it's been used.
       </SectionText>
+      <TierLegend>
+        <span><i className="daily" /> Daily — primary stack on live products</span>
+        <span><i className="production" /> Production — shipped in at least one project</span>
+        <span><i className="fluent" /> Fluent — working knowledge, not currently in production</span>
+      </TierLegend>
 
       {Skills.map(({ category, skills }) => {
-        const activeSkill = skills.find((s) => s.slug === activeSlug);
+        const sortedSkills = [...skills].sort(
+          (a, b) => tierRank[tierFor(a)] - tierRank[tierFor(b)]
+        );
+        const activeSkill = sortedSkills.find((s) => s.slug === activeSlug);
         return (
           <div key={category}>
             <CategoryHeading>{category}</CategoryHeading>
             <PillRow>
-              {skills.map((skill) => {
+              {sortedSkills.map((skill) => {
                 const isActive = skill.slug === activeSlug;
+                const tier = tierFor(skill);
                 return (
                   <Pill
                     key={skill.slug}
@@ -48,6 +69,7 @@ const Technologies = () => {
                       <skill.Component size="2rem" />
                     </PillIcon>
                     <PillLabel>{skill.title}</PillLabel>
+                    <TierBadge tier={tier}>{tierLabel[tier]}</TierBadge>
                   </Pill>
                 );
               })}

@@ -4,19 +4,19 @@ export const TestimonialsContainer = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin: 0 auto;
-  max-width: 1040px;
-  box-sizing: content-box;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    padding: 0 48px; 
+    padding: 0;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    padding: 0 16px;
-    width: calc(100vw - 32px);
+    padding: 0;
+    width: 100%;
   }
 `;
 
@@ -25,7 +25,7 @@ export const CardsContainer = styled.div`
   gap: 24px;
   margin-top: 3rem;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   scroll-behavior: smooth;
   padding-bottom: 20px; /* Space for scrollbar if visible, or aesthetics */
   
@@ -96,6 +96,11 @@ export const CarouselButton = styled.button`
   transition: 0.3s ease;
   font-size: 20px;
 
+  &:focus-visible {
+    outline: 2px solid ${(props) => props.theme.colors.borderInputFocus};
+    outline-offset: 2px;
+  }
+
   &:hover {
     background: ${(props) => props.theme.colors.brandGradient};
     transform: scale(1.1);
@@ -106,8 +111,8 @@ export const Quote = styled.p`
   font-family: 'Inter', sans-serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 14px; /* Reduced from 16px */
-  line-height: 24px; /* Reduced from 26px */
+  font-size: 17px;
+  line-height: 28px;
   color: ${(props) => props.theme.colors.textSecondary};
   margin-bottom: 16px; /* Reduced from 24px */
   position: relative;
@@ -155,14 +160,14 @@ export const AuthorText = styled.div`
 
 export const AuthorName = styled.h4`
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   color: ${(props) => props.theme.colors.textBright};
   margin: 0;
   margin-bottom: 4px;
 `;
 
 export const AuthorRole = styled.p`
-  font-size: 12px;
+  font-size: 14px;
   color: ${(props) => props.theme.colors.textMuted};
   margin: 0;
 `;
@@ -171,7 +176,7 @@ export const ReadMoreButton = styled.button`
   background: transparent;
   border: none;
   color: ${(props) => props.theme.colors.accentReadMore};
-  font-size: 12px;
+  font-size: 14px;
   padding: 0;
   margin-top: 8px;
   cursor: pointer;

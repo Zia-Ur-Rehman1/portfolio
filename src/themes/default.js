@@ -11,7 +11,7 @@ const breakpoints = {
   xl: 'screen and (max-width: 1280px)',
 };
 
-// Brand accents — same in both themes
+// Brand accents, same in both themes
 const sharedAccents = {
   accentCyan: '#13ADC7',
   accentCyanBright: '#00DBD8',
@@ -22,7 +22,7 @@ const sharedAccents = {
   accentGreen: '#22c55e',
   accentMint: '#6ee7b7',
   accentSky: '#38bdf8',
-  accentBlue: '#2575fc',
+  accentBlue: '#1d4ed8',
   accentDeepPurple: '#6a11cb',
   accentReadMore: '#93c5fd',
   accentCyanGlow: '#a5f3fc',
@@ -67,12 +67,12 @@ export const darkTheme = {
     textBodyAlt2: '#e4e6e7',
     textSecondary: 'rgba(255, 255, 255, 0.8)',
     textTertiary: 'rgba(255, 255, 255, 0.75)',
-    textMuted: 'rgba(255, 255, 255, 0.5)',
-    textFaint: 'rgba(255, 255, 255, 0.4)',
-    textVeryFaint: 'rgba(255, 255, 255, 0.1)',
+    textMuted: 'rgba(255, 255, 255, 0.7)',
+    textFaint: 'rgba(255, 255, 255, 0.55)',
+    textVeryFaint: 'rgba(255, 255, 255, 0.15)',
     textSoft: '#cbd5e1',
-    textMutedAlt: '#94a3b8',
-    textModalRole: '#9ca3af',
+    textMutedAlt: '#a3b1c6',
+    textModalRole: '#b6bcc7',
     textOnGradient: '#0f172a',
 
     // Borders
@@ -219,10 +219,10 @@ export const lightTheme = {
     techRadial: 'radial-gradient(50% 50% at 50% 50%, rgba(79, 108, 176, 0.12) 53.8%, rgba(79, 108, 176, 0) 100%)',
     contactDecorative: 'linear-gradient(120deg, rgba(56, 189, 248, 0.45), rgba(148, 93, 214, 0.45))',
 
-    // Hero text gradient — white-on-light is invisible, use brand gradient instead
+    // Hero text gradient, white-on-light is invisible, use brand gradient instead
     heroTextGradient: 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)',
 
-    // Section title gradient — strong dark-to-brand on light bg for readability
+    // Section title gradient, strong dark-to-brand on light bg for readability
     sectionTitleGradient: 'linear-gradient(121.57deg, #0f172a 0%, #0e7490 60%, #6a11cb 100%)',
 
     // Header social hover bg

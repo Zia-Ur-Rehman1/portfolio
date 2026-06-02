@@ -14,6 +14,7 @@ import Hook from '../components/Hook/Hook';
 import Contact from '../components/Contact/Contact';
 import SEO from '../components/SEO/SEO';
 import Testimonials from '../components/Testimonials/Testimonials';
+import Services from '../components/Services/Services';
 const Home = () => {
   return (
     <Layout>
@@ -31,6 +32,7 @@ const Home = () => {
       <CurrentFocus />
       <Achievements />
       <AiNativeProjects />
+      <Services />
       <Projects />
       <Testimonials />
       <Technologies />
