@@ -21,11 +21,12 @@ const Hero = () => {
         <SectionTitle main center>
           <GradientText>Zia Ur Rehman</GradientText>
         </SectionTitle>
+        
         <SectionText>
-          Rails 8 + React engineer. I ship multi-tenant SaaS, real-time integrations, and AI pipelines end-to-end, production-grade, not prototypes.
+          Full-Stack Ruby on Rails Engineer + React engineer. I ship multi-tenant SaaS, real-time integrations, and AI pipelines end-to-end, production-grade, not prototypes.
         </SectionText>
         <SectionText>
-          4+ years across FinTech, HealthTech, e-commerce, communications, travel SaaS, and Saudi software escrow. Remote with US, UAE, and KSA teams. Strong in performance work, ActionCable / Turbo real-time, and complex integrations (HL7, Experian, RingCentral, AMS360, EPIC, Shopify). Pair daily with Claude / Codex to ship faster without cutting corners.
+          4+ years across Communications, RealEstate, HealthCare, E-commerce, Travel SaaS, and Saudi software escrow. Remote with US, UAE, and KSA teams. Strong in performance work, ActionCable / Turbo real-time, and complex integrations (HL7, Experian, RingCentral, AMS360, EPIC, Shopify). Pair daily with Claude / Codex to ship faster without cutting corners.
         </SectionText>
         <SectionText>
           Independently shipped three AI-native production builds: <strong>Escrow.sa</strong> (KSA software escrow on Rails 8), <strong>AgencyPortal</strong> (multi-tenant travel SaaS, 12 supplier portals via scripted Selenium), and <strong>Yushas Collection</strong> (Rails 8 storefront).
