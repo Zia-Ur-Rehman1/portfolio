@@ -118,7 +118,7 @@ const Contact = () => {
               <FaMapMarkerAlt size="0.85rem" /> Based in Pakistan (PKT, UTC+5)
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <FaClock size="0.85rem" /> Comfortable overlap with US, UAE, KSA timezones
+              <FaClock size="0.85rem" /> Comfortable overlap with any timezones
             </div>
           </InfoFootnote>
         </InfoPanel>
