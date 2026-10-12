@@ -1,5 +1,5 @@
 import { DiJavascript1,  DiRuby, DiPostgresql, DiPython, DiDjango } from "react-icons/di";
-import { SiTypescript, SiFlutter, SiGraphql, SiDocker, SiJenkins, SiHeroku, SiShopify,SiBootstrap, SiMui, SiRedis, SiDigitalocean, SiAmazonwebservices, SiFirebase, SiTailwindcss, SiNgrok, SiDart, SiHetzner, SiCloudflare, SiCaddy, SiSelenium } from "react-icons/si";
+import { SiTypescript, SiFastapi, SiFlutter, SiGraphql, SiDocker, SiJenkins, SiHeroku, SiShopify,SiBootstrap, SiMui, SiRedis, SiDigitalocean, SiAmazonwebservices, SiFirebase, SiTailwindcss, SiNgrok, SiDart, SiHetzner, SiCloudflare, SiCaddy, SiSelenium } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 
 export const Skills = [
@@ -10,14 +10,14 @@ export const Skills = [
         slug: "ruby",
         Component: DiRuby,
         title: "Ruby",
-        usedIn: ["Escrow.sa", "AgencyPortal", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
+        usedIn: ["ADY Alert", "Escrow.sa", "AgencyPortal", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Backend development with Ruby on Rails</>,
       },
       {
         slug: "python",
         Component: DiPython,
         title: "Python",
-        usedIn: ["Local Serv", "Mindrift (Tendem Data Collection)"],
+        usedIn: ["ADY Alert (FastAPI chat service)", "Local Serv", "Mindrift (Tendem Data Collection)"],
         Description: () => <>Scripting and automation tasks</>,
       },
       {
@@ -49,8 +49,15 @@ export const Skills = [
         slug: "rails",
         Component: DiRuby,
         title: "Rails",
-        usedIn: ["Escrow.sa (Rails 8)", "AgencyPortal (Rails 8)", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
+        usedIn: ["ADY Alert (Rails 7.2 microservices)", "Escrow.sa (Rails 8)", "AgencyPortal (Rails 8)", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Web application framework for Ruby</>,
+      },
+      {
+        slug: "fastapi",
+        Component: SiFastapi,
+        title: "FastAPI",
+        usedIn: ["ADY Alert (real-time chat service)"],
+        Description: () => <>Async Python APIs and WebSocket services</>,
       },
       {
         slug: 'django',
@@ -100,7 +107,7 @@ export const Skills = [
         slug: "postgresql",
         Component: DiPostgresql,
         title: "PostgreSQL",
-        usedIn: ["Escrow.sa", "AgencyPortal (4 logical DBs: primary/cache/queue/cable)", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
+        usedIn: ["ADY Alert", "Escrow.sa", "AgencyPortal (4 logical DBs: primary/cache/queue/cable)", "EcoLink", "Intellirent", "PC - Product Customization", "Biomark"],
         Description: () => <>Relational database management</>,
       },
       {
@@ -119,7 +126,7 @@ export const Skills = [
         slug: "redis",
         Component: SiRedis,
         title: "Redis",
-        usedIn: ["EcoLink", "Intellirent", "PC - Product Customization"],
+        usedIn: ["ADY Alert", "EcoLink", "Intellirent", "PC - Product Customization"],
         Description: () => <>In-memory data structure store</>,
       },
     ],
@@ -131,7 +138,7 @@ export const Skills = [
         slug: "aws",
         Component: SiAmazonwebservices,
         title: "AWS",
-        usedIn: ["EcoLink", "Intellirent"],
+        usedIn: ["ADY Alert (EC2, S3, SNS)", "EcoLink", "Intellirent"],
         Description: () => <>Cloud services for hosting and deployment</>,
       },
       {
@@ -173,7 +180,7 @@ export const Skills = [
         slug: "docker",
         Component: SiDocker,
         title: "Docker",
-        usedIn: ["Biomark"],
+        usedIn: ["ADY Alert", "Biomark"],
         Description: () => <>Containerization for development and deployment</>,
       },
       {

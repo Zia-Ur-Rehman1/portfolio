@@ -1,37 +1,233 @@
-import { IoIosArrowDropdown } from 'react-icons/io';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
-export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-  padding: 1rem;
-  padding-top: 2rem;
-  position: relative;
+// Keep section headings clear of the sticky bar when jumping via anchors
+export const ScrollOffset = createGlobalStyle`
+  main [id] { scroll-margin-top: 96px; }
+`;
+
+export const Wrapper = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 1.2rem 1rem;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto;
-    grid-column-gap: 1rem;
     padding: 1rem 1.25rem;
-    padding-top: 1.5rem;
+  }
+`;
+
+export const Bar = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  padding: 0.8rem 1rem 0.8rem 1.6rem;
+  border-radius: 999px;
+  border: 1px solid
+    ${({ scrolled, theme }) => (scrolled ? theme.colors.borderSoft : 'transparent')};
+  background: ${({ scrolled }) =>
+    scrolled ? 'rgba(15, 22, 36, 0.88)' : 'transparent'};
+  backdrop-filter: ${({ scrolled }) => (scrolled ? 'blur(14px) saturate(140%)' : 'none')};
+  -webkit-backdrop-filter: ${({ scrolled }) =>
+    scrolled ? 'blur(14px) saturate(140%)' : 'none'};
+  box-shadow: ${({ scrolled }) =>
+    scrolled ? '0 10px 30px rgba(0, 0, 0, 0.35)' : 'none'};
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    border-radius: 16px;
+    padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+    flex-wrap: wrap;
+  }
+`;
+
+export const Brand = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  flex-shrink: 0;
+`;
+
+export const Monogram = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: ${(props) => props.theme.colors.ctaGradient};
+  color: ${(props) => props.theme.colors.textBright};
+  font-family: ${(props) => props.theme.fonts.title};
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 14px rgba(148, 93, 214, 0.35);
+`;
+
+export const BrandName = styled.span`
+  font-family: ${(props) => props.theme.fonts.title};
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: ${(props) => props.theme.colors.textBright};
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    display: none;
+  }
+  @media ${(props) => props.theme.breakpoints.md} {
+    display: inline;
+  }
+`;
+
+export const NavList = styled.ul`
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0.4rem;
+  list-style: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid ${(props) => props.theme.colors.borderFaint};
+
+  li { list-style: none; }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    order: 3;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+    border-radius: 12px;
+    padding: ${({ isOpen }) => (isOpen ? '0.6rem' : '0 0.6rem')};
+    margin-top: ${({ isOpen }) => (isOpen ? '0.8rem' : '0')};
+    max-height: ${({ isOpen }) => (isOpen ? '600px' : '0')};
+    opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+    visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+    overflow: hidden;
+    border-color: ${({ isOpen, theme }) => (isOpen ? theme.colors.borderSoft : 'transparent')};
+    transition:
+      max-height 0.3s ease,
+      opacity 0.25s ease,
+      padding 0.25s ease,
+      margin 0.25s ease,
+      visibility 0s linear ${({ isOpen }) => (isOpen ? '0s' : '0.3s')};
+  }
+`;
+
+export const NavLink = styled.a`
+  display: block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: nowrap;
+  text-decoration: none;
+  color: ${({ active, theme }) => (active ? theme.colors.textBright : theme.colors.textMuted)};
+  background: ${({ active }) => (active ? 'rgba(255, 255, 255, 0.1)' : 'transparent')};
+  transition: color 0.2s ease, background 0.2s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.textBright};
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${(props) => props.theme.colors.borderInputFocus};
+    outline-offset: 2px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    padding: 0.6rem 0.9rem;
+    font-size: 1.3rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 1.5rem;
+    padding: 0.9rem 1.2rem;
+    border-radius: 10px;
+  }
+`;
+
+export const Actions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  margin-left: auto;
+`;
+
+export const SocialIcon = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  color: ${(props) => props.theme.colors.textMuted};
+  transition: color 0.2s ease, background 0.2s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.textBright};
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    display: none;
+  }
+`;
+
+export const ResumeButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  background: ${(props) => props.theme.colors.ctaGradient};
+  color: ${(props) => props.theme.colors.textBright};
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(19, 173, 199, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(148, 93, 214, 0.4);
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    margin-left: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+
+    span { display: none; }
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${(props) => props.theme.colors.borderInputFocus};
+    outline-offset: 2px;
   }
 `;
 
 export const HamburgerButton = styled.button`
   display: none;
-  background: transparent;
-  border: 1px solid ${(props) => props.theme.colors.borderSoft};
-  border-radius: 8px;
-  width: 44px;
-  height: 44px;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 0.4rem;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid ${(props) => props.theme.colors.borderSoft};
   color: ${(props) => props.theme.colors.textBright};
   cursor: pointer;
   transition: background 0.2s ease;
-  z-index: 30;
 
   &:hover {
     background: ${(props) => props.theme.colors.cardBgHover};
@@ -44,142 +240,10 @@ export const HamburgerButton = styled.button`
 
   @media ${(props) => props.theme.breakpoints.md} {
     display: inline-flex;
-    grid-column: 1 / 2;
-    justify-self: start;
   }
 `;
 
-export const Div2 = styled.ul`
-  grid-area: 1 / 1 / 2 / 4;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.25rem;
-  margin: 0;
-  margin-top: 0.75em;
-  list-style: none;
-  padding: 0;
-
-  li { list-style: none; }
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    padding: ${({ isOpen }) => (isOpen ? '1rem 1.25rem' : '0 1.25rem')};
-    max-height: ${({ isOpen }) => (isOpen ? '600px' : '0')};
-    opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
-    visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
-    overflow: hidden;
-    background: ${(props) => props.theme.colors.cardBg};
-    border: ${({ isOpen, theme }) =>
-      isOpen ? `1px solid ${theme.colors.borderSoft}` : '1px solid transparent'};
-    border-radius: 12px;
-    transition:
-      max-height 0.3s ease,
-      opacity 0.25s ease,
-      padding 0.25s ease,
-      visibility 0s linear ${({ isOpen }) => (isOpen ? '0s' : '0.3s')};
-
-    li { width: 100%; }
-  }
-`;
-
-export const Div3 = styled.div`
-  grid-area: 1 / 4 / 2 / 6;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 4px;
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    align-items: flex-end;
-  }
-`;
-
-export const NavLink = styled.a`
-  font-size: 1.6rem;
-  line-height: 32px;
-  color: ${(props) => props.theme.colors.textTertiary};
-  transition: 0.4s ease;
-  white-space: nowrap;
-  &:hover {
-    color: ${(props) => props.theme.colors.textBright};
-    opacity: 1;
-    cursor: pointer;
-  }
-  @media ${(props) => props.theme.breakpoints.md} {
-    font-size: 1.6rem;
-    display: block;
-    padding: 0.5rem 0;
-  }
-`;
-
-export const ContactDropDown = styled.button`
-  border: none;
-  display: flex;
-  position: relative;
-  background: none;
-  font-size: 1.7rem;
-  line-height: 32px;
-  color: ${(props) => props.theme.colors.textTertiary};
-  cursor: pointer;
-  transition: 0.3s ease;
-
-  &:focus { outline: none; }
-  &:hover { color: ${(props) => props.theme.colors.textBright}; }
-
-  @media ${(props) => props.theme.breakpoints.sm} { padding: 0.4rem 0; }
-  @media ${(props) => props.theme.breakpoints.md} { padding: 0; }
-`;
-
-export const NavProductsIcon = styled(IoIosArrowDropdown)`
-  margin-left: 8px;
-  display: flex;
-  align-self: center;
-  transition: 0.3s ease;
-  opacity: ${({ isOpen }) => (isOpen ? '1' : '.75')};
-  transform: ${({ isOpen }) => (isOpen ? 'scaleY(-1)' : 'scaleY(1)')};
-
-  &:hover { opacity: 1; }
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    margin: 2px 0 0 2px;
-    width: 15px;
-  }
-`;
-
-export const Tagline = styled.p`
-  font-size: 12px;
-  color: ${(props) => props.theme.colors.tagline};
-  margin: 0 0 4px 0;
-  text-align: right;
-  max-width: 420px;
-
-  @media ${(props) => props.theme.breakpoints.sm} {
-    text-align: center;
-    font-size: 11px;
-    max-width: 100%;
-  }
-`;
-
-export const SocialContainer = styled.div`
-  display: flex;
-  align-items: center;
-
-  @media ${(props) => props.theme.breakpoints.md} {
-    justify-content: flex-end;
-    flex-wrap: wrap;
-  }
-`;
-
+// Used by the footer
 export const SocialIcons = styled.a`
   transition: 0.3s ease;
   color: ${(props) => props.theme.colors.textBright};

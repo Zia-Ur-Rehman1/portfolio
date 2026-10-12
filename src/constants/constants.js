@@ -2,6 +2,21 @@ import { FaCalendar, FaRocket, FaPlug, FaBolt, FaCode, FaTachometerAlt, FaBug, F
 
 export const ProjectsData = [
   {
+    title: 'ADY Alert (Actions Define You)',
+    category: 'Personal Safety & Emergency Alerts',
+    description: 'iOS/Android personal-safety app. When a user raises an alert, their live location goes to emergency contacts or guardians, who coordinate in a real-time chat room with photos and video. Also includes QR identity tags anyone can scan to raise an alert, Lost & Found for tagged items, a no-login web chat for joining an alert from a share link, medical records behind a security code, a Trust Score, and Stripe subscriptions.',
+    tags: [
+      'Ruby on Rails', 'Microservices', 'Deep Linking', 'FastAPI', 'WebSockets', 'Solid Queue', 'Python 3.13', 'PostgreSQL', 
+      'ActionCable', 'Redis',  'SQLAlchemy (async)', 'Alembic',
+      'Pydantic',  'React Native',
+      'Stripe', 'AWS (EC2, S3, SNS)', 'JWT (RS256)', 'Phone OTP Auth',
+      'QR Codes',  'Pundit', 'AASM', 'RSpec', 'Swagger',
+      'Capistrano', 'GitHub Actions', 'Docker'
+    ],
+    visit: 'https://www.actionsdefineyou.com',
+    id: 10,
+  },
+  {
     title: 'Yushas Collection',
     category: 'E-Commerce · Pakistani Unstitched Fabric',
     description: 'Greenfield Rails 8 storefront for a Pakistani unstitched-fabric brand. Full catalog with collections, products, variants, and color-bound photos. Complete order lifecycle for the local market (bank transfer + cash-on-delivery), admin-themable storefront (colors, fonts, homepage blocks), product detail lightbox with mobile swipe, and a rich-text admin for every page. Live in production at yushascollection.com.',
@@ -106,9 +121,14 @@ export const ProjectsData = [
 
 export const AccomplishmentsData = [
   {
+    title: 'ADY Alert (TK Designs)',
+    role: 'Senior Software Engineer',
+    duration: 'Jun 2026 – Present',
+  },
+  {
     title: 'Devsinc',
     role: 'Senior Software Engineer',
-    duration: 'June 2022 – Present',
+    duration: 'June 2022 – June 2026',
   },
   {
     title: 'EcoLink',
@@ -190,9 +210,25 @@ export const AiNativeProjectsData = [
 export const AchievementsData = [
   {
     role: 'Senior Software Engineer',
+    company: 'TK Designs, ADY Alert personal-safety & emergency alert app',
+    location: 'Remote',
+    duration: 'Jun 2026 – Present',
+    achievements: [
+      'Lead backend contributor on a personal-safety app for iOS and Android: top committer with ~690 commits in four months across Rails and FastAPI microservices.',
+      'Built the core emergency alert: live location goes to trusted contacts and guardians, who coordinate in a real-time ActionCable chat room. Every alert is rate-limited and logged to an audit trail.',
+      'Shipped shareable alert codes and a no-login web chat so anyone with a link or QR code can join an alert from a browser, with consent capture and moderator kick/ban.',
+      'Built QR identity tags and Lost & Found. Scanning a tag raises an alert or opens a recovery case for the owner, with photo proof and push notifications.',
+      'Built passwordless phone OTP login with JWTs shared across all services, plus Stripe subscription billing and plan entitlements.',
+      'Designed a cross-service Trust Score with an append-only audit trail and backfill, plus invite links that credit the inviter when a new user installs the app.',
+      'Built chat features in the FastAPI real-time chat service (async SQLAlchemy, WebSockets): direct-to-S3 photo/video attachments and Lost & Found chat rooms that connect finders with owners.',
+      'Added medical records protected by a security-code check with an access audit trail.',
+    ],
+  },
+  {
+    role: 'Senior Software Engineer',
     company: 'Devsinc, Full-Stack Engineer staffed across US and global client engagements',
     location: 'Lahore, Pakistan – Hybrid',
-    duration: 'June 2022 – Present',
+    duration: 'June 2022 – June 2026',
     isParent: true,
     achievements: [
       'Senior full-stack engineer at Devsinc working on production Rails + React systems for distributed teams across the US, UAE, and KSA.',
@@ -257,6 +293,11 @@ export const AchievementsData = [
 ];
 
 export const CurrentFocusData = [
+  {
+    title: 'ADY Alert',
+    hook: 'Personal-safety app for iOS/Android: building real-time emergency alerts, QR identity tags, Lost & Found, and no-login web chat on Rails 7.2 microservices with ActionCable, Stripe, and AWS.',
+    link: 'https://www.actionsdefineyou.com',
+  },
   {
     title: 'AgencyPortal',
     hook: 'Multi-tenant Umrah travel SaaS, scripted Selenium logins against 12 supplier portals, booking flows, per-agency analytics. Live at hasnaintravel.com.',
