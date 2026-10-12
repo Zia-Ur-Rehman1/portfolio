@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaWhatsapp, FaRegCalendarCheck, FaMapMarkerAlt, FaClock, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaEnvelope, FaWhatsapp, FaRegCalendarCheck, FaMapMarkerAlt, FaClock, FaExternalLinkAlt, FaCheckCircle } from 'react-icons/fa';
 import { Section, SectionDivider, SectionSubText, SectionTitle } from '../../styles/GlobalComponents';
 import {
   ContactCard,
@@ -20,6 +20,7 @@ import {
   InfoChannel,
   InfoFootnote,
 } from './ContactStyles';
+import { PSEB_CREDENTIAL } from '../../constants/site';
 
 const initialState = {
   name: '',
@@ -119,6 +120,12 @@ const Contact = () => {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <FaClock size="0.85rem" /> Comfortable overlap with any timezones
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.35rem' }}>
+              <FaCheckCircle size="0.85rem" />
+              <a href={PSEB_CREDENTIAL.verifyUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                {PSEB_CREDENTIAL.label} (Govt. of Pakistan)
+              </a>
             </div>
           </InfoFootnote>
         </InfoPanel>

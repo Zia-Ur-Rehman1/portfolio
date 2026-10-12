@@ -1,9 +1,9 @@
 import React from 'react';
-import { FaEnvelope, FaWhatsapp, FaHandshake } from 'react-icons/fa';
+import { FaEnvelope, FaWhatsapp, FaHandshake, FaCheckCircle } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { CtaRow, GradientText, LeftSection, SecondaryButtonLink, StyledButtonLink } from './HeroStyles';
-import { RESUME_PDF_URL } from '../../constants/site';
+import { CredentialBadge, CtaRow, GradientText, LeftSection, SecondaryButtonLink, StyledButtonLink } from './HeroStyles';
+import { PSEB_CREDENTIAL, RESUME_PDF_URL } from '../../constants/site';
 
 const Hero = () => {
   const handleHireClick = (e) => {
@@ -21,7 +21,20 @@ const Hero = () => {
         <SectionTitle main center>
           <GradientText>Zia Ur Rehman</GradientText>
         </SectionTitle>
-        
+
+        <CredentialBadge title={`${PSEB_CREDENTIAL.issuer} · Reg. No. ${PSEB_CREDENTIAL.registrationNo}`}>
+          <FaCheckCircle size="1.6rem" />
+          <span>
+            <a href={PSEB_CREDENTIAL.certificateUrl} target="_blank" rel="noopener noreferrer">
+              <strong>{PSEB_CREDENTIAL.label}</strong>
+            </a>{' '}
+            <small>· Reg. {PSEB_CREDENTIAL.registrationNo} · Valid till {PSEB_CREDENTIAL.validTill} · </small>
+            <a href={PSEB_CREDENTIAL.verifyUrl} target="_blank" rel="noopener noreferrer">
+              <small className="verify">Verify ↗</small>
+            </a>
+          </span>
+        </CredentialBadge>
+
         <SectionText>
           Full-Stack Ruby on Rails Engineer + React engineer. I ship multi-tenant SaaS, real-time integrations, and AI pipelines end-to-end, production-grade, not prototypes.
         </SectionText>

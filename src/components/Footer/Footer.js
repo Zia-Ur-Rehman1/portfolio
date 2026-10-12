@@ -46,6 +46,7 @@ const Footer = () => {
           <LinkItem as="span">Pakistan (PKT, UTC+5)</LinkItem>
           <LinkItem as="span">Open to remote roles globally</LinkItem>
           <LinkItem as="span">Worked across US · UAE · KSA timezones</LinkItem>
+          <LinkItem as="span">PSEB Registered Freelancer · Govt. of Pakistan</LinkItem>
         </LinkColumn>
       </LinkList>
       <SocialIconsContainer>

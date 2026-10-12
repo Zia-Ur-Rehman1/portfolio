@@ -141,3 +141,52 @@ export const SecondaryButtonLink = styled.a`
     font-size: 14px;
   }
 `;
+
+export const CredentialBadge = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  align-self: flex-start;
+  margin: 0 0 2.4rem;
+  padding: 0.6rem 1.4rem 0.6rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  background: rgba(34, 197, 94, 0.08);
+  color: ${(props) => props.theme.colors.textBody};
+  font-size: 1.4rem;
+  line-height: 1.4;
+
+  svg {
+    flex-shrink: 0;
+    color: ${(props) => props.theme.colors.accentGreen};
+  }
+
+  strong {
+    color: ${(props) => props.theme.colors.textBright};
+    font-weight: 600;
+  }
+
+  small {
+    color: ${(props) => props.theme.colors.textFaint};
+    font-size: 1.2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover strong,
+  a:hover .verify {
+    text-decoration: underline;
+  }
+
+  .verify {
+    color: ${(props) => props.theme.colors.accentMint};
+    font-weight: 600;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    border-radius: 14px;
+    font-size: 1.3rem;
+  }
+`;
