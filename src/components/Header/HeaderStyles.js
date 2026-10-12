@@ -38,6 +38,7 @@ export const Bar = styled.div`
     border-radius: 16px;
     padding: 0.8rem 0.8rem 0.8rem 1.2rem;
     flex-wrap: wrap;
+    row-gap: 0;
   }
 `;
 
@@ -71,11 +72,14 @@ export const BrandName = styled.span`
   font-size: 1.7rem;
   color: ${(props) => props.theme.colors.textBright};
 
-  @media ${(props) => props.theme.breakpoints.lg} {
+  @media ${(props) => props.theme.breakpoints.xl} {
     display: none;
   }
   @media ${(props) => props.theme.breakpoints.md} {
     display: inline;
+  }
+  @media screen and (max-width: 360px) {
+    display: none;
   }
 `;
 
@@ -141,6 +145,10 @@ export const NavLink = styled.a`
   @media ${(props) => props.theme.breakpoints.xl} {
     padding: 0.6rem 0.9rem;
     font-size: 1.3rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding: 0.6rem 0.7rem;
   }
 
   @media ${(props) => props.theme.breakpoints.md} {

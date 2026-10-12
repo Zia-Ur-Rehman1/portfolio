@@ -21,6 +21,7 @@ const NAV_ITEMS = [
   { id: 'current-focus', label: 'Now' },
   { id: 'achievements', label: 'Experience' },
   { id: 'ai-native', label: 'AI-Native' },
+  { id: 'automation', label: 'Automation' },
   { id: 'services', label: 'Services' },
   { id: 'projects', label: 'Projects' },
   { id: 'testimonials', label: 'Testimonials' },

@@ -1,4 +1,4 @@
-import { FaCalendar, FaRocket, FaPlug, FaBolt, FaCode, FaTachometerAlt, FaBug, FaTools, FaCloudUploadAlt, FaSearchPlus } from 'react-icons/fa';
+import { FaCalendar, FaRocket, FaPlug, FaBolt, FaCode, FaTachometerAlt, FaBug, FaTools, FaCloudUploadAlt, FaSearchPlus, FaMicrophoneAlt, FaTasks, FaChartBar, FaPassport, FaSyncAlt, FaShieldAlt, FaProjectDiagram, FaChrome } from 'react-icons/fa';
 
 export const ProjectsData = [
   {
@@ -204,6 +204,89 @@ export const AiNativeProjectsData = [
       'Added rich-text editing on every body field via ActionText, PDP lightbox with full photo navigation + mobile swipe, and a storefront perf pass (fragment cache, Thruster + Puma tuning, font trim).',
       'Wired Solid Queue / Solid Cache / Solid Cable on PostgreSQL, zero Redis dependency, and deployed live on yushascollection.com via Kamal with Caddy TLS.',
     ],
+  },
+];
+
+export const AutomationData = [
+  {
+    icon: <FaMicrophoneAlt />,
+    title: 'AI Call Transcription & Summaries',
+    project: 'EcoLink',
+    status: 'Live',
+    description: 'Every recorded call becomes a transcript and a short summary automatically, pushed live to the agent’s screen. No more manual call notes.',
+    flow: ['Call recording', 'Transcription', 'LLM summary', 'Live on screen'],
+    outcome: '~50% less manual effort per call',
+    stack: ['Rails', 'ActionCable', 'AI microservice', 'Sidekiq'],
+  },
+  {
+    icon: <FaTasks />,
+    title: 'Inteveo IQ: AI Priority Task Board',
+    project: 'EcoLink',
+    status: 'Live',
+    description: 'Reads each transcribed call, scores customer sentiment, and turns it into prioritised follow-ups (Growth / Maintenance / Relationship). Became the agents’ default daily workflow.',
+    flow: ['Transcript', 'Sentiment scoring', 'Task classification', 'Priority board'],
+    outcome: '~90% faster agent follow-ups',
+    stack: ['LLM', 'Rails', 'Turbo Streams', 'PostgreSQL'],
+  },
+  {
+    icon: <FaChartBar />,
+    title: 'Automated Usage & Call Reports',
+    project: 'EcoLink',
+    status: 'Live',
+    description: 'A Slack bot and scheduled emails compile call and usage metrics into PDF / CSV reports every two weeks, so nobody builds them by hand.',
+    flow: ['Call data', 'Aggregation', 'PDF / CSV', 'Slack + email'],
+    outcome: '~80% less manual reporting',
+    stack: ['Slack API', 'SendGrid', 'Background jobs', 'PDF'],
+  },
+  {
+    icon: <FaPassport />,
+    title: 'Passport Scanning with Vision AI',
+    project: 'AgencyPortal',
+    status: 'Live',
+    description: 'Agents upload a passport photo and the passenger details fill the booking form. Falls back across AI providers so a rate limit never breaks it; images are never stored or logged.',
+    flow: ['Passport photo', 'Vision LLM', 'Field checks', 'Form filled'],
+    outcome: 'Replaces manual passenger data entry',
+    stack: ['Rails', 'Vision LLM', 'Provider failover', 'Stimulus'],
+  },
+  {
+    icon: <FaSyncAlt />,
+    title: 'Supplier Inventory Sync Bots',
+    project: 'AgencyPortal',
+    status: 'Live',
+    description: 'Bots sign in to 12 supplier portals (including 2FA), pull live prices and availability, and keep sessions alive. Failed syncs retry, then stale stock is hidden so customers never see outdated prices.',
+    flow: ['Scheduled job', 'Scripted login', 'Fetch & normalise', 'Retry or hide stale'],
+    outcome: '12 suppliers in one live dashboard',
+    stack: ['Selenium', 'Headless Chrome', 'Solid Queue', 'TOTP'],
+  },
+  {
+    icon: <FaShieldAlt />,
+    title: 'Lead Spam Screening',
+    project: 'AgencyPortal',
+    status: 'Live',
+    description: 'Scores every contact-form inquiry on links, spam keywords and unexpected scripts (Urdu and Arabic always pass), quarantines spam, and lets admins block senders.',
+    flow: ['New inquiry', 'Signal scoring', 'Pass or quarantine', 'Admin blocklist'],
+    outcome: 'Clean lead inbox for every agency',
+    stack: ['Rails', 'Rule-based scoring', 'Admin controls'],
+  },
+  {
+    icon: <FaProjectDiagram />,
+    title: 'Job Aggregator',
+    project: 'n8n workflow',
+    status: 'Live',
+    description: 'A daily n8n workflow scrapes new job listings, logs them to Google Sheets, and emails an AI-written summary of the best matches.',
+    flow: ['Daily trigger', 'Apify scrape', 'OpenAI summary', 'Sheets + Gmail'],
+    outcome: 'Daily shortlist, zero manual browsing',
+    stack: ['n8n', 'Apify', 'OpenAI', 'Google Sheets', 'Gmail'],
+  },
+  {
+    icon: <FaChrome />,
+    title: 'Passport Autofill Chrome Extension',
+    project: 'Travel agencies',
+    status: 'Live',
+    description: 'A Chrome extension shipped to travel agencies that reads passport images with Gemini and fills the Sabre airline booking form for each traveller.',
+    flow: ['Drop passports', 'Gemini vision', 'Assign travellers', 'Fill Sabre form'],
+    outcome: 'Shipped to clients, 290 unit tests',
+    stack: ['TypeScript', 'Chrome Extension', 'Gemini API', 'Vite'],
   },
 ];
 
