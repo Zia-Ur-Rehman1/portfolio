@@ -2,7 +2,7 @@ import { FaCalendar, FaRocket, FaPlug, FaBolt, FaCode, FaTachometerAlt, FaBug, F
 
 export const ProjectsData = [
   {
-    title: 'ADY Alert (Actions Define You)',
+    title: 'Personal Safety & Emergency Alert App (TK Designs)',
     category: 'Personal Safety & Emergency Alerts',
     description: 'iOS/Android personal-safety app. When a user raises an alert, their live location goes to emergency contacts or guardians, who coordinate in a real-time chat room with photos and video. Also includes QR identity tags anyone can scan to raise an alert, Lost & Found for tagged items, a no-login web chat for joining an alert from a share link, medical records behind a security code, a Trust Score, and Stripe subscriptions.',
     tags: [
@@ -13,7 +13,7 @@ export const ProjectsData = [
       'QR Codes',  'Pundit', 'AASM', 'RSpec', 'Swagger',
       'Capistrano', 'GitHub Actions', 'Docker'
     ],
-    visit: 'https://www.actionsdefineyou.com',
+    visit: 'https://thetkdesigns.com',
     id: 10,
   },
   {
@@ -121,7 +121,7 @@ export const ProjectsData = [
 
 export const AccomplishmentsData = [
   {
-    title: 'ADY Alert (TK Designs)',
+    title: 'TK Designs',
     role: 'Senior Software Engineer',
     duration: 'Jun 2026 – Present',
   },
@@ -293,7 +293,7 @@ export const AutomationData = [
 export const AchievementsData = [
   {
     role: 'Senior Software Engineer',
-    company: 'TK Designs, ADY Alert personal-safety & emergency alert app',
+    company: 'TK Designs, personal-safety & emergency alert app for iOS and Android',
     location: 'Remote',
     duration: 'Jun 2026 – Present',
     achievements: [
@@ -377,9 +377,9 @@ export const AchievementsData = [
 
 export const CurrentFocusData = [
   {
-    title: 'ADY Alert',
+    title: 'TK Designs',
     hook: 'Personal-safety app for iOS/Android: building real-time emergency alerts, QR identity tags, Lost & Found, and no-login web chat on Rails 7.2 microservices with ActionCable, Stripe, and AWS.',
-    link: 'https://www.actionsdefineyou.com',
+    link: 'https://thetkdesigns.com',
   },
   {
     title: 'AgencyPortal',
