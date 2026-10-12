@@ -20,6 +20,10 @@ export const GridContainer = styled.div`
   justify-content: center;
   align-items: stretch;
   padding: 0 2rem;
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 0;
+  }
 `;
 
 export const Card = styled.div`
