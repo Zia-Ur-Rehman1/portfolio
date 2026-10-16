@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { FiMenu, FiX, FiDownload } from 'react-icons/fi';
+import { GiCrossedSwords } from 'react-icons/gi';
 import {
   Actions,
   Bar,
@@ -12,6 +14,7 @@ import {
   NavList,
   ResumeButton,
   ScrollOffset,
+  SideQuestsLink,
   SocialIcon,
   Wrapper,
 } from './HeaderStyles';
@@ -121,6 +124,12 @@ const Header = () => {
           >
             <AiFillLinkedin size="2rem" />
           </SocialIcon>
+          <Link href="/side-quests" passHref legacyBehavior>
+            <SideQuestsLink aria-label="Side Quests">
+              <GiCrossedSwords size="1.6rem" aria-hidden="true" />
+              <span>Side Quests</span>
+            </SideQuestsLink>
+          </Link>
           <ResumeButton href={RESUME_PDF_URL} target="_blank" rel="noopener noreferrer" aria-label="Resume (PDF)">
             <FiDownload size="1.5rem" />
             <span>Resume</span>

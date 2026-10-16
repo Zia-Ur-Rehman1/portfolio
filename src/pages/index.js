@@ -16,6 +16,7 @@ import SEO from '../components/SEO/SEO';
 import Testimonials from '../components/Testimonials/Testimonials';
 import Services from '../components/Services/Services';
 import Automation from '../components/Automation/Automation';
+import SideQuestsTeaser from '../components/SideQuests/SideQuestsTeaser';
 const Home = () => {
   return (
     <Layout>
@@ -39,6 +40,7 @@ const Home = () => {
       <Testimonials />
       <Technologies />
       <Acomplishments />
+      <SideQuestsTeaser />
       <Contact />
     </Layout>
   );

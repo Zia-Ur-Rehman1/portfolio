@@ -6,6 +6,7 @@ const buildDate = new Date().toISOString().slice(0, 10);
 const nextConfig = {
   env: {
     NEXT_PUBLIC_RESUME_VERSION: buildDate,
+    NEXT_PUBLIC_BASE_PATH: isProd ? '/portfolio' : '',
   },
   basePath: isProd ? '/portfolio' : '',
   assetPrefix: isProd ? '/portfolio/' : '',

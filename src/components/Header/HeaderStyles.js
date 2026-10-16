@@ -148,7 +148,7 @@ export const NavLink = styled.a`
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
-    padding: 0.6rem 0.7rem;
+    padding: 0.6rem 0.5rem;
   }
 
   @media ${(props) => props.theme.breakpoints.md} {
@@ -181,8 +181,42 @@ export const SocialIcon = styled.a`
     background: rgba(255, 255, 255, 0.08);
   }
 
-  @media ${(props) => props.theme.breakpoints.lg} {
+  @media screen and (max-width: 1500px) {
     display: none;
+  }
+`;
+
+export const SideQuestsLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: 38px;
+  padding: 0 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(76, 201, 255, 0.4);
+  color: #4cc9ff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: rgba(76, 201, 255, 0.1);
+    box-shadow: 0 0 16px rgba(76, 201, 255, 0.3);
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${(props) => props.theme.colors.borderInputFocus};
+    outline-offset: 2px;
+  }
+
+  @media ${(props) => props.theme.breakpoints.xl} {
+    width: 38px;
+    padding: 0;
+    justify-content: center;
+
+    span { display: none; }
   }
 `;
 
