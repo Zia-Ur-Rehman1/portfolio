@@ -190,3 +190,117 @@ export const CredentialBadge = styled.div`
     font-size: 1.3rem;
   }
 `;
+
+export const Headline = styled.p`
+  max-width: 680px;
+  margin: 0 0 1.6rem;
+  font-size: 2.8rem;
+  line-height: 1.35;
+  font-weight: 400;
+  color: ${(props) => props.theme.colors.textSecondary};
+
+  strong {
+    font-weight: 700;
+    color: ${(props) => props.theme.colors.textBright};
+  }
+
+  @media ${(props) => props.theme.breakpoints.md} {
+    font-size: 2.3rem;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 2rem;
+  }
+`;
+
+export const Supporting = styled.p`
+  max-width: 640px;
+  margin: 0 0 2.4rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: ${(props) => props.theme.colors.textMuted};
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    font-size: 1.6rem;
+  }
+`;
+
+export const Chips = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: ${(props) => props.theme.colors.textBody};
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid ${(props) => props.theme.colors.borderSoft};
+  }
+`;
+
+export const MoreAbout = styled.details`
+  max-width: 680px;
+  margin: 0 0 2.8rem;
+
+  summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.accentCyan};
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary:hover {
+    text-decoration: underline;
+  }
+
+  summary:focus-visible {
+    outline: 2px solid ${(props) => props.theme.colors.borderInputFocus};
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  summary svg {
+    transition: transform 0.2s ease;
+  }
+
+  &[open] summary svg {
+    transform: rotate(180deg);
+  }
+
+  div {
+    margin-top: 1.6rem;
+    padding-left: 1.6rem;
+    border-left: 2px solid ${(props) => props.theme.colors.borderSoft};
+  }
+
+  p {
+    margin: 0 0 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: ${(props) => props.theme.colors.textMuted};
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: ${(props) => props.theme.colors.textBright};
+    font-weight: 600;
+  }
+`;
