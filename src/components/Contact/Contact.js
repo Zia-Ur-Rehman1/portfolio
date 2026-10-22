@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaWhatsapp, FaRegCalendarCheck, FaMapMarkerAlt, FaClock, FaExternalLinkAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaEnvelope, FaRegCalendarCheck, FaMapMarkerAlt, FaClock, FaExternalLinkAlt, FaCheckCircle } from 'react-icons/fa';
 import { Section, SectionDivider, SectionSubText, SectionTitle } from '../../styles/GlobalComponents';
 import {
   ContactCard,
@@ -95,12 +95,6 @@ const Contact = () => {
             <InfoChannel>
               <FaEnvelope size="1.1rem" />
               <a href="mailto:zia.rehman.web@gmail.com">zia.rehman.web@gmail.com</a>
-            </InfoChannel>
-            <InfoChannel>
-              <FaWhatsapp size="1.1rem" />
-              <a href="https://wa.me/+923131407828" target="_blank" rel="noopener noreferrer">
-                +92 313 1407828 <FaExternalLinkAlt size="0.75rem" style={{ marginLeft: '0.3rem', verticalAlign: 'baseline' }} />
-              </a>
             </InfoChannel>
             <InfoChannel>
               <FaRegCalendarCheck size="1.1rem" />

@@ -1,154 +1,100 @@
 import { FaCalendar, FaRocket, FaPlug, FaBolt, FaCode, FaTachometerAlt, FaBug, FaTools, FaCloudUploadAlt, FaSearchPlus, FaMicrophoneAlt, FaTasks, FaChartBar, FaPassport, FaSyncAlt, FaShieldAlt, FaProjectDiagram, FaChrome } from 'react-icons/fa';
 
+// Local images need the GitHub Pages base path in production
+const asset = (path) => `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${path}`;
+
 export const ProjectsData = [
   {
     title: 'Personal Safety & Emergency Alert App (TK Designs)',
+    experienceKey: 'tk',
     category: 'Personal Safety & Emergency Alerts',
     description: 'iOS/Android personal-safety app. When a user raises an alert, their live location goes to emergency contacts or guardians, who coordinate in a real-time chat room with photos and video. Also includes QR identity tags anyone can scan to raise an alert, Lost & Found for tagged items, a no-login web chat for joining an alert from a share link, medical records behind a security code, a Trust Score, and Stripe subscriptions.',
-    tags: [
-      'Ruby on Rails', 'Microservices', 'Deep Linking', 'FastAPI', 'WebSockets', 'Solid Queue', 'Python 3.13', 'PostgreSQL', 
-      'ActionCable', 'Redis',  'SQLAlchemy (async)', 'Alembic',
-      'Pydantic',  'React Native',
-      'Stripe', 'AWS (EC2, S3, SNS)', 'JWT (RS256)', 'Phone OTP Auth',
-      'QR Codes',  'Pundit', 'AASM', 'RSpec', 'Swagger',
-      'Capistrano', 'GitHub Actions', 'Docker'
-    ],
     visit: 'https://thetkdesigns.com',
     id: 10,
   },
   {
     title: 'Yushas Collection',
+    image: asset('/images/projects/yushas-collection.jpg'),
     category: 'E-Commerce · Pakistani Unstitched Fabric',
     description: 'Greenfield Rails 8 storefront for a Pakistani unstitched-fabric brand. Full catalog with collections, products, variants, and color-bound photos. Complete order lifecycle for the local market (bank transfer + cash-on-delivery), admin-themable storefront (colors, fonts, homepage blocks), product detail lightbox with mobile swipe, and a rich-text admin for every page. Live in production at yushascollection.com.',
-    tags: [
-      'Ruby on Rails 8.1', 'Ruby 3.3', 'PostgreSQL 18', 'Hotwire (Turbo/Stimulus)',
-      'Tailwind v4', 'ActionText', 'Solid Queue', 'Solid Cache', 'Solid Cable',
-      'importmap-rails', 'Kamal', 'Caddy', 'Thruster + Puma',
-      'Multi-DB (primary/cache/queue/cable)', 'Active Storage',
-    ],
     visit: 'https://yushascollection.com',
     id: 9,
   },
   {
     title: 'Escrow.sa',
+    image: asset('/images/projects/escrow.jpg'),
     category: 'Software Escrow & Compliance (KSA)',
     description: 'Tri-party software escrow platform for the Saudi market, holds vendor source code in an encrypted vault, verifies each deposit via senior-engineer review, and releases code to beneficiaries only when legally defined conditions are met. Bilingual Arabic/English with full RTL and Saudi data residency.',
-    tags: [
-      'Ruby on Rails 8', 'Hotwire', 'Turbo', 'Stimulus', 'Tailwind CSS',
-      'PostgreSQL', 'Solid Queue', 'Solid Cache', 'Solid Cable',
-      'action_policy', 'AASM', 'PaperTrail', 'HexaPDF',
-      'i18n (ar/en, RTL)', 'KMS Encryption', 'Audit Logs',
-      'Forgejo', 'Multi-tenant', 'Saudi Data Residency'
-    ],
     visit: 'https://escrow.sa',
     id: 8,
   },
   {
     title: 'AgencyPortal (AI Umrah Portal)',
+    image: asset('/images/projects/agencyportal.jpg'),
     category: 'Travel SaaS · Multi-Tenant',
     description: 'A self-serve booking platform for Umrah travel agencies. Pulls live availability and prices from 12 different supplier systems into a single dashboard, lets each agency set its own pricing and branded landing page, manages bookings with automatic hold and cancellation timers, and surfaces system health alerts so issues are caught before customers notice. Live in production.',
-    tags: [
-      'Ruby on Rails 8.1', 'Ruby 3.3', 'PostgreSQL (JSONB)', 'Hotwire (Turbo/Stimulus)', 'Tailwind v4',
-      'SolidQueue', 'SolidCache', 'SolidCable', 'Selenium', 'Pundit', 'Active Storage',
-      'Multi-Tenancy (subdomain + custom domain)', 'JWT', 'TOTP', 'OCR (Groq / Llama 4 Scout)',
-      'Cloudflare R2', 'Cloudflare Analytics', 'Hetzner Cloud', 'Caddy (on-demand TLS)',
-      'Observability & Alerting',
-    ],
     visit: 'https://hasnaintravel.com',
     id: 7,
   },
   {
     title: 'EcoLink',
+    experienceKey: 'ecolink',
+    image: asset('/images/projects/ecolink.jpg'),
     category: 'Insurance Communications',
     description: 'Cloud communications platform for insurance agencies that connects RingCentral with AMS360 and EPIC to unify calls, SMS, voicemail, and compliance logging.' ,
-    tags: ['Ruby on Rails', 'JavaScript', 'Slim', 'Turbo', 'ActionCable', 'PostgreSQL', 'Sidekiq', 'Redis', 'RingCentral', 'AMS360', 'Epic', 'Infobip', '8x8', 'Slack', 'WebSockets', 'Multi-Tenancy', 'AWS ( EC2, S3 )'],
     visit: 'https://ecolink.inteveo.com',
     id: 0,
   },
   {
     title: 'Intellirent',
+    experienceKey: 'intellirent',
+    image: asset('/images/projects/intellirent.jpg'),
     category: 'Real Estate & Rental Marketing',
     description: 'Paperless rental marketing and tenant screening platform used by residential leasing teams to collect applications, documents, and Experian-backed reports in one place.',
-    tags: ['Ruby', 'Rails', 'React', 'AWS (S3, EventBridge, Lambda)', 'JavaScript', 'Jira', 'Heroku','HAML','HTML/CSS (Bootstrap)', 'Atlassian', 'Stripe', 'PostgreSQL', 'Redis', 'PDF Prawn/Wicked', 'Experian', 'Hubspot'],
     visit: 'https://myintellirent.com',
     id: 1,
   },
   {
     title: 'Mindrift (Tendem Data Collection)',
+    image: asset('/images/projects/mindrift.jpg'),
     category: 'AI Data Operations',
     description: 'Contributed to Tendem data collection by running web scraping/parsing workflows with Apify and delivering clean, structured datasets for AI tasks.',
-    tags: ['Apify', 'Web Scraping', 'Data Parsing', 'Data Validation', 'AI Data Collection', 'Quality Assurance'],
     visit: 'https://toloka.ai/blog/introducing-tendem/',
     id: 2,
   },
   {
     title: 'Revelo (Behavioral Data Annotation)',
+    image: asset('/images/projects/revelo.jpg'),
     category: 'AI Model Quality',
     description: 'Worked on Behavioral Data - Architecture & Strategy Annotation, evaluating strategy-level responses with structured rubrics to improve consistency and quality.',
-    tags: ['LLM Evaluation', 'Behavioral Data Annotation', 'Quality Rubrics', 'Prompt Quality', 'AI Training'],
     visit: 'https://www.revelo.com/',
     id: 3,
   },
   {
     title: 'PC - Product Customization',
+    experienceKey: 'saas-ltv',
+    image: asset('/images/projects/product-customizer.jpg'),
     category: 'SaaS & E-Commerce',
     description: 'Shopify app that lets merchants offer deep product customization (engraving, swatches, image uploads, pricing rules) with interactive visuals, boosting AOV and personalization.',
-    tags: [
-      'Rails', 'PostgreSQL', 'Ruby', 'React', 'Shopify',
-      'Remix', 'Polaris', 'Redis', 'JavaScript (ES6)', 'TypeScript',
-      'DigitalOcean', 'Hetzner', 'Coolify', 'Sidekiq', 'GraphQL', 'Azure', 'Tailwind CSS'
-    ],
     visit: 'https://apps.shopify.com/product-customizer',
     id: 4,
   },
   {
     title: 'Biomark',
+    experienceKey: 'biomark',
+    image: asset('/images/projects/biomark.jpg'),
     category: 'HealthCare',
     description: 'Healthcare connectivity platform that keeps patients, doctors, and labs in sync through secure, HL7-powered data pipelines and dashboards.',
-    tags: ['Rails', 'Ruby', 'Docker', 'PostMan', 'Ngrok', 'Jenkins', 'JavaScript (ES6)', 'PostgreSQL', 'Sidekiq', 'HL7'],
     visit: 'https://biomarking.com',
     id: 5,
   },
   {
     title: 'Local Serv',
+    image: asset('/images/projects/localserv.jpg'),
     category: 'AI Automation',
     description: 'AI-powered service marketplace built with Databutton that lets customers book local services (car wash, home renovation, etc.) via conversational AI flows.',
-    tags: ['Prompt Engineering', 'Generative AI', 'Databutton', 'OpenAI GPT', 'API Integrations', 'Rapid Prototyping', 'JavaScript', 'Python', 'Figma'],
-    visit: 'https://barhoumholdings.databutton.app/local-serv',
+    visit: 'https://www.localserv.ai/',
     id: 6,
-  },
-];
-
-export const AccomplishmentsData = [
-  {
-    title: 'TK Designs',
-    role: 'Senior Software Engineer',
-    duration: 'Jun 2026 – Present',
-  },
-  {
-    title: 'Devsinc',
-    role: 'Senior Software Engineer',
-    duration: 'June 2022 – June 2026',
-  },
-  {
-    title: 'EcoLink',
-    role: 'Full-Stack Engineer (via Devsinc)',
-    duration: 'Feb 2025 – Apr 2026',
-  },
-  {
-    title: 'SaaS LTV Growth Fund',
-    role: 'Software Engineer (via Devsinc)',
-    duration: 'Nov 2024 – Feb 2025',
-  },
-  {
-    title: 'Intellirent',
-    role: 'Full-Stack Engineer (via Devsinc)',
-    duration: 'Jan 2023 – Dec 2024',
-  },
-  {
-    title: 'Biomark',
-    role: 'Software Engineer (via Devsinc)',
-    duration: 'June 2022 – Jan 2023',
   },
 ];
 
@@ -293,6 +239,7 @@ export const AutomationData = [
 export const AchievementsData = [
   {
     role: 'Senior Software Engineer',
+    key: 'tk',
     company: 'TK Designs, personal-safety & emergency alert app for iOS and Android',
     location: 'Remote',
     duration: 'Jun 2026 – Present',
@@ -309,6 +256,7 @@ export const AchievementsData = [
   },
   {
     role: 'Senior Software Engineer',
+    key: 'devsinc',
     company: 'Devsinc, Full-Stack Engineer staffed across US and global client engagements',
     location: 'Lahore, Pakistan – Hybrid',
     duration: 'June 2022 – June 2026',
@@ -320,6 +268,7 @@ export const AchievementsData = [
   },
   {
     role: 'Full-Stack Engineer (via Devsinc)',
+    key: 'ecolink',
     company: 'Ecolink – Communication Platform for Insurance Agencies',
     location: 'California – Remote',
     duration: 'Feb 2025 – Apr 2026',
@@ -334,6 +283,7 @@ export const AchievementsData = [
   },
   {
     role: 'Software Engineer (via Devsinc)',
+    key: 'saas-ltv',
     company: 'SaaS LTV Growth – E-commerce Revenue Optimization',
     location: 'Wilmington – Remote',
     duration: 'Nov 2024 – Feb 2025',
@@ -346,6 +296,7 @@ export const AchievementsData = [
   },
   {
     role: 'Full-Stack Engineer (via Devsinc)',
+    key: 'intellirent',
     company: 'Intellirent – Real Estate & Rental Marketing',
     location: 'Texas – Remote',
     duration: 'Jan 2023 – Dec 2024',
@@ -361,6 +312,7 @@ export const AchievementsData = [
   },
   {
     role: 'Software Engineer (via Devsinc)',
+    key: 'biomark',
     company: 'Biomark – Healthcare Connectivity Platform',
     location: 'Singapore – Remote',
     duration: 'June 2022 – Jan 2023',
@@ -372,24 +324,6 @@ export const AchievementsData = [
       'Optimized background processing and operational workflows with Sidekiq and CI/CD practices to improve release consistency.',
       'Collaborated with cross-functional teams to ship compliant healthcare features while maintaining delivery velocity.',
     ],
-  },
-];
-
-export const CurrentFocusData = [
-  {
-    title: 'TK Designs',
-    hook: 'Personal-safety app for iOS/Android: building real-time emergency alerts, QR identity tags, Lost & Found, and no-login web chat on Rails 7.2 microservices with ActionCable, Stripe, and AWS.',
-    link: 'https://thetkdesigns.com',
-  },
-  {
-    title: 'AgencyPortal',
-    hook: 'Multi-tenant Umrah travel SaaS, scripted Selenium logins against 12 supplier portals, booking flows, per-agency analytics. Live at hasnaintravel.com.',
-    link: 'https://hasnaintravel.com',
-  },
-  {
-    title: 'Yushas Collection',
-    hook: 'Greenfield Rails 8 storefront for a Pakistani unstitched-fabric brand, catalog, theming, full order lifecycle (bank transfer + COD), admin-managed homepage blocks. Live at yushascollection.com.',
-    link: 'https://yushascollection.com',
   },
 ];
 

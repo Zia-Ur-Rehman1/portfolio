@@ -30,7 +30,6 @@ const Footer = () => {
       <LinkList>
         <LinkColumn>
           <LinkTitle>Explore</LinkTitle>
-          <LinkItem href="#current-focus" onClick={(e) => handleSmoothScroll(e, 'current-focus')}>Now</LinkItem>
           <LinkItem href="#achievements" onClick={(e) => handleSmoothScroll(e, 'achievements')}>Experience</LinkItem>
           <LinkItem href="#projects" onClick={(e) => handleSmoothScroll(e, 'projects')}>Projects</LinkItem>
           <LinkItem href="#testimonials" onClick={(e) => handleSmoothScroll(e, 'testimonials')}>Testimonials</LinkItem>
@@ -38,7 +37,6 @@ const Footer = () => {
         <LinkColumn>
           <LinkTitle>Get in touch</LinkTitle>
           <LinkItem href="mailto:zia.rehman.web@gmail.com">zia.rehman.web@gmail.com</LinkItem>
-          <LinkItem href="https://wa.me/+923131407828" target="_blank" rel="noopener noreferrer">WhatsApp</LinkItem>
           <LinkItem href="tel:+923131407828">+92 313 1407828</LinkItem>
         </LinkColumn>
         <LinkColumn>

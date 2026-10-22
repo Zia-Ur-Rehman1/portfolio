@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 import { AchievementsData } from '../../constants/constants';
 import { Section, SectionTitle, SectionDivider } from '../../styles/GlobalComponents';
@@ -23,16 +23,33 @@ const Achievements = () => {
     setOpenIndex((current) => (current === index ? null : index));
   };
 
+  // Project cards link here: open the matching job and scroll it into view
+  useEffect(() => {
+    const openByKey = (key) => {
+      const index = AchievementsData.findIndex((item) => item.key === key);
+      if (index === -1) return;
+      setOpenIndex(index);
+      requestAnimationFrame(() => {
+        document.getElementById(`experience-${key}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    };
+    const onOpen = (e) => openByKey(e.detail);
+    window.addEventListener('open-experience', onOpen);
+    const match = window.location.hash.match(/^#experience-(.+)$/);
+    if (match) openByKey(match[1]);
+    return () => window.removeEventListener('open-experience', onOpen);
+  }, []);
+
   return (
     <Section id="achievements">
       <SectionDivider />
-      <SectionTitle main>Achievements</SectionTitle>
+      <SectionTitle main>Experience</SectionTitle>
       <GridContainer>
         {AchievementsData.map((item, index) => {
           const isOpen = openIndex === index;
           const count = item.achievements.length;
           return (
-            <Card key={index} isOpen={isOpen}>
+            <Card key={index} id={item.key ? `experience-${item.key}` : undefined} isOpen={isOpen}>
               <CardHeader
                 role="button"
                 tabIndex={0}

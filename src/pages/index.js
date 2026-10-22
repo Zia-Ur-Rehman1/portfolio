@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Acomplishments from '../components/Acomplishments/Acomplishments';
 import BgAnimation from '../components/BackgrooundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
 import Projects from '../components/Projects/Projects';
@@ -9,7 +8,6 @@ import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 import Achievements from '../components/Achievements/Achievements';
 import AiNativeProjects from '../components/AiNativeProjects/AiNativeProjects';
-import CurrentFocus from '../components/CurrentFocus/CurrentFocus';
 import Hook from '../components/Hook/Hook';
 import Contact from '../components/Contact/Contact';
 import SEO from '../components/SEO/SEO';
@@ -31,7 +29,6 @@ const Home = () => {
         <BgAnimation />
         <Stats/>
       </Section>
-      <CurrentFocus />
       <Achievements />
       <AiNativeProjects />
       <Automation />
@@ -39,7 +36,6 @@ const Home = () => {
       <Projects />
       <Testimonials />
       <Technologies />
-      <Acomplishments />
       <SideQuestsTeaser />
       <Contact />
     </Layout>

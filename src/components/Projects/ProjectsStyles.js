@@ -162,3 +162,47 @@ export const UtilityList = styled.div`
   justify-content: space-between; /* Space between buttons */
   margin-top: 20px;
 `;
+
+export const CardImage = styled.div`
+  margin: -20px -20px 1.2rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom: 1px solid ${(props) => props.theme.colors.borderSoft};
+  background: ${(props) => props.theme.colors.ctaGradient};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.4s ease;
+  }
+
+  ${BlogCard}:hover & img {
+    transform: scale(1.04);
+  }
+
+  span {
+    font-family: ${(props) => props.theme.fonts.title};
+    font-size: 6rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+  }
+`;
+
+export const SeeWork = styled.a`
+  align-self: flex-start;
+  margin-top: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: ${(props) => props.theme.colors.accentCyan};
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;

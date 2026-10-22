@@ -21,7 +21,6 @@ import {
 import { RESUME_PDF_URL } from '../../constants/site';
 
 const NAV_ITEMS = [
-  { id: 'current-focus', label: 'Now' },
   { id: 'achievements', label: 'Experience' },
   { id: 'ai-native', label: 'AI-Native' },
   { id: 'automation', label: 'Automation' },
