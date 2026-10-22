@@ -1,0 +1,25 @@
+name = "portfolio-chat"
+main = "src/worker.js"
+compatibility_date = "2025-09-01"
+
+[vars]
+# Fallback order. Primary: Gemini 3.5 Flash-Lite (highest free-tier RPM/RPD, fast,
+# plenty for short factual answers). Then the latest Flash-Lite, then the latest Flash.
+GEMINI_MODELS = "gemini-3.5-flash-lite,gemini-flash-lite-latest,gemini-flash-latest"
+# Less "thinking" = faster answers: minimal | low | medium | high, or "off" to omit it.
+GEMINI_THINKING_LEVEL = "minimal"
+
+# Per-visitor rate limit (Workers Rate Limiting API): 6 messages per minute per IP.
+[[unsafe.bindings]]
+name = "CHAT_LIMITER"
+type = "ratelimit"
+namespace_id = "2101"
+simple = { limit = 6, period = 60 }
+
+# Secret (never committed), comma-separated, primary key first:
+#   wrangler secret put GEMINI_API_KEYS
+# Local dev: put GEMINI_API_KEYS=key1,key2 in .dev.vars (git-ignored)
+
+# Keep logs so they can be viewed in the Cloudflare dashboard (Workers > portfolio-chat > Logs)
+[observability]
+enabled = true

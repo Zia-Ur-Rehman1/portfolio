@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-chat",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "knowledge": "node scripts/build-knowledge.mjs",
+    "dev": "npm run knowledge && wrangler dev",
+    "deploy": "npm run knowledge && wrangler deploy",
+    "test:scope": "node scripts/scope-test.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "wrangler": "^4.0.0"
+  }
+}

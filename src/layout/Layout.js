@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import BookCallFab from '../components/BookCallFab/BookCallFab'
+import ChatWidget from '../components/ChatWidget/ChatWidget'
 import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import { Container } from './LayoutStyles'
@@ -39,7 +39,7 @@ export const Layout = ({ children }) => {
       <Header />
       <main id="main-content">{children}</main>
       <Footer />
-      <BookCallFab />
+      <ChatWidget />
     </Container>
   )
 }
