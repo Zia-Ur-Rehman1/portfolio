@@ -41,6 +41,7 @@ import {
   Pips,
   Player,
   QuestCard,
+  QuestImage,
   Rank,
   StatRow,
   StatusChip,
@@ -74,6 +75,11 @@ const QuestGrid = ({ quests }) => (
       const locked = quest.status === 'locked';
       return (
         <QuestCard key={quest.title} $status={quest.status}>
+          {quest.image && (
+            <QuestImage>
+              <img src={quest.image} alt={`${quest.title} screenshot`} loading="lazy" />
+            </QuestImage>
+          )}
           <CardTop>
             <StatusChip $status={quest.status}>{STATUS_LABEL[quest.status]}</StatusChip>
             {quest.year && <span>{quest.year}</span>}

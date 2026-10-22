@@ -512,6 +512,26 @@ export const QuestCard = styled.article`
     `}
 `;
 
+export const QuestImage = styled.div`
+  margin: -2rem -2rem 0.4rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 14px 14px 0 0;
+  background: #0b1224;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  ${QuestCard}:hover & img {
+    transform: scale(1.05);
+  }
+`;
+
 export const CardTop = styled.div`
   display: flex;
   align-items: center;

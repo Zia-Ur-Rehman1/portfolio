@@ -26,6 +26,39 @@ export const StatusWindow = {
 
 export const Games = [
   {
+    title: 'Chess Battle',
+    year: '2026',
+    status: 'cleared',
+    image: asset('/images/games/chess-battle.jpg'),
+    description:
+      'Both players secretly deploy chess-piece armies on a 3D battlefield of forests, mountains and rivers, then watch them fight it out. Terrain is the weapon: high ground, ambushes in the trees, choke points through mountain passes.',
+    tags: ['Godot 4', 'GDScript', '3D', 'Online by room code'],
+    links: [],
+    note: 'Released for Windows, macOS, Linux and Android',
+  },
+  {
+    title: 'Shooter Buddies',
+    year: '2026',
+    status: 'cleared',
+    image: asset('/images/games/shooter-buddies.jpg'),
+    description:
+      'Online arena shooter for Android where everyone gets the same gun: movement, timing, map knowledge and one special power decide who wins. 15 arenas with lasers, toxic floors, portals and line-of-sight stealth.',
+    tags: ['Godot 4', 'Android', '1v1 online', 'Bots'],
+    links: [],
+    note: 'Playable v0.3',
+  },
+  {
+    title: 'Siegeworks',
+    year: '2026',
+    status: 'active',
+    image: asset('/images/games/siegeworks.jpg'),
+    description:
+      'A 1v1 fortress duel: five minutes to build, two minutes to find the hole in your rival’s defences. Lockstep netcode keeps two devices in perfect sync over WiFi, and it plays offline against the computer.',
+    tags: ['TypeScript', 'Canvas 2D', 'Web + Android', 'Lockstep netcode'],
+    links: [],
+    note: 'Prototype',
+  },
+  {
     title: 'Snails: Human vs AI',
     year: '2020',
     status: 'cleared',
@@ -62,6 +95,16 @@ export const Games = [
 ];
 
 export const Arcs = [
+  {
+    title: 'Game Relay',
+    year: '2026',
+    status: 'cleared',
+    description:
+      'A tiny WebSocket server that pairs two players by a 5-letter room code and forwards their traffic without reading it, so one relay powers online play for all my games.',
+    tags: ['Node.js', 'WebSockets', 'Docker'],
+    links: [],
+    note: 'Live, serving Chess Battle and Shooter Buddies',
+  },
   {
     title: 'WhatsApp × Website',
     year: '2026',
